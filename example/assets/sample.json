@@ -1,0 +1,147 @@
+{
+    "title": "Forms okay okay",
+    "description": "Dynamic form generator is a form of the things in the line",
+    "name": "",
+    "version": "1.0.0",
+    "elements": [
+        {
+            "type": "time",
+            "name": "time1",
+            "id": "time1",
+            "title": "Enter time for notification",
+            "isRequired": true,
+            "answer": "11:23",
+            "min": "11:21",
+            "max": "12:12"
+        },
+        {
+            "type": "date",
+            "name": "date1",
+            "id": "date1",
+            "title": "Enter date to have leave",
+            "min": "2023-05-23",
+            "max": "2023-05-24",
+            "answer": "2023-05-24"
+        },
+        {
+            "type": "datetimelocal",
+            "answer": "2023-05-31T11:17",
+            "name": "datetime1",
+            "id": "datetime1",
+            "title": "What is your first day to start office",
+            "min": "2023-05-15T06:00",
+            "max": "2023-05-31T18:06"
+        },
+        {
+            "type": "files",
+            "name": "file1",
+            "id": "file1",
+            "title": "Attach citizenship files",
+            "isMultiple": false
+        },
+        {
+            "type": "files",
+            "name": "files2",
+            "id": "files2",
+            "title": "Attach covver letter",
+            "isMultiple": true
+        },
+        {
+            "type": "dropdown",
+            "name": "select1",
+            "id": "select1",
+            "answer": "item3",
+            "title": "Select from below drop down testelect from below drop down testelect from below drop down testelect from below drop down testelect from below drop down test",
+            "isRequired": true,
+            "requiredErrorText": "Drop down is required",
+            "commentPlaceholder": "comment are place",
+            "choices": [
+                {
+                    "value": "item1",
+                    "text": "This is item 1."
+                },
+                {
+                    "value": "item2",
+                    "text": "This is item 2."
+                },
+                {
+                    "value": "item3",
+                    "text": "This is item 3."
+                },
+                {
+                    "value": "item4",
+                    "text": "This is item 4."
+                },
+                {
+                    "value": "item5",
+                    "text": "This is item 5."
+                }
+            ],
+            "showOtherItem": true,
+            "showNoneItem": true,
+            "otherErrorText": "Empty comment required",
+            "placeholder": "Select...OKkk"
+        },
+        {
+            "type": "checkbox",
+            "name": "checkbox1",
+            "id": "checkbox1",
+            "title": "Check boxes type test Check boxes type test Check boxes type test Check boxes type test Check boxes type test Check boxes type test ",
+            "isRequired": true,
+            "answer": "item1",
+            "showNoneItem": true,
+            "requiredErrorText": "At least one item must be selected",
+            "choices": [
+                {
+                    "value": "item1",
+                    "text": "This is item 1."
+                },
+                {
+                    "value": "item2",
+                    "text": "This is item 2."
+                },
+                {
+                    "value": "item3",
+                    "text": "This is item 3."
+                }
+            ],
+            "showOtherItem": true,
+            "otherErrorText": "Other field comment is required."
+        },
+        {
+            "type": "radiogroup",
+            "name": "radio1",
+            "id": "radio1",
+            "answer": "2",
+            "title": "Select from below drop down",
+            "isRequired": true,
+            "value": 2,
+            "choices": [
+                {
+                    "text": "product 1",
+                    "value": "1"
+                },
+                {
+                    "text": "product 2",
+                    "value": "2"
+                },
+                {
+                    "text": "product 3",
+                    "value": "3"
+                }
+            ]
+        },
+        {
+            "type": "text",
+            "name": "firstName",
+            "answer": "Susan Timilsina is the text",
+            "id": "firstName",
+            "title": "Please provide your first namePlease provide your first namePlease provide your first namePlease provide your first name",
+            "isRequired": true,
+            "requiredErrorText": "First name is required",
+            "autocomplete": "name",
+            "maxLength": 30,
+            "placeholder": "First Name placeholder"
+        }
+    ]
+}
