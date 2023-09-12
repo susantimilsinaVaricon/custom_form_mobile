@@ -13,7 +13,7 @@ class InputField with _$InputField implements BasicInputField {
   // InputField that is not supported.
   const factory InputField.fallback({
     @JsonKey(name: 'name') required String name,
-    @JsonKey(name: 'title') String? title,
+    @JsonKey(name: 'label') String? label,
     @JsonKey(name: 'answer') String? answer,
     @JsonKey(name: 'description') String? description,
     @JsonKey(name: 'visible') @Default(true) bool visible,
@@ -24,7 +24,7 @@ class InputField with _$InputField implements BasicInputField {
 
   const factory InputField.text({
     @JsonKey(name: 'name') required String name,
-    @JsonKey(name: 'title') String? title,
+    @JsonKey(name: 'label') String? label,
     @JsonKey(name: 'description') String? description,
     @JsonKey(name: 'visible') @Default(true) bool visible,
     @JsonKey(name: 'isRequired') @Default(false) bool isRequired,
@@ -44,7 +44,7 @@ class InputField with _$InputField implements BasicInputField {
 
   const factory InputField.date({
     @JsonKey(name: 'name') required String name,
-    @JsonKey(name: 'title') String? title,
+    @JsonKey(name: 'label') String? label,
     @JsonKey(name: 'answer') String? answer,
     @JsonKey(name: 'description') String? description,
     @JsonKey(name: 'visible') @Default(true) bool visible,
@@ -64,7 +64,7 @@ class InputField with _$InputField implements BasicInputField {
 
   const factory InputField.time({
     @JsonKey(name: 'name') required String name,
-    @JsonKey(name: 'title') String? title,
+    @JsonKey(name: 'label') String? label,
     @JsonKey(name: 'answer') String? answer,
     @JsonKey(name: 'description') String? description,
     @JsonKey(name: 'visible') @Default(true) bool visible,
@@ -84,7 +84,7 @@ class InputField with _$InputField implements BasicInputField {
 
   const factory InputField.url({
     @JsonKey(name: 'name') required String name,
-    @JsonKey(name: 'title') String? title,
+    @JsonKey(name: 'label') String? label,
     @JsonKey(name: 'answer') String? answer,
     @JsonKey(name: 'description') String? description,
     @JsonKey(name: 'visible') @Default(true) bool visible,
@@ -104,7 +104,7 @@ class InputField with _$InputField implements BasicInputField {
 
   const factory InputField.number({
     @JsonKey(name: 'name') required String name,
-    @JsonKey(name: 'title') String? title,
+    @JsonKey(name: 'label') String? label,
     @JsonKey(name: 'answer') String? answer,
     @JsonKey(name: 'description') String? description,
     @JsonKey(name: 'visible') @Default(true) bool visible,
@@ -124,7 +124,7 @@ class InputField with _$InputField implements BasicInputField {
 
   const factory InputField.email({
     @JsonKey(name: 'name') required String name,
-    @JsonKey(name: 'title') String? title,
+    @JsonKey(name: 'label') String? label,
     @JsonKey(name: 'answer') String? answer,
     @JsonKey(name: 'description') String? description,
     @JsonKey(name: 'visible') @Default(true) bool visible,
@@ -144,7 +144,7 @@ class InputField with _$InputField implements BasicInputField {
 
   const factory InputField.datetimelocal({
     @JsonKey(name: 'name') required String name,
-    @JsonKey(name: 'title') String? title,
+    @JsonKey(name: 'label') String? label,
     @JsonKey(name: 'answer') String? answer,
     @JsonKey(name: 'description') String? description,
     @JsonKey(name: 'visible') @Default(true) bool visible,
@@ -164,7 +164,7 @@ class InputField with _$InputField implements BasicInputField {
 
   const factory InputField.comment({
     @JsonKey(name: 'name') required String name,
-    @JsonKey(name: 'title') String? title,
+    @JsonKey(name: 'label') String? label,
     @JsonKey(name: 'answer') String? answer,
     @JsonKey(name: 'description') String? description,
     @JsonKey(name: 'visible') @Default(true) bool visible,
@@ -178,7 +178,7 @@ class InputField with _$InputField implements BasicInputField {
 
   const factory InputField.dropdown({
     @JsonKey(name: 'name') required String name,
-    @JsonKey(name: 'title') String? title,
+    @JsonKey(name: 'label') String? label,
     @JsonKey(name: 'answer') String? answer,
     @JsonKey(name: 'description') String? description,
     @JsonKey(name: 'visible') @Default(true) bool visible,
@@ -204,7 +204,7 @@ class InputField with _$InputField implements BasicInputField {
   //
   // const factory InputField.rating({
   //   @JsonKey(name: 'name') required String name,
-  //   @JsonKey(name: 'title') String? title,
+  //   @JsonKey(name: 'label') String? label,
   //   @JsonKey(name: 'description') String? description,
   //   @JsonKey(name: 'visible') @Default(true) bool visible,
   //   @JsonKey(name: 'isRequired') @Default(false) bool isRequired,
@@ -220,7 +220,7 @@ class InputField with _$InputField implements BasicInputField {
 
   const factory InputField.checkbox({
     @JsonKey(name: 'name') required String name,
-    @JsonKey(name: 'title') String? title,
+    @JsonKey(name: 'label') String? label,
     @JsonKey(name: 'answer') String? answer,
     @JsonKey(name: 'description') String? description,
     @JsonKey(name: 'visible') @Default(true) bool visible,
@@ -247,7 +247,7 @@ class InputField with _$InputField implements BasicInputField {
 
   const factory InputField.radiogroup({
     @JsonKey(name: 'name') required String name,
-    @JsonKey(name: 'title') String? title,
+    @JsonKey(name: 'label') String? label,
     @JsonKey(name: 'answer') String? answer,
     @JsonKey(name: 'description') String? description,
     @JsonKey(name: 'visible') @Default(true) bool visible,
@@ -273,7 +273,7 @@ class InputField with _$InputField implements BasicInputField {
 
   const factory InputField.files({
     @JsonKey(name: 'name') required String name,
-    @JsonKey(name: 'title') String? title,
+    @JsonKey(name: 'label') String? label,
     @JsonKey(name: 'answer') String? answer,
     @JsonKey(name: 'description') String? description,
     @JsonKey(name: 'visible') @Default(true) bool visible,
@@ -290,7 +290,7 @@ class InputField with _$InputField implements BasicInputField {
 abstract class BasicInputField {
   BasicInputField(
     this.name,
-    this.title,
+    this.label,
     this.description,
     this.visible,
     this.isRequired,
@@ -300,7 +300,7 @@ abstract class BasicInputField {
   );
 
   final String name;
-  final String? title;
+  final String? label;
   final String? description;
   final bool visible;
   final bool isRequired;

@@ -50,8 +50,8 @@ InputField _$InputFieldFromJson(Map<String, dynamic> json) {
 mixin _$InputField {
   @JsonKey(name: 'name')
   String get name => throw _privateConstructorUsedError;
-  @JsonKey(name: 'title')
-  String? get title => throw _privateConstructorUsedError;
+  @JsonKey(name: 'label')
+  String? get label => throw _privateConstructorUsedError;
   @JsonKey(name: 'answer')
   String? get answer => throw _privateConstructorUsedError;
   @JsonKey(name: 'description')
@@ -68,7 +68,7 @@ mixin _$InputField {
   TResult when<TResult extends Object?>({
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -78,7 +78,7 @@ mixin _$InputField {
         fallback,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
             @JsonKey(name: 'isRequired') bool isRequired,
@@ -94,7 +94,7 @@ mixin _$InputField {
         text,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -110,7 +110,7 @@ mixin _$InputField {
         date,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -126,7 +126,7 @@ mixin _$InputField {
         time,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -142,7 +142,7 @@ mixin _$InputField {
         url,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -158,7 +158,7 @@ mixin _$InputField {
         number,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -174,7 +174,7 @@ mixin _$InputField {
         email,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -190,7 +190,7 @@ mixin _$InputField {
         datetimelocal,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -202,7 +202,7 @@ mixin _$InputField {
         comment,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -223,7 +223,7 @@ mixin _$InputField {
         dropdown,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -244,7 +244,7 @@ mixin _$InputField {
         checkbox,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -264,7 +264,7 @@ mixin _$InputField {
         radiogroup,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -279,7 +279,7 @@ mixin _$InputField {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -289,7 +289,7 @@ mixin _$InputField {
         fallback,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
             @JsonKey(name: 'isRequired') bool isRequired,
@@ -305,7 +305,7 @@ mixin _$InputField {
         text,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -321,7 +321,7 @@ mixin _$InputField {
         date,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -337,7 +337,7 @@ mixin _$InputField {
         time,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -353,7 +353,7 @@ mixin _$InputField {
         url,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -369,7 +369,7 @@ mixin _$InputField {
         number,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -385,7 +385,7 @@ mixin _$InputField {
         email,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -401,7 +401,7 @@ mixin _$InputField {
         datetimelocal,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -413,7 +413,7 @@ mixin _$InputField {
         comment,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -434,7 +434,7 @@ mixin _$InputField {
         dropdown,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -455,7 +455,7 @@ mixin _$InputField {
         checkbox,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -475,7 +475,7 @@ mixin _$InputField {
         radiogroup,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -490,7 +490,7 @@ mixin _$InputField {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -500,7 +500,7 @@ mixin _$InputField {
         fallback,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
             @JsonKey(name: 'isRequired') bool isRequired,
@@ -516,7 +516,7 @@ mixin _$InputField {
         text,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -532,7 +532,7 @@ mixin _$InputField {
         date,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -548,7 +548,7 @@ mixin _$InputField {
         time,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -564,7 +564,7 @@ mixin _$InputField {
         url,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -580,7 +580,7 @@ mixin _$InputField {
         number,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -596,7 +596,7 @@ mixin _$InputField {
         email,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -612,7 +612,7 @@ mixin _$InputField {
         datetimelocal,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -624,7 +624,7 @@ mixin _$InputField {
         comment,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -645,7 +645,7 @@ mixin _$InputField {
         dropdown,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -666,7 +666,7 @@ mixin _$InputField {
         checkbox,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -686,7 +686,7 @@ mixin _$InputField {
         radiogroup,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -764,7 +764,7 @@ abstract class $InputFieldCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(name: 'name') String name,
-      @JsonKey(name: 'title') String? title,
+      @JsonKey(name: 'label') String? label,
       @JsonKey(name: 'answer') String? answer,
       @JsonKey(name: 'description') String? description,
       @JsonKey(name: 'visible') bool visible,
@@ -787,7 +787,7 @@ class _$InputFieldCopyWithImpl<$Res, $Val extends InputField>
   @override
   $Res call({
     Object? name = null,
-    Object? title = freezed,
+    Object? label = freezed,
     Object? answer = freezed,
     Object? description = freezed,
     Object? visible = null,
@@ -800,9 +800,9 @@ class _$InputFieldCopyWithImpl<$Res, $Val extends InputField>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      title: freezed == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
+      label: freezed == label
+          ? _value.label
+          : label // ignore: cast_nullable_to_non_nullable
               as String?,
       answer: freezed == answer
           ? _value.answer
@@ -842,7 +842,7 @@ abstract class _$$_FallbackInputFieldCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(name: 'name') String name,
-      @JsonKey(name: 'title') String? title,
+      @JsonKey(name: 'label') String? label,
       @JsonKey(name: 'answer') String? answer,
       @JsonKey(name: 'description') String? description,
       @JsonKey(name: 'visible') bool visible,
@@ -863,7 +863,7 @@ class __$$_FallbackInputFieldCopyWithImpl<$Res>
   @override
   $Res call({
     Object? name = null,
-    Object? title = freezed,
+    Object? label = freezed,
     Object? answer = freezed,
     Object? description = freezed,
     Object? visible = null,
@@ -876,9 +876,9 @@ class __$$_FallbackInputFieldCopyWithImpl<$Res>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      title: freezed == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
+      label: freezed == label
+          ? _value.label
+          : label // ignore: cast_nullable_to_non_nullable
               as String?,
       answer: freezed == answer
           ? _value.answer
@@ -913,7 +913,7 @@ class __$$_FallbackInputFieldCopyWithImpl<$Res>
 class _$_FallbackInputField implements _FallbackInputField {
   const _$_FallbackInputField(
       {@JsonKey(name: 'name') required this.name,
-      @JsonKey(name: 'title') this.title,
+      @JsonKey(name: 'label') this.label,
       @JsonKey(name: 'answer') this.answer,
       @JsonKey(name: 'description') this.description,
       @JsonKey(name: 'visible') this.visible = true,
@@ -930,8 +930,8 @@ class _$_FallbackInputField implements _FallbackInputField {
   @JsonKey(name: 'name')
   final String name;
   @override
-  @JsonKey(name: 'title')
-  final String? title;
+  @JsonKey(name: 'label')
+  final String? label;
   @override
   @JsonKey(name: 'answer')
   final String? answer;
@@ -956,7 +956,7 @@ class _$_FallbackInputField implements _FallbackInputField {
 
   @override
   String toString() {
-    return 'InputField.fallback(name: $name, title: $title, answer: $answer, description: $description, visible: $visible, isRequired: $isRequired, readOnly: $readOnly, requiredErrorText: $requiredErrorText)';
+    return 'InputField.fallback(name: $name, label: $label, answer: $answer, description: $description, visible: $visible, isRequired: $isRequired, readOnly: $readOnly, requiredErrorText: $requiredErrorText)';
   }
 
   @override
@@ -965,7 +965,7 @@ class _$_FallbackInputField implements _FallbackInputField {
         (other.runtimeType == runtimeType &&
             other is _$_FallbackInputField &&
             (identical(other.name, name) || other.name == name) &&
-            (identical(other.title, title) || other.title == title) &&
+            (identical(other.label, label) || other.label == label) &&
             (identical(other.answer, answer) || other.answer == answer) &&
             (identical(other.description, description) ||
                 other.description == description) &&
@@ -980,7 +980,7 @@ class _$_FallbackInputField implements _FallbackInputField {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, name, title, answer, description,
+  int get hashCode => Object.hash(runtimeType, name, label, answer, description,
       visible, isRequired, readOnly, requiredErrorText);
 
   @JsonKey(ignore: true)
@@ -995,7 +995,7 @@ class _$_FallbackInputField implements _FallbackInputField {
   TResult when<TResult extends Object?>({
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -1005,7 +1005,7 @@ class _$_FallbackInputField implements _FallbackInputField {
         fallback,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
             @JsonKey(name: 'isRequired') bool isRequired,
@@ -1021,7 +1021,7 @@ class _$_FallbackInputField implements _FallbackInputField {
         text,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -1037,7 +1037,7 @@ class _$_FallbackInputField implements _FallbackInputField {
         date,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -1053,7 +1053,7 @@ class _$_FallbackInputField implements _FallbackInputField {
         time,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -1069,7 +1069,7 @@ class _$_FallbackInputField implements _FallbackInputField {
         url,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -1085,7 +1085,7 @@ class _$_FallbackInputField implements _FallbackInputField {
         number,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -1101,7 +1101,7 @@ class _$_FallbackInputField implements _FallbackInputField {
         email,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -1117,7 +1117,7 @@ class _$_FallbackInputField implements _FallbackInputField {
         datetimelocal,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -1129,7 +1129,7 @@ class _$_FallbackInputField implements _FallbackInputField {
         comment,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -1150,7 +1150,7 @@ class _$_FallbackInputField implements _FallbackInputField {
         dropdown,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -1171,7 +1171,7 @@ class _$_FallbackInputField implements _FallbackInputField {
         checkbox,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -1191,7 +1191,7 @@ class _$_FallbackInputField implements _FallbackInputField {
         radiogroup,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -1201,7 +1201,7 @@ class _$_FallbackInputField implements _FallbackInputField {
             @JsonKey(name: 'requiredErrorText') String? requiredErrorText)
         files,
   }) {
-    return fallback(name, title, answer, description, visible, isRequired,
+    return fallback(name, label, answer, description, visible, isRequired,
         readOnly, requiredErrorText);
   }
 
@@ -1210,7 +1210,7 @@ class _$_FallbackInputField implements _FallbackInputField {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -1220,7 +1220,7 @@ class _$_FallbackInputField implements _FallbackInputField {
         fallback,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
             @JsonKey(name: 'isRequired') bool isRequired,
@@ -1236,7 +1236,7 @@ class _$_FallbackInputField implements _FallbackInputField {
         text,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -1252,7 +1252,7 @@ class _$_FallbackInputField implements _FallbackInputField {
         date,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -1268,7 +1268,7 @@ class _$_FallbackInputField implements _FallbackInputField {
         time,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -1284,7 +1284,7 @@ class _$_FallbackInputField implements _FallbackInputField {
         url,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -1300,7 +1300,7 @@ class _$_FallbackInputField implements _FallbackInputField {
         number,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -1316,7 +1316,7 @@ class _$_FallbackInputField implements _FallbackInputField {
         email,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -1332,7 +1332,7 @@ class _$_FallbackInputField implements _FallbackInputField {
         datetimelocal,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -1344,7 +1344,7 @@ class _$_FallbackInputField implements _FallbackInputField {
         comment,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -1365,7 +1365,7 @@ class _$_FallbackInputField implements _FallbackInputField {
         dropdown,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -1386,7 +1386,7 @@ class _$_FallbackInputField implements _FallbackInputField {
         checkbox,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -1406,7 +1406,7 @@ class _$_FallbackInputField implements _FallbackInputField {
         radiogroup,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -1416,7 +1416,7 @@ class _$_FallbackInputField implements _FallbackInputField {
             @JsonKey(name: 'requiredErrorText') String? requiredErrorText)?
         files,
   }) {
-    return fallback?.call(name, title, answer, description, visible, isRequired,
+    return fallback?.call(name, label, answer, description, visible, isRequired,
         readOnly, requiredErrorText);
   }
 
@@ -1425,7 +1425,7 @@ class _$_FallbackInputField implements _FallbackInputField {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -1435,7 +1435,7 @@ class _$_FallbackInputField implements _FallbackInputField {
         fallback,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
             @JsonKey(name: 'isRequired') bool isRequired,
@@ -1451,7 +1451,7 @@ class _$_FallbackInputField implements _FallbackInputField {
         text,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -1467,7 +1467,7 @@ class _$_FallbackInputField implements _FallbackInputField {
         date,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -1483,7 +1483,7 @@ class _$_FallbackInputField implements _FallbackInputField {
         time,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -1499,7 +1499,7 @@ class _$_FallbackInputField implements _FallbackInputField {
         url,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -1515,7 +1515,7 @@ class _$_FallbackInputField implements _FallbackInputField {
         number,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -1531,7 +1531,7 @@ class _$_FallbackInputField implements _FallbackInputField {
         email,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -1547,7 +1547,7 @@ class _$_FallbackInputField implements _FallbackInputField {
         datetimelocal,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -1559,7 +1559,7 @@ class _$_FallbackInputField implements _FallbackInputField {
         comment,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -1580,7 +1580,7 @@ class _$_FallbackInputField implements _FallbackInputField {
         dropdown,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -1601,7 +1601,7 @@ class _$_FallbackInputField implements _FallbackInputField {
         checkbox,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -1621,7 +1621,7 @@ class _$_FallbackInputField implements _FallbackInputField {
         radiogroup,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -1633,7 +1633,7 @@ class _$_FallbackInputField implements _FallbackInputField {
     required TResult orElse(),
   }) {
     if (fallback != null) {
-      return fallback(name, title, answer, description, visible, isRequired,
+      return fallback(name, label, answer, description, visible, isRequired,
           readOnly, requiredErrorText);
     }
     return orElse();
@@ -1714,7 +1714,7 @@ class _$_FallbackInputField implements _FallbackInputField {
 abstract class _FallbackInputField implements InputField {
   const factory _FallbackInputField(
       {@JsonKey(name: 'name') required final String name,
-      @JsonKey(name: 'title') final String? title,
+      @JsonKey(name: 'label') final String? label,
       @JsonKey(name: 'answer') final String? answer,
       @JsonKey(name: 'description') final String? description,
       @JsonKey(name: 'visible') final bool visible,
@@ -1730,8 +1730,8 @@ abstract class _FallbackInputField implements InputField {
   @JsonKey(name: 'name')
   String get name;
   @override
-  @JsonKey(name: 'title')
-  String? get title;
+  @JsonKey(name: 'label')
+  String? get label;
   @override
   @JsonKey(name: 'answer')
   String? get answer;
@@ -1766,7 +1766,7 @@ abstract class _$$TextInputFieldCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(name: 'name') String name,
-      @JsonKey(name: 'title') String? title,
+      @JsonKey(name: 'label') String? label,
       @JsonKey(name: 'description') String? description,
       @JsonKey(name: 'visible') bool visible,
       @JsonKey(name: 'isRequired') bool isRequired,
@@ -1793,7 +1793,7 @@ class __$$TextInputFieldCopyWithImpl<$Res>
   @override
   $Res call({
     Object? name = null,
-    Object? title = freezed,
+    Object? label = freezed,
     Object? description = freezed,
     Object? visible = null,
     Object? isRequired = null,
@@ -1812,9 +1812,9 @@ class __$$TextInputFieldCopyWithImpl<$Res>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      title: freezed == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
+      label: freezed == label
+          ? _value.label
+          : label // ignore: cast_nullable_to_non_nullable
               as String?,
       description: freezed == description
           ? _value.description
@@ -1873,7 +1873,7 @@ class __$$TextInputFieldCopyWithImpl<$Res>
 class _$TextInputField implements TextInputField {
   const _$TextInputField(
       {@JsonKey(name: 'name') required this.name,
-      @JsonKey(name: 'title') this.title,
+      @JsonKey(name: 'label') this.label,
       @JsonKey(name: 'description') this.description,
       @JsonKey(name: 'visible') this.visible = true,
       @JsonKey(name: 'isRequired') this.isRequired = false,
@@ -1896,8 +1896,8 @@ class _$TextInputField implements TextInputField {
   @JsonKey(name: 'name')
   final String name;
   @override
-  @JsonKey(name: 'title')
-  final String? title;
+  @JsonKey(name: 'label')
+  final String? label;
   @override
   @JsonKey(name: 'description')
   final String? description;
@@ -1942,7 +1942,7 @@ class _$TextInputField implements TextInputField {
 
   @override
   String toString() {
-    return 'InputField.text(name: $name, title: $title, description: $description, visible: $visible, isRequired: $isRequired, readOnly: $readOnly, answer: $answer, requiredErrorText: $requiredErrorText, hintText: $hintText, maxLength: $maxLength, min: $min, minErrorText: $minErrorText, max: $max, maxErrorText: $maxErrorText)';
+    return 'InputField.text(name: $name, label: $label, description: $description, visible: $visible, isRequired: $isRequired, readOnly: $readOnly, answer: $answer, requiredErrorText: $requiredErrorText, hintText: $hintText, maxLength: $maxLength, min: $min, minErrorText: $minErrorText, max: $max, maxErrorText: $maxErrorText)';
   }
 
   @override
@@ -1951,7 +1951,7 @@ class _$TextInputField implements TextInputField {
         (other.runtimeType == runtimeType &&
             other is _$TextInputField &&
             (identical(other.name, name) || other.name == name) &&
-            (identical(other.title, title) || other.title == title) &&
+            (identical(other.label, label) || other.label == label) &&
             (identical(other.description, description) ||
                 other.description == description) &&
             (identical(other.visible, visible) || other.visible == visible) &&
@@ -1979,7 +1979,7 @@ class _$TextInputField implements TextInputField {
   int get hashCode => Object.hash(
       runtimeType,
       name,
-      title,
+      label,
       description,
       visible,
       isRequired,
@@ -2004,7 +2004,7 @@ class _$TextInputField implements TextInputField {
   TResult when<TResult extends Object?>({
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -2014,7 +2014,7 @@ class _$TextInputField implements TextInputField {
         fallback,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
             @JsonKey(name: 'isRequired') bool isRequired,
@@ -2030,7 +2030,7 @@ class _$TextInputField implements TextInputField {
         text,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -2046,7 +2046,7 @@ class _$TextInputField implements TextInputField {
         date,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -2062,7 +2062,7 @@ class _$TextInputField implements TextInputField {
         time,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -2078,7 +2078,7 @@ class _$TextInputField implements TextInputField {
         url,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -2094,7 +2094,7 @@ class _$TextInputField implements TextInputField {
         number,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -2110,7 +2110,7 @@ class _$TextInputField implements TextInputField {
         email,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -2126,7 +2126,7 @@ class _$TextInputField implements TextInputField {
         datetimelocal,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -2138,7 +2138,7 @@ class _$TextInputField implements TextInputField {
         comment,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -2159,7 +2159,7 @@ class _$TextInputField implements TextInputField {
         dropdown,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -2180,7 +2180,7 @@ class _$TextInputField implements TextInputField {
         checkbox,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -2200,7 +2200,7 @@ class _$TextInputField implements TextInputField {
         radiogroup,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -2212,7 +2212,7 @@ class _$TextInputField implements TextInputField {
   }) {
     return text(
         name,
-        title,
+        label,
         description,
         visible,
         isRequired,
@@ -2232,7 +2232,7 @@ class _$TextInputField implements TextInputField {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -2242,7 +2242,7 @@ class _$TextInputField implements TextInputField {
         fallback,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
             @JsonKey(name: 'isRequired') bool isRequired,
@@ -2258,7 +2258,7 @@ class _$TextInputField implements TextInputField {
         text,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -2274,7 +2274,7 @@ class _$TextInputField implements TextInputField {
         date,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -2290,7 +2290,7 @@ class _$TextInputField implements TextInputField {
         time,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -2306,7 +2306,7 @@ class _$TextInputField implements TextInputField {
         url,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -2322,7 +2322,7 @@ class _$TextInputField implements TextInputField {
         number,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -2338,7 +2338,7 @@ class _$TextInputField implements TextInputField {
         email,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -2354,7 +2354,7 @@ class _$TextInputField implements TextInputField {
         datetimelocal,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -2366,7 +2366,7 @@ class _$TextInputField implements TextInputField {
         comment,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -2387,7 +2387,7 @@ class _$TextInputField implements TextInputField {
         dropdown,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -2408,7 +2408,7 @@ class _$TextInputField implements TextInputField {
         checkbox,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -2428,7 +2428,7 @@ class _$TextInputField implements TextInputField {
         radiogroup,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -2440,7 +2440,7 @@ class _$TextInputField implements TextInputField {
   }) {
     return text?.call(
         name,
-        title,
+        label,
         description,
         visible,
         isRequired,
@@ -2460,7 +2460,7 @@ class _$TextInputField implements TextInputField {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -2470,7 +2470,7 @@ class _$TextInputField implements TextInputField {
         fallback,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
             @JsonKey(name: 'isRequired') bool isRequired,
@@ -2486,7 +2486,7 @@ class _$TextInputField implements TextInputField {
         text,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -2502,7 +2502,7 @@ class _$TextInputField implements TextInputField {
         date,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -2518,7 +2518,7 @@ class _$TextInputField implements TextInputField {
         time,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -2534,7 +2534,7 @@ class _$TextInputField implements TextInputField {
         url,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -2550,7 +2550,7 @@ class _$TextInputField implements TextInputField {
         number,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -2566,7 +2566,7 @@ class _$TextInputField implements TextInputField {
         email,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -2582,7 +2582,7 @@ class _$TextInputField implements TextInputField {
         datetimelocal,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -2594,7 +2594,7 @@ class _$TextInputField implements TextInputField {
         comment,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -2615,7 +2615,7 @@ class _$TextInputField implements TextInputField {
         dropdown,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -2636,7 +2636,7 @@ class _$TextInputField implements TextInputField {
         checkbox,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -2656,7 +2656,7 @@ class _$TextInputField implements TextInputField {
         radiogroup,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -2670,7 +2670,7 @@ class _$TextInputField implements TextInputField {
     if (text != null) {
       return text(
           name,
-          title,
+          label,
           description,
           visible,
           isRequired,
@@ -2762,7 +2762,7 @@ class _$TextInputField implements TextInputField {
 abstract class TextInputField implements InputField {
   const factory TextInputField(
           {@JsonKey(name: 'name') required final String name,
-          @JsonKey(name: 'title') final String? title,
+          @JsonKey(name: 'label') final String? label,
           @JsonKey(name: 'description') final String? description,
           @JsonKey(name: 'visible') final bool visible,
           @JsonKey(name: 'isRequired') final bool isRequired,
@@ -2784,8 +2784,8 @@ abstract class TextInputField implements InputField {
   @JsonKey(name: 'name')
   String get name;
   @override
-  @JsonKey(name: 'title')
-  String? get title;
+  @JsonKey(name: 'label')
+  String? get label;
   @override
   @JsonKey(name: 'description')
   String? get description;
@@ -2832,7 +2832,7 @@ abstract class _$$DateInputFieldCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(name: 'name') String name,
-      @JsonKey(name: 'title') String? title,
+      @JsonKey(name: 'label') String? label,
       @JsonKey(name: 'answer') String? answer,
       @JsonKey(name: 'description') String? description,
       @JsonKey(name: 'visible') bool visible,
@@ -2859,7 +2859,7 @@ class __$$DateInputFieldCopyWithImpl<$Res>
   @override
   $Res call({
     Object? name = null,
-    Object? title = freezed,
+    Object? label = freezed,
     Object? answer = freezed,
     Object? description = freezed,
     Object? visible = null,
@@ -2878,9 +2878,9 @@ class __$$DateInputFieldCopyWithImpl<$Res>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      title: freezed == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
+      label: freezed == label
+          ? _value.label
+          : label // ignore: cast_nullable_to_non_nullable
               as String?,
       answer: freezed == answer
           ? _value.answer
@@ -2939,7 +2939,7 @@ class __$$DateInputFieldCopyWithImpl<$Res>
 class _$DateInputField implements DateInputField {
   const _$DateInputField(
       {@JsonKey(name: 'name') required this.name,
-      @JsonKey(name: 'title') this.title,
+      @JsonKey(name: 'label') this.label,
       @JsonKey(name: 'answer') this.answer,
       @JsonKey(name: 'description') this.description,
       @JsonKey(name: 'visible') this.visible = true,
@@ -2962,8 +2962,8 @@ class _$DateInputField implements DateInputField {
   @JsonKey(name: 'name')
   final String name;
   @override
-  @JsonKey(name: 'title')
-  final String? title;
+  @JsonKey(name: 'label')
+  final String? label;
   @override
   @JsonKey(name: 'answer')
   final String? answer;
@@ -3008,7 +3008,7 @@ class _$DateInputField implements DateInputField {
 
   @override
   String toString() {
-    return 'InputField.date(name: $name, title: $title, answer: $answer, description: $description, visible: $visible, isRequired: $isRequired, readOnly: $readOnly, requiredErrorText: $requiredErrorText, hintText: $hintText, maxLength: $maxLength, min: $min, minErrorText: $minErrorText, max: $max, maxErrorText: $maxErrorText)';
+    return 'InputField.date(name: $name, label: $label, answer: $answer, description: $description, visible: $visible, isRequired: $isRequired, readOnly: $readOnly, requiredErrorText: $requiredErrorText, hintText: $hintText, maxLength: $maxLength, min: $min, minErrorText: $minErrorText, max: $max, maxErrorText: $maxErrorText)';
   }
 
   @override
@@ -3017,7 +3017,7 @@ class _$DateInputField implements DateInputField {
         (other.runtimeType == runtimeType &&
             other is _$DateInputField &&
             (identical(other.name, name) || other.name == name) &&
-            (identical(other.title, title) || other.title == title) &&
+            (identical(other.label, label) || other.label == label) &&
             (identical(other.answer, answer) || other.answer == answer) &&
             (identical(other.description, description) ||
                 other.description == description) &&
@@ -3045,7 +3045,7 @@ class _$DateInputField implements DateInputField {
   int get hashCode => Object.hash(
       runtimeType,
       name,
-      title,
+      label,
       answer,
       description,
       visible,
@@ -3070,7 +3070,7 @@ class _$DateInputField implements DateInputField {
   TResult when<TResult extends Object?>({
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -3080,7 +3080,7 @@ class _$DateInputField implements DateInputField {
         fallback,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
             @JsonKey(name: 'isRequired') bool isRequired,
@@ -3096,7 +3096,7 @@ class _$DateInputField implements DateInputField {
         text,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -3112,7 +3112,7 @@ class _$DateInputField implements DateInputField {
         date,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -3128,7 +3128,7 @@ class _$DateInputField implements DateInputField {
         time,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -3144,7 +3144,7 @@ class _$DateInputField implements DateInputField {
         url,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -3160,7 +3160,7 @@ class _$DateInputField implements DateInputField {
         number,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -3176,7 +3176,7 @@ class _$DateInputField implements DateInputField {
         email,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -3192,7 +3192,7 @@ class _$DateInputField implements DateInputField {
         datetimelocal,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -3204,7 +3204,7 @@ class _$DateInputField implements DateInputField {
         comment,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -3225,7 +3225,7 @@ class _$DateInputField implements DateInputField {
         dropdown,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -3246,7 +3246,7 @@ class _$DateInputField implements DateInputField {
         checkbox,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -3266,7 +3266,7 @@ class _$DateInputField implements DateInputField {
         radiogroup,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -3278,7 +3278,7 @@ class _$DateInputField implements DateInputField {
   }) {
     return date(
         name,
-        title,
+        label,
         answer,
         description,
         visible,
@@ -3298,7 +3298,7 @@ class _$DateInputField implements DateInputField {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -3308,7 +3308,7 @@ class _$DateInputField implements DateInputField {
         fallback,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
             @JsonKey(name: 'isRequired') bool isRequired,
@@ -3324,7 +3324,7 @@ class _$DateInputField implements DateInputField {
         text,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -3340,7 +3340,7 @@ class _$DateInputField implements DateInputField {
         date,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -3356,7 +3356,7 @@ class _$DateInputField implements DateInputField {
         time,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -3372,7 +3372,7 @@ class _$DateInputField implements DateInputField {
         url,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -3388,7 +3388,7 @@ class _$DateInputField implements DateInputField {
         number,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -3404,7 +3404,7 @@ class _$DateInputField implements DateInputField {
         email,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -3420,7 +3420,7 @@ class _$DateInputField implements DateInputField {
         datetimelocal,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -3432,7 +3432,7 @@ class _$DateInputField implements DateInputField {
         comment,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -3453,7 +3453,7 @@ class _$DateInputField implements DateInputField {
         dropdown,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -3474,7 +3474,7 @@ class _$DateInputField implements DateInputField {
         checkbox,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -3494,7 +3494,7 @@ class _$DateInputField implements DateInputField {
         radiogroup,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -3506,7 +3506,7 @@ class _$DateInputField implements DateInputField {
   }) {
     return date?.call(
         name,
-        title,
+        label,
         answer,
         description,
         visible,
@@ -3526,7 +3526,7 @@ class _$DateInputField implements DateInputField {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -3536,7 +3536,7 @@ class _$DateInputField implements DateInputField {
         fallback,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
             @JsonKey(name: 'isRequired') bool isRequired,
@@ -3552,7 +3552,7 @@ class _$DateInputField implements DateInputField {
         text,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -3568,7 +3568,7 @@ class _$DateInputField implements DateInputField {
         date,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -3584,7 +3584,7 @@ class _$DateInputField implements DateInputField {
         time,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -3600,7 +3600,7 @@ class _$DateInputField implements DateInputField {
         url,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -3616,7 +3616,7 @@ class _$DateInputField implements DateInputField {
         number,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -3632,7 +3632,7 @@ class _$DateInputField implements DateInputField {
         email,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -3648,7 +3648,7 @@ class _$DateInputField implements DateInputField {
         datetimelocal,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -3660,7 +3660,7 @@ class _$DateInputField implements DateInputField {
         comment,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -3681,7 +3681,7 @@ class _$DateInputField implements DateInputField {
         dropdown,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -3702,7 +3702,7 @@ class _$DateInputField implements DateInputField {
         checkbox,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -3722,7 +3722,7 @@ class _$DateInputField implements DateInputField {
         radiogroup,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -3736,7 +3736,7 @@ class _$DateInputField implements DateInputField {
     if (date != null) {
       return date(
           name,
-          title,
+          label,
           answer,
           description,
           visible,
@@ -3828,7 +3828,7 @@ class _$DateInputField implements DateInputField {
 abstract class DateInputField implements InputField {
   const factory DateInputField(
           {@JsonKey(name: 'name') required final String name,
-          @JsonKey(name: 'title') final String? title,
+          @JsonKey(name: 'label') final String? label,
           @JsonKey(name: 'answer') final String? answer,
           @JsonKey(name: 'description') final String? description,
           @JsonKey(name: 'visible') final bool visible,
@@ -3850,8 +3850,8 @@ abstract class DateInputField implements InputField {
   @JsonKey(name: 'name')
   String get name;
   @override
-  @JsonKey(name: 'title')
-  String? get title;
+  @JsonKey(name: 'label')
+  String? get label;
   @override
   @JsonKey(name: 'answer')
   String? get answer;
@@ -3898,7 +3898,7 @@ abstract class _$$TimeInputFieldCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(name: 'name') String name,
-      @JsonKey(name: 'title') String? title,
+      @JsonKey(name: 'label') String? label,
       @JsonKey(name: 'answer') String? answer,
       @JsonKey(name: 'description') String? description,
       @JsonKey(name: 'visible') bool visible,
@@ -3925,7 +3925,7 @@ class __$$TimeInputFieldCopyWithImpl<$Res>
   @override
   $Res call({
     Object? name = null,
-    Object? title = freezed,
+    Object? label = freezed,
     Object? answer = freezed,
     Object? description = freezed,
     Object? visible = null,
@@ -3944,9 +3944,9 @@ class __$$TimeInputFieldCopyWithImpl<$Res>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      title: freezed == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
+      label: freezed == label
+          ? _value.label
+          : label // ignore: cast_nullable_to_non_nullable
               as String?,
       answer: freezed == answer
           ? _value.answer
@@ -4005,7 +4005,7 @@ class __$$TimeInputFieldCopyWithImpl<$Res>
 class _$TimeInputField implements TimeInputField {
   const _$TimeInputField(
       {@JsonKey(name: 'name') required this.name,
-      @JsonKey(name: 'title') this.title,
+      @JsonKey(name: 'label') this.label,
       @JsonKey(name: 'answer') this.answer,
       @JsonKey(name: 'description') this.description,
       @JsonKey(name: 'visible') this.visible = true,
@@ -4028,8 +4028,8 @@ class _$TimeInputField implements TimeInputField {
   @JsonKey(name: 'name')
   final String name;
   @override
-  @JsonKey(name: 'title')
-  final String? title;
+  @JsonKey(name: 'label')
+  final String? label;
   @override
   @JsonKey(name: 'answer')
   final String? answer;
@@ -4074,7 +4074,7 @@ class _$TimeInputField implements TimeInputField {
 
   @override
   String toString() {
-    return 'InputField.time(name: $name, title: $title, answer: $answer, description: $description, visible: $visible, isRequired: $isRequired, readOnly: $readOnly, requiredErrorText: $requiredErrorText, hintText: $hintText, maxLength: $maxLength, min: $min, minErrorText: $minErrorText, max: $max, maxErrorText: $maxErrorText)';
+    return 'InputField.time(name: $name, label: $label, answer: $answer, description: $description, visible: $visible, isRequired: $isRequired, readOnly: $readOnly, requiredErrorText: $requiredErrorText, hintText: $hintText, maxLength: $maxLength, min: $min, minErrorText: $minErrorText, max: $max, maxErrorText: $maxErrorText)';
   }
 
   @override
@@ -4083,7 +4083,7 @@ class _$TimeInputField implements TimeInputField {
         (other.runtimeType == runtimeType &&
             other is _$TimeInputField &&
             (identical(other.name, name) || other.name == name) &&
-            (identical(other.title, title) || other.title == title) &&
+            (identical(other.label, label) || other.label == label) &&
             (identical(other.answer, answer) || other.answer == answer) &&
             (identical(other.description, description) ||
                 other.description == description) &&
@@ -4111,7 +4111,7 @@ class _$TimeInputField implements TimeInputField {
   int get hashCode => Object.hash(
       runtimeType,
       name,
-      title,
+      label,
       answer,
       description,
       visible,
@@ -4136,7 +4136,7 @@ class _$TimeInputField implements TimeInputField {
   TResult when<TResult extends Object?>({
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -4146,7 +4146,7 @@ class _$TimeInputField implements TimeInputField {
         fallback,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
             @JsonKey(name: 'isRequired') bool isRequired,
@@ -4162,7 +4162,7 @@ class _$TimeInputField implements TimeInputField {
         text,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -4178,7 +4178,7 @@ class _$TimeInputField implements TimeInputField {
         date,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -4194,7 +4194,7 @@ class _$TimeInputField implements TimeInputField {
         time,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -4210,7 +4210,7 @@ class _$TimeInputField implements TimeInputField {
         url,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -4226,7 +4226,7 @@ class _$TimeInputField implements TimeInputField {
         number,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -4242,7 +4242,7 @@ class _$TimeInputField implements TimeInputField {
         email,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -4258,7 +4258,7 @@ class _$TimeInputField implements TimeInputField {
         datetimelocal,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -4270,7 +4270,7 @@ class _$TimeInputField implements TimeInputField {
         comment,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -4291,7 +4291,7 @@ class _$TimeInputField implements TimeInputField {
         dropdown,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -4312,7 +4312,7 @@ class _$TimeInputField implements TimeInputField {
         checkbox,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -4332,7 +4332,7 @@ class _$TimeInputField implements TimeInputField {
         radiogroup,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -4344,7 +4344,7 @@ class _$TimeInputField implements TimeInputField {
   }) {
     return time(
         name,
-        title,
+        label,
         answer,
         description,
         visible,
@@ -4364,7 +4364,7 @@ class _$TimeInputField implements TimeInputField {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -4374,7 +4374,7 @@ class _$TimeInputField implements TimeInputField {
         fallback,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
             @JsonKey(name: 'isRequired') bool isRequired,
@@ -4390,7 +4390,7 @@ class _$TimeInputField implements TimeInputField {
         text,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -4406,7 +4406,7 @@ class _$TimeInputField implements TimeInputField {
         date,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -4422,7 +4422,7 @@ class _$TimeInputField implements TimeInputField {
         time,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -4438,7 +4438,7 @@ class _$TimeInputField implements TimeInputField {
         url,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -4454,7 +4454,7 @@ class _$TimeInputField implements TimeInputField {
         number,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -4470,7 +4470,7 @@ class _$TimeInputField implements TimeInputField {
         email,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -4486,7 +4486,7 @@ class _$TimeInputField implements TimeInputField {
         datetimelocal,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -4498,7 +4498,7 @@ class _$TimeInputField implements TimeInputField {
         comment,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -4519,7 +4519,7 @@ class _$TimeInputField implements TimeInputField {
         dropdown,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -4540,7 +4540,7 @@ class _$TimeInputField implements TimeInputField {
         checkbox,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -4560,7 +4560,7 @@ class _$TimeInputField implements TimeInputField {
         radiogroup,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -4572,7 +4572,7 @@ class _$TimeInputField implements TimeInputField {
   }) {
     return time?.call(
         name,
-        title,
+        label,
         answer,
         description,
         visible,
@@ -4592,7 +4592,7 @@ class _$TimeInputField implements TimeInputField {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -4602,7 +4602,7 @@ class _$TimeInputField implements TimeInputField {
         fallback,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
             @JsonKey(name: 'isRequired') bool isRequired,
@@ -4618,7 +4618,7 @@ class _$TimeInputField implements TimeInputField {
         text,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -4634,7 +4634,7 @@ class _$TimeInputField implements TimeInputField {
         date,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -4650,7 +4650,7 @@ class _$TimeInputField implements TimeInputField {
         time,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -4666,7 +4666,7 @@ class _$TimeInputField implements TimeInputField {
         url,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -4682,7 +4682,7 @@ class _$TimeInputField implements TimeInputField {
         number,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -4698,7 +4698,7 @@ class _$TimeInputField implements TimeInputField {
         email,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -4714,7 +4714,7 @@ class _$TimeInputField implements TimeInputField {
         datetimelocal,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -4726,7 +4726,7 @@ class _$TimeInputField implements TimeInputField {
         comment,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -4747,7 +4747,7 @@ class _$TimeInputField implements TimeInputField {
         dropdown,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -4768,7 +4768,7 @@ class _$TimeInputField implements TimeInputField {
         checkbox,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -4788,7 +4788,7 @@ class _$TimeInputField implements TimeInputField {
         radiogroup,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -4802,7 +4802,7 @@ class _$TimeInputField implements TimeInputField {
     if (time != null) {
       return time(
           name,
-          title,
+          label,
           answer,
           description,
           visible,
@@ -4894,7 +4894,7 @@ class _$TimeInputField implements TimeInputField {
 abstract class TimeInputField implements InputField {
   const factory TimeInputField(
           {@JsonKey(name: 'name') required final String name,
-          @JsonKey(name: 'title') final String? title,
+          @JsonKey(name: 'label') final String? label,
           @JsonKey(name: 'answer') final String? answer,
           @JsonKey(name: 'description') final String? description,
           @JsonKey(name: 'visible') final bool visible,
@@ -4916,8 +4916,8 @@ abstract class TimeInputField implements InputField {
   @JsonKey(name: 'name')
   String get name;
   @override
-  @JsonKey(name: 'title')
-  String? get title;
+  @JsonKey(name: 'label')
+  String? get label;
   @override
   @JsonKey(name: 'answer')
   String? get answer;
@@ -4964,7 +4964,7 @@ abstract class _$$UrlInputFieldCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(name: 'name') String name,
-      @JsonKey(name: 'title') String? title,
+      @JsonKey(name: 'label') String? label,
       @JsonKey(name: 'answer') String? answer,
       @JsonKey(name: 'description') String? description,
       @JsonKey(name: 'visible') bool visible,
@@ -4991,7 +4991,7 @@ class __$$UrlInputFieldCopyWithImpl<$Res>
   @override
   $Res call({
     Object? name = null,
-    Object? title = freezed,
+    Object? label = freezed,
     Object? answer = freezed,
     Object? description = freezed,
     Object? visible = null,
@@ -5010,9 +5010,9 @@ class __$$UrlInputFieldCopyWithImpl<$Res>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      title: freezed == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
+      label: freezed == label
+          ? _value.label
+          : label // ignore: cast_nullable_to_non_nullable
               as String?,
       answer: freezed == answer
           ? _value.answer
@@ -5071,7 +5071,7 @@ class __$$UrlInputFieldCopyWithImpl<$Res>
 class _$UrlInputField implements UrlInputField {
   const _$UrlInputField(
       {@JsonKey(name: 'name') required this.name,
-      @JsonKey(name: 'title') this.title,
+      @JsonKey(name: 'label') this.label,
       @JsonKey(name: 'answer') this.answer,
       @JsonKey(name: 'description') this.description,
       @JsonKey(name: 'visible') this.visible = true,
@@ -5094,8 +5094,8 @@ class _$UrlInputField implements UrlInputField {
   @JsonKey(name: 'name')
   final String name;
   @override
-  @JsonKey(name: 'title')
-  final String? title;
+  @JsonKey(name: 'label')
+  final String? label;
   @override
   @JsonKey(name: 'answer')
   final String? answer;
@@ -5140,7 +5140,7 @@ class _$UrlInputField implements UrlInputField {
 
   @override
   String toString() {
-    return 'InputField.url(name: $name, title: $title, answer: $answer, description: $description, visible: $visible, isRequired: $isRequired, readOnly: $readOnly, requiredErrorText: $requiredErrorText, hintText: $hintText, maxLength: $maxLength, min: $min, minErrorText: $minErrorText, max: $max, maxErrorText: $maxErrorText)';
+    return 'InputField.url(name: $name, label: $label, answer: $answer, description: $description, visible: $visible, isRequired: $isRequired, readOnly: $readOnly, requiredErrorText: $requiredErrorText, hintText: $hintText, maxLength: $maxLength, min: $min, minErrorText: $minErrorText, max: $max, maxErrorText: $maxErrorText)';
   }
 
   @override
@@ -5149,7 +5149,7 @@ class _$UrlInputField implements UrlInputField {
         (other.runtimeType == runtimeType &&
             other is _$UrlInputField &&
             (identical(other.name, name) || other.name == name) &&
-            (identical(other.title, title) || other.title == title) &&
+            (identical(other.label, label) || other.label == label) &&
             (identical(other.answer, answer) || other.answer == answer) &&
             (identical(other.description, description) ||
                 other.description == description) &&
@@ -5177,7 +5177,7 @@ class _$UrlInputField implements UrlInputField {
   int get hashCode => Object.hash(
       runtimeType,
       name,
-      title,
+      label,
       answer,
       description,
       visible,
@@ -5202,7 +5202,7 @@ class _$UrlInputField implements UrlInputField {
   TResult when<TResult extends Object?>({
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -5212,7 +5212,7 @@ class _$UrlInputField implements UrlInputField {
         fallback,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
             @JsonKey(name: 'isRequired') bool isRequired,
@@ -5228,7 +5228,7 @@ class _$UrlInputField implements UrlInputField {
         text,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -5244,7 +5244,7 @@ class _$UrlInputField implements UrlInputField {
         date,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -5260,7 +5260,7 @@ class _$UrlInputField implements UrlInputField {
         time,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -5276,7 +5276,7 @@ class _$UrlInputField implements UrlInputField {
         url,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -5292,7 +5292,7 @@ class _$UrlInputField implements UrlInputField {
         number,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -5308,7 +5308,7 @@ class _$UrlInputField implements UrlInputField {
         email,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -5324,7 +5324,7 @@ class _$UrlInputField implements UrlInputField {
         datetimelocal,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -5336,7 +5336,7 @@ class _$UrlInputField implements UrlInputField {
         comment,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -5357,7 +5357,7 @@ class _$UrlInputField implements UrlInputField {
         dropdown,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -5378,7 +5378,7 @@ class _$UrlInputField implements UrlInputField {
         checkbox,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -5398,7 +5398,7 @@ class _$UrlInputField implements UrlInputField {
         radiogroup,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -5410,7 +5410,7 @@ class _$UrlInputField implements UrlInputField {
   }) {
     return url(
         name,
-        title,
+        label,
         answer,
         description,
         visible,
@@ -5430,7 +5430,7 @@ class _$UrlInputField implements UrlInputField {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -5440,7 +5440,7 @@ class _$UrlInputField implements UrlInputField {
         fallback,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
             @JsonKey(name: 'isRequired') bool isRequired,
@@ -5456,7 +5456,7 @@ class _$UrlInputField implements UrlInputField {
         text,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -5472,7 +5472,7 @@ class _$UrlInputField implements UrlInputField {
         date,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -5488,7 +5488,7 @@ class _$UrlInputField implements UrlInputField {
         time,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -5504,7 +5504,7 @@ class _$UrlInputField implements UrlInputField {
         url,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -5520,7 +5520,7 @@ class _$UrlInputField implements UrlInputField {
         number,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -5536,7 +5536,7 @@ class _$UrlInputField implements UrlInputField {
         email,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -5552,7 +5552,7 @@ class _$UrlInputField implements UrlInputField {
         datetimelocal,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -5564,7 +5564,7 @@ class _$UrlInputField implements UrlInputField {
         comment,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -5585,7 +5585,7 @@ class _$UrlInputField implements UrlInputField {
         dropdown,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -5606,7 +5606,7 @@ class _$UrlInputField implements UrlInputField {
         checkbox,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -5626,7 +5626,7 @@ class _$UrlInputField implements UrlInputField {
         radiogroup,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -5638,7 +5638,7 @@ class _$UrlInputField implements UrlInputField {
   }) {
     return url?.call(
         name,
-        title,
+        label,
         answer,
         description,
         visible,
@@ -5658,7 +5658,7 @@ class _$UrlInputField implements UrlInputField {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -5668,7 +5668,7 @@ class _$UrlInputField implements UrlInputField {
         fallback,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
             @JsonKey(name: 'isRequired') bool isRequired,
@@ -5684,7 +5684,7 @@ class _$UrlInputField implements UrlInputField {
         text,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -5700,7 +5700,7 @@ class _$UrlInputField implements UrlInputField {
         date,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -5716,7 +5716,7 @@ class _$UrlInputField implements UrlInputField {
         time,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -5732,7 +5732,7 @@ class _$UrlInputField implements UrlInputField {
         url,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -5748,7 +5748,7 @@ class _$UrlInputField implements UrlInputField {
         number,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -5764,7 +5764,7 @@ class _$UrlInputField implements UrlInputField {
         email,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -5780,7 +5780,7 @@ class _$UrlInputField implements UrlInputField {
         datetimelocal,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -5792,7 +5792,7 @@ class _$UrlInputField implements UrlInputField {
         comment,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -5813,7 +5813,7 @@ class _$UrlInputField implements UrlInputField {
         dropdown,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -5834,7 +5834,7 @@ class _$UrlInputField implements UrlInputField {
         checkbox,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -5854,7 +5854,7 @@ class _$UrlInputField implements UrlInputField {
         radiogroup,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -5868,7 +5868,7 @@ class _$UrlInputField implements UrlInputField {
     if (url != null) {
       return url(
           name,
-          title,
+          label,
           answer,
           description,
           visible,
@@ -5960,7 +5960,7 @@ class _$UrlInputField implements UrlInputField {
 abstract class UrlInputField implements InputField {
   const factory UrlInputField(
           {@JsonKey(name: 'name') required final String name,
-          @JsonKey(name: 'title') final String? title,
+          @JsonKey(name: 'label') final String? label,
           @JsonKey(name: 'answer') final String? answer,
           @JsonKey(name: 'description') final String? description,
           @JsonKey(name: 'visible') final bool visible,
@@ -5982,8 +5982,8 @@ abstract class UrlInputField implements InputField {
   @JsonKey(name: 'name')
   String get name;
   @override
-  @JsonKey(name: 'title')
-  String? get title;
+  @JsonKey(name: 'label')
+  String? get label;
   @override
   @JsonKey(name: 'answer')
   String? get answer;
@@ -6030,7 +6030,7 @@ abstract class _$$NumberInputFieldCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(name: 'name') String name,
-      @JsonKey(name: 'title') String? title,
+      @JsonKey(name: 'label') String? label,
       @JsonKey(name: 'answer') String? answer,
       @JsonKey(name: 'description') String? description,
       @JsonKey(name: 'visible') bool visible,
@@ -6057,7 +6057,7 @@ class __$$NumberInputFieldCopyWithImpl<$Res>
   @override
   $Res call({
     Object? name = null,
-    Object? title = freezed,
+    Object? label = freezed,
     Object? answer = freezed,
     Object? description = freezed,
     Object? visible = null,
@@ -6076,9 +6076,9 @@ class __$$NumberInputFieldCopyWithImpl<$Res>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      title: freezed == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
+      label: freezed == label
+          ? _value.label
+          : label // ignore: cast_nullable_to_non_nullable
               as String?,
       answer: freezed == answer
           ? _value.answer
@@ -6137,7 +6137,7 @@ class __$$NumberInputFieldCopyWithImpl<$Res>
 class _$NumberInputField implements NumberInputField {
   const _$NumberInputField(
       {@JsonKey(name: 'name') required this.name,
-      @JsonKey(name: 'title') this.title,
+      @JsonKey(name: 'label') this.label,
       @JsonKey(name: 'answer') this.answer,
       @JsonKey(name: 'description') this.description,
       @JsonKey(name: 'visible') this.visible = true,
@@ -6160,8 +6160,8 @@ class _$NumberInputField implements NumberInputField {
   @JsonKey(name: 'name')
   final String name;
   @override
-  @JsonKey(name: 'title')
-  final String? title;
+  @JsonKey(name: 'label')
+  final String? label;
   @override
   @JsonKey(name: 'answer')
   final String? answer;
@@ -6206,7 +6206,7 @@ class _$NumberInputField implements NumberInputField {
 
   @override
   String toString() {
-    return 'InputField.number(name: $name, title: $title, answer: $answer, description: $description, visible: $visible, isRequired: $isRequired, readOnly: $readOnly, requiredErrorText: $requiredErrorText, hintText: $hintText, maxLength: $maxLength, min: $min, minErrorText: $minErrorText, max: $max, maxErrorText: $maxErrorText)';
+    return 'InputField.number(name: $name, label: $label, answer: $answer, description: $description, visible: $visible, isRequired: $isRequired, readOnly: $readOnly, requiredErrorText: $requiredErrorText, hintText: $hintText, maxLength: $maxLength, min: $min, minErrorText: $minErrorText, max: $max, maxErrorText: $maxErrorText)';
   }
 
   @override
@@ -6215,7 +6215,7 @@ class _$NumberInputField implements NumberInputField {
         (other.runtimeType == runtimeType &&
             other is _$NumberInputField &&
             (identical(other.name, name) || other.name == name) &&
-            (identical(other.title, title) || other.title == title) &&
+            (identical(other.label, label) || other.label == label) &&
             (identical(other.answer, answer) || other.answer == answer) &&
             (identical(other.description, description) ||
                 other.description == description) &&
@@ -6243,7 +6243,7 @@ class _$NumberInputField implements NumberInputField {
   int get hashCode => Object.hash(
       runtimeType,
       name,
-      title,
+      label,
       answer,
       description,
       visible,
@@ -6268,7 +6268,7 @@ class _$NumberInputField implements NumberInputField {
   TResult when<TResult extends Object?>({
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -6278,7 +6278,7 @@ class _$NumberInputField implements NumberInputField {
         fallback,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
             @JsonKey(name: 'isRequired') bool isRequired,
@@ -6294,7 +6294,7 @@ class _$NumberInputField implements NumberInputField {
         text,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -6310,7 +6310,7 @@ class _$NumberInputField implements NumberInputField {
         date,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -6326,7 +6326,7 @@ class _$NumberInputField implements NumberInputField {
         time,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -6342,7 +6342,7 @@ class _$NumberInputField implements NumberInputField {
         url,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -6358,7 +6358,7 @@ class _$NumberInputField implements NumberInputField {
         number,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -6374,7 +6374,7 @@ class _$NumberInputField implements NumberInputField {
         email,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -6390,7 +6390,7 @@ class _$NumberInputField implements NumberInputField {
         datetimelocal,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -6402,7 +6402,7 @@ class _$NumberInputField implements NumberInputField {
         comment,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -6423,7 +6423,7 @@ class _$NumberInputField implements NumberInputField {
         dropdown,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -6444,7 +6444,7 @@ class _$NumberInputField implements NumberInputField {
         checkbox,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -6464,7 +6464,7 @@ class _$NumberInputField implements NumberInputField {
         radiogroup,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -6476,7 +6476,7 @@ class _$NumberInputField implements NumberInputField {
   }) {
     return number(
         name,
-        title,
+        label,
         answer,
         description,
         visible,
@@ -6496,7 +6496,7 @@ class _$NumberInputField implements NumberInputField {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -6506,7 +6506,7 @@ class _$NumberInputField implements NumberInputField {
         fallback,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
             @JsonKey(name: 'isRequired') bool isRequired,
@@ -6522,7 +6522,7 @@ class _$NumberInputField implements NumberInputField {
         text,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -6538,7 +6538,7 @@ class _$NumberInputField implements NumberInputField {
         date,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -6554,7 +6554,7 @@ class _$NumberInputField implements NumberInputField {
         time,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -6570,7 +6570,7 @@ class _$NumberInputField implements NumberInputField {
         url,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -6586,7 +6586,7 @@ class _$NumberInputField implements NumberInputField {
         number,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -6602,7 +6602,7 @@ class _$NumberInputField implements NumberInputField {
         email,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -6618,7 +6618,7 @@ class _$NumberInputField implements NumberInputField {
         datetimelocal,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -6630,7 +6630,7 @@ class _$NumberInputField implements NumberInputField {
         comment,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -6651,7 +6651,7 @@ class _$NumberInputField implements NumberInputField {
         dropdown,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -6672,7 +6672,7 @@ class _$NumberInputField implements NumberInputField {
         checkbox,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -6692,7 +6692,7 @@ class _$NumberInputField implements NumberInputField {
         radiogroup,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -6704,7 +6704,7 @@ class _$NumberInputField implements NumberInputField {
   }) {
     return number?.call(
         name,
-        title,
+        label,
         answer,
         description,
         visible,
@@ -6724,7 +6724,7 @@ class _$NumberInputField implements NumberInputField {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -6734,7 +6734,7 @@ class _$NumberInputField implements NumberInputField {
         fallback,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
             @JsonKey(name: 'isRequired') bool isRequired,
@@ -6750,7 +6750,7 @@ class _$NumberInputField implements NumberInputField {
         text,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -6766,7 +6766,7 @@ class _$NumberInputField implements NumberInputField {
         date,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -6782,7 +6782,7 @@ class _$NumberInputField implements NumberInputField {
         time,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -6798,7 +6798,7 @@ class _$NumberInputField implements NumberInputField {
         url,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -6814,7 +6814,7 @@ class _$NumberInputField implements NumberInputField {
         number,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -6830,7 +6830,7 @@ class _$NumberInputField implements NumberInputField {
         email,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -6846,7 +6846,7 @@ class _$NumberInputField implements NumberInputField {
         datetimelocal,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -6858,7 +6858,7 @@ class _$NumberInputField implements NumberInputField {
         comment,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -6879,7 +6879,7 @@ class _$NumberInputField implements NumberInputField {
         dropdown,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -6900,7 +6900,7 @@ class _$NumberInputField implements NumberInputField {
         checkbox,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -6920,7 +6920,7 @@ class _$NumberInputField implements NumberInputField {
         radiogroup,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -6934,7 +6934,7 @@ class _$NumberInputField implements NumberInputField {
     if (number != null) {
       return number(
           name,
-          title,
+          label,
           answer,
           description,
           visible,
@@ -7026,7 +7026,7 @@ class _$NumberInputField implements NumberInputField {
 abstract class NumberInputField implements InputField {
   const factory NumberInputField(
           {@JsonKey(name: 'name') required final String name,
-          @JsonKey(name: 'title') final String? title,
+          @JsonKey(name: 'label') final String? label,
           @JsonKey(name: 'answer') final String? answer,
           @JsonKey(name: 'description') final String? description,
           @JsonKey(name: 'visible') final bool visible,
@@ -7048,8 +7048,8 @@ abstract class NumberInputField implements InputField {
   @JsonKey(name: 'name')
   String get name;
   @override
-  @JsonKey(name: 'title')
-  String? get title;
+  @JsonKey(name: 'label')
+  String? get label;
   @override
   @JsonKey(name: 'answer')
   String? get answer;
@@ -7096,7 +7096,7 @@ abstract class _$$EmailInputFieldCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(name: 'name') String name,
-      @JsonKey(name: 'title') String? title,
+      @JsonKey(name: 'label') String? label,
       @JsonKey(name: 'answer') String? answer,
       @JsonKey(name: 'description') String? description,
       @JsonKey(name: 'visible') bool visible,
@@ -7123,7 +7123,7 @@ class __$$EmailInputFieldCopyWithImpl<$Res>
   @override
   $Res call({
     Object? name = null,
-    Object? title = freezed,
+    Object? label = freezed,
     Object? answer = freezed,
     Object? description = freezed,
     Object? visible = null,
@@ -7142,9 +7142,9 @@ class __$$EmailInputFieldCopyWithImpl<$Res>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      title: freezed == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
+      label: freezed == label
+          ? _value.label
+          : label // ignore: cast_nullable_to_non_nullable
               as String?,
       answer: freezed == answer
           ? _value.answer
@@ -7203,7 +7203,7 @@ class __$$EmailInputFieldCopyWithImpl<$Res>
 class _$EmailInputField implements EmailInputField {
   const _$EmailInputField(
       {@JsonKey(name: 'name') required this.name,
-      @JsonKey(name: 'title') this.title,
+      @JsonKey(name: 'label') this.label,
       @JsonKey(name: 'answer') this.answer,
       @JsonKey(name: 'description') this.description,
       @JsonKey(name: 'visible') this.visible = true,
@@ -7226,8 +7226,8 @@ class _$EmailInputField implements EmailInputField {
   @JsonKey(name: 'name')
   final String name;
   @override
-  @JsonKey(name: 'title')
-  final String? title;
+  @JsonKey(name: 'label')
+  final String? label;
   @override
   @JsonKey(name: 'answer')
   final String? answer;
@@ -7272,7 +7272,7 @@ class _$EmailInputField implements EmailInputField {
 
   @override
   String toString() {
-    return 'InputField.email(name: $name, title: $title, answer: $answer, description: $description, visible: $visible, isRequired: $isRequired, readOnly: $readOnly, requiredErrorText: $requiredErrorText, hintText: $hintText, maxLength: $maxLength, min: $min, minErrorText: $minErrorText, max: $max, maxErrorText: $maxErrorText)';
+    return 'InputField.email(name: $name, label: $label, answer: $answer, description: $description, visible: $visible, isRequired: $isRequired, readOnly: $readOnly, requiredErrorText: $requiredErrorText, hintText: $hintText, maxLength: $maxLength, min: $min, minErrorText: $minErrorText, max: $max, maxErrorText: $maxErrorText)';
   }
 
   @override
@@ -7281,7 +7281,7 @@ class _$EmailInputField implements EmailInputField {
         (other.runtimeType == runtimeType &&
             other is _$EmailInputField &&
             (identical(other.name, name) || other.name == name) &&
-            (identical(other.title, title) || other.title == title) &&
+            (identical(other.label, label) || other.label == label) &&
             (identical(other.answer, answer) || other.answer == answer) &&
             (identical(other.description, description) ||
                 other.description == description) &&
@@ -7309,7 +7309,7 @@ class _$EmailInputField implements EmailInputField {
   int get hashCode => Object.hash(
       runtimeType,
       name,
-      title,
+      label,
       answer,
       description,
       visible,
@@ -7334,7 +7334,7 @@ class _$EmailInputField implements EmailInputField {
   TResult when<TResult extends Object?>({
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -7344,7 +7344,7 @@ class _$EmailInputField implements EmailInputField {
         fallback,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
             @JsonKey(name: 'isRequired') bool isRequired,
@@ -7360,7 +7360,7 @@ class _$EmailInputField implements EmailInputField {
         text,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -7376,7 +7376,7 @@ class _$EmailInputField implements EmailInputField {
         date,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -7392,7 +7392,7 @@ class _$EmailInputField implements EmailInputField {
         time,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -7408,7 +7408,7 @@ class _$EmailInputField implements EmailInputField {
         url,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -7424,7 +7424,7 @@ class _$EmailInputField implements EmailInputField {
         number,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -7440,7 +7440,7 @@ class _$EmailInputField implements EmailInputField {
         email,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -7456,7 +7456,7 @@ class _$EmailInputField implements EmailInputField {
         datetimelocal,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -7468,7 +7468,7 @@ class _$EmailInputField implements EmailInputField {
         comment,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -7489,7 +7489,7 @@ class _$EmailInputField implements EmailInputField {
         dropdown,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -7510,7 +7510,7 @@ class _$EmailInputField implements EmailInputField {
         checkbox,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -7530,7 +7530,7 @@ class _$EmailInputField implements EmailInputField {
         radiogroup,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -7542,7 +7542,7 @@ class _$EmailInputField implements EmailInputField {
   }) {
     return email(
         name,
-        title,
+        label,
         answer,
         description,
         visible,
@@ -7562,7 +7562,7 @@ class _$EmailInputField implements EmailInputField {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -7572,7 +7572,7 @@ class _$EmailInputField implements EmailInputField {
         fallback,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
             @JsonKey(name: 'isRequired') bool isRequired,
@@ -7588,7 +7588,7 @@ class _$EmailInputField implements EmailInputField {
         text,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -7604,7 +7604,7 @@ class _$EmailInputField implements EmailInputField {
         date,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -7620,7 +7620,7 @@ class _$EmailInputField implements EmailInputField {
         time,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -7636,7 +7636,7 @@ class _$EmailInputField implements EmailInputField {
         url,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -7652,7 +7652,7 @@ class _$EmailInputField implements EmailInputField {
         number,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -7668,7 +7668,7 @@ class _$EmailInputField implements EmailInputField {
         email,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -7684,7 +7684,7 @@ class _$EmailInputField implements EmailInputField {
         datetimelocal,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -7696,7 +7696,7 @@ class _$EmailInputField implements EmailInputField {
         comment,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -7717,7 +7717,7 @@ class _$EmailInputField implements EmailInputField {
         dropdown,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -7738,7 +7738,7 @@ class _$EmailInputField implements EmailInputField {
         checkbox,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -7758,7 +7758,7 @@ class _$EmailInputField implements EmailInputField {
         radiogroup,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -7770,7 +7770,7 @@ class _$EmailInputField implements EmailInputField {
   }) {
     return email?.call(
         name,
-        title,
+        label,
         answer,
         description,
         visible,
@@ -7790,7 +7790,7 @@ class _$EmailInputField implements EmailInputField {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -7800,7 +7800,7 @@ class _$EmailInputField implements EmailInputField {
         fallback,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
             @JsonKey(name: 'isRequired') bool isRequired,
@@ -7816,7 +7816,7 @@ class _$EmailInputField implements EmailInputField {
         text,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -7832,7 +7832,7 @@ class _$EmailInputField implements EmailInputField {
         date,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -7848,7 +7848,7 @@ class _$EmailInputField implements EmailInputField {
         time,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -7864,7 +7864,7 @@ class _$EmailInputField implements EmailInputField {
         url,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -7880,7 +7880,7 @@ class _$EmailInputField implements EmailInputField {
         number,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -7896,7 +7896,7 @@ class _$EmailInputField implements EmailInputField {
         email,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -7912,7 +7912,7 @@ class _$EmailInputField implements EmailInputField {
         datetimelocal,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -7924,7 +7924,7 @@ class _$EmailInputField implements EmailInputField {
         comment,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -7945,7 +7945,7 @@ class _$EmailInputField implements EmailInputField {
         dropdown,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -7966,7 +7966,7 @@ class _$EmailInputField implements EmailInputField {
         checkbox,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -7986,7 +7986,7 @@ class _$EmailInputField implements EmailInputField {
         radiogroup,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -8000,7 +8000,7 @@ class _$EmailInputField implements EmailInputField {
     if (email != null) {
       return email(
           name,
-          title,
+          label,
           answer,
           description,
           visible,
@@ -8092,7 +8092,7 @@ class _$EmailInputField implements EmailInputField {
 abstract class EmailInputField implements InputField {
   const factory EmailInputField(
           {@JsonKey(name: 'name') required final String name,
-          @JsonKey(name: 'title') final String? title,
+          @JsonKey(name: 'label') final String? label,
           @JsonKey(name: 'answer') final String? answer,
           @JsonKey(name: 'description') final String? description,
           @JsonKey(name: 'visible') final bool visible,
@@ -8114,8 +8114,8 @@ abstract class EmailInputField implements InputField {
   @JsonKey(name: 'name')
   String get name;
   @override
-  @JsonKey(name: 'title')
-  String? get title;
+  @JsonKey(name: 'label')
+  String? get label;
   @override
   @JsonKey(name: 'answer')
   String? get answer;
@@ -8162,7 +8162,7 @@ abstract class _$$DateTimeInputFieldCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(name: 'name') String name,
-      @JsonKey(name: 'title') String? title,
+      @JsonKey(name: 'label') String? label,
       @JsonKey(name: 'answer') String? answer,
       @JsonKey(name: 'description') String? description,
       @JsonKey(name: 'visible') bool visible,
@@ -8189,7 +8189,7 @@ class __$$DateTimeInputFieldCopyWithImpl<$Res>
   @override
   $Res call({
     Object? name = null,
-    Object? title = freezed,
+    Object? label = freezed,
     Object? answer = freezed,
     Object? description = freezed,
     Object? visible = null,
@@ -8208,9 +8208,9 @@ class __$$DateTimeInputFieldCopyWithImpl<$Res>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      title: freezed == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
+      label: freezed == label
+          ? _value.label
+          : label // ignore: cast_nullable_to_non_nullable
               as String?,
       answer: freezed == answer
           ? _value.answer
@@ -8269,7 +8269,7 @@ class __$$DateTimeInputFieldCopyWithImpl<$Res>
 class _$DateTimeInputField implements DateTimeInputField {
   const _$DateTimeInputField(
       {@JsonKey(name: 'name') required this.name,
-      @JsonKey(name: 'title') this.title,
+      @JsonKey(name: 'label') this.label,
       @JsonKey(name: 'answer') this.answer,
       @JsonKey(name: 'description') this.description,
       @JsonKey(name: 'visible') this.visible = true,
@@ -8292,8 +8292,8 @@ class _$DateTimeInputField implements DateTimeInputField {
   @JsonKey(name: 'name')
   final String name;
   @override
-  @JsonKey(name: 'title')
-  final String? title;
+  @JsonKey(name: 'label')
+  final String? label;
   @override
   @JsonKey(name: 'answer')
   final String? answer;
@@ -8338,7 +8338,7 @@ class _$DateTimeInputField implements DateTimeInputField {
 
   @override
   String toString() {
-    return 'InputField.datetimelocal(name: $name, title: $title, answer: $answer, description: $description, visible: $visible, isRequired: $isRequired, readOnly: $readOnly, requiredErrorText: $requiredErrorText, hintText: $hintText, maxLength: $maxLength, min: $min, minErrorText: $minErrorText, max: $max, maxErrorText: $maxErrorText)';
+    return 'InputField.datetimelocal(name: $name, label: $label, answer: $answer, description: $description, visible: $visible, isRequired: $isRequired, readOnly: $readOnly, requiredErrorText: $requiredErrorText, hintText: $hintText, maxLength: $maxLength, min: $min, minErrorText: $minErrorText, max: $max, maxErrorText: $maxErrorText)';
   }
 
   @override
@@ -8347,7 +8347,7 @@ class _$DateTimeInputField implements DateTimeInputField {
         (other.runtimeType == runtimeType &&
             other is _$DateTimeInputField &&
             (identical(other.name, name) || other.name == name) &&
-            (identical(other.title, title) || other.title == title) &&
+            (identical(other.label, label) || other.label == label) &&
             (identical(other.answer, answer) || other.answer == answer) &&
             (identical(other.description, description) ||
                 other.description == description) &&
@@ -8375,7 +8375,7 @@ class _$DateTimeInputField implements DateTimeInputField {
   int get hashCode => Object.hash(
       runtimeType,
       name,
-      title,
+      label,
       answer,
       description,
       visible,
@@ -8401,7 +8401,7 @@ class _$DateTimeInputField implements DateTimeInputField {
   TResult when<TResult extends Object?>({
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -8411,7 +8411,7 @@ class _$DateTimeInputField implements DateTimeInputField {
         fallback,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
             @JsonKey(name: 'isRequired') bool isRequired,
@@ -8427,7 +8427,7 @@ class _$DateTimeInputField implements DateTimeInputField {
         text,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -8443,7 +8443,7 @@ class _$DateTimeInputField implements DateTimeInputField {
         date,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -8459,7 +8459,7 @@ class _$DateTimeInputField implements DateTimeInputField {
         time,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -8475,7 +8475,7 @@ class _$DateTimeInputField implements DateTimeInputField {
         url,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -8491,7 +8491,7 @@ class _$DateTimeInputField implements DateTimeInputField {
         number,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -8507,7 +8507,7 @@ class _$DateTimeInputField implements DateTimeInputField {
         email,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -8523,7 +8523,7 @@ class _$DateTimeInputField implements DateTimeInputField {
         datetimelocal,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -8535,7 +8535,7 @@ class _$DateTimeInputField implements DateTimeInputField {
         comment,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -8556,7 +8556,7 @@ class _$DateTimeInputField implements DateTimeInputField {
         dropdown,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -8577,7 +8577,7 @@ class _$DateTimeInputField implements DateTimeInputField {
         checkbox,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -8597,7 +8597,7 @@ class _$DateTimeInputField implements DateTimeInputField {
         radiogroup,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -8609,7 +8609,7 @@ class _$DateTimeInputField implements DateTimeInputField {
   }) {
     return datetimelocal(
         name,
-        title,
+        label,
         answer,
         description,
         visible,
@@ -8629,7 +8629,7 @@ class _$DateTimeInputField implements DateTimeInputField {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -8639,7 +8639,7 @@ class _$DateTimeInputField implements DateTimeInputField {
         fallback,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
             @JsonKey(name: 'isRequired') bool isRequired,
@@ -8655,7 +8655,7 @@ class _$DateTimeInputField implements DateTimeInputField {
         text,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -8671,7 +8671,7 @@ class _$DateTimeInputField implements DateTimeInputField {
         date,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -8687,7 +8687,7 @@ class _$DateTimeInputField implements DateTimeInputField {
         time,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -8703,7 +8703,7 @@ class _$DateTimeInputField implements DateTimeInputField {
         url,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -8719,7 +8719,7 @@ class _$DateTimeInputField implements DateTimeInputField {
         number,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -8735,7 +8735,7 @@ class _$DateTimeInputField implements DateTimeInputField {
         email,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -8751,7 +8751,7 @@ class _$DateTimeInputField implements DateTimeInputField {
         datetimelocal,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -8763,7 +8763,7 @@ class _$DateTimeInputField implements DateTimeInputField {
         comment,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -8784,7 +8784,7 @@ class _$DateTimeInputField implements DateTimeInputField {
         dropdown,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -8805,7 +8805,7 @@ class _$DateTimeInputField implements DateTimeInputField {
         checkbox,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -8825,7 +8825,7 @@ class _$DateTimeInputField implements DateTimeInputField {
         radiogroup,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -8837,7 +8837,7 @@ class _$DateTimeInputField implements DateTimeInputField {
   }) {
     return datetimelocal?.call(
         name,
-        title,
+        label,
         answer,
         description,
         visible,
@@ -8857,7 +8857,7 @@ class _$DateTimeInputField implements DateTimeInputField {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -8867,7 +8867,7 @@ class _$DateTimeInputField implements DateTimeInputField {
         fallback,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
             @JsonKey(name: 'isRequired') bool isRequired,
@@ -8883,7 +8883,7 @@ class _$DateTimeInputField implements DateTimeInputField {
         text,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -8899,7 +8899,7 @@ class _$DateTimeInputField implements DateTimeInputField {
         date,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -8915,7 +8915,7 @@ class _$DateTimeInputField implements DateTimeInputField {
         time,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -8931,7 +8931,7 @@ class _$DateTimeInputField implements DateTimeInputField {
         url,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -8947,7 +8947,7 @@ class _$DateTimeInputField implements DateTimeInputField {
         number,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -8963,7 +8963,7 @@ class _$DateTimeInputField implements DateTimeInputField {
         email,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -8979,7 +8979,7 @@ class _$DateTimeInputField implements DateTimeInputField {
         datetimelocal,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -8991,7 +8991,7 @@ class _$DateTimeInputField implements DateTimeInputField {
         comment,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -9012,7 +9012,7 @@ class _$DateTimeInputField implements DateTimeInputField {
         dropdown,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -9033,7 +9033,7 @@ class _$DateTimeInputField implements DateTimeInputField {
         checkbox,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -9053,7 +9053,7 @@ class _$DateTimeInputField implements DateTimeInputField {
         radiogroup,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -9067,7 +9067,7 @@ class _$DateTimeInputField implements DateTimeInputField {
     if (datetimelocal != null) {
       return datetimelocal(
           name,
-          title,
+          label,
           answer,
           description,
           visible,
@@ -9159,7 +9159,7 @@ class _$DateTimeInputField implements DateTimeInputField {
 abstract class DateTimeInputField implements InputField {
   const factory DateTimeInputField(
           {@JsonKey(name: 'name') required final String name,
-          @JsonKey(name: 'title') final String? title,
+          @JsonKey(name: 'label') final String? label,
           @JsonKey(name: 'answer') final String? answer,
           @JsonKey(name: 'description') final String? description,
           @JsonKey(name: 'visible') final bool visible,
@@ -9181,8 +9181,8 @@ abstract class DateTimeInputField implements InputField {
   @JsonKey(name: 'name')
   String get name;
   @override
-  @JsonKey(name: 'title')
-  String? get title;
+  @JsonKey(name: 'label')
+  String? get label;
   @override
   @JsonKey(name: 'answer')
   String? get answer;
@@ -9229,7 +9229,7 @@ abstract class _$$CommentInputFieldCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(name: 'name') String name,
-      @JsonKey(name: 'title') String? title,
+      @JsonKey(name: 'label') String? label,
       @JsonKey(name: 'answer') String? answer,
       @JsonKey(name: 'description') String? description,
       @JsonKey(name: 'visible') bool visible,
@@ -9252,7 +9252,7 @@ class __$$CommentInputFieldCopyWithImpl<$Res>
   @override
   $Res call({
     Object? name = null,
-    Object? title = freezed,
+    Object? label = freezed,
     Object? answer = freezed,
     Object? description = freezed,
     Object? visible = null,
@@ -9267,9 +9267,9 @@ class __$$CommentInputFieldCopyWithImpl<$Res>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      title: freezed == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
+      label: freezed == label
+          ? _value.label
+          : label // ignore: cast_nullable_to_non_nullable
               as String?,
       answer: freezed == answer
           ? _value.answer
@@ -9312,7 +9312,7 @@ class __$$CommentInputFieldCopyWithImpl<$Res>
 class _$CommentInputField implements CommentInputField {
   const _$CommentInputField(
       {@JsonKey(name: 'name') required this.name,
-      @JsonKey(name: 'title') this.title,
+      @JsonKey(name: 'label') this.label,
       @JsonKey(name: 'answer') this.answer,
       @JsonKey(name: 'description') this.description,
       @JsonKey(name: 'visible') this.visible = true,
@@ -9331,8 +9331,8 @@ class _$CommentInputField implements CommentInputField {
   @JsonKey(name: 'name')
   final String name;
   @override
-  @JsonKey(name: 'title')
-  final String? title;
+  @JsonKey(name: 'label')
+  final String? label;
   @override
   @JsonKey(name: 'answer')
   final String? answer;
@@ -9364,7 +9364,7 @@ class _$CommentInputField implements CommentInputField {
 
   @override
   String toString() {
-    return 'InputField.comment(name: $name, title: $title, answer: $answer, description: $description, visible: $visible, isRequired: $isRequired, readOnly: $readOnly, requiredErrorText: $requiredErrorText, hintText: $hintText, maxLength: $maxLength)';
+    return 'InputField.comment(name: $name, label: $label, answer: $answer, description: $description, visible: $visible, isRequired: $isRequired, readOnly: $readOnly, requiredErrorText: $requiredErrorText, hintText: $hintText, maxLength: $maxLength)';
   }
 
   @override
@@ -9373,7 +9373,7 @@ class _$CommentInputField implements CommentInputField {
         (other.runtimeType == runtimeType &&
             other is _$CommentInputField &&
             (identical(other.name, name) || other.name == name) &&
-            (identical(other.title, title) || other.title == title) &&
+            (identical(other.label, label) || other.label == label) &&
             (identical(other.answer, answer) || other.answer == answer) &&
             (identical(other.description, description) ||
                 other.description == description) &&
@@ -9392,7 +9392,7 @@ class _$CommentInputField implements CommentInputField {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, name, title, answer, description,
+  int get hashCode => Object.hash(runtimeType, name, label, answer, description,
       visible, isRequired, readOnly, requiredErrorText, hintText, maxLength);
 
   @JsonKey(ignore: true)
@@ -9406,7 +9406,7 @@ class _$CommentInputField implements CommentInputField {
   TResult when<TResult extends Object?>({
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -9416,7 +9416,7 @@ class _$CommentInputField implements CommentInputField {
         fallback,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
             @JsonKey(name: 'isRequired') bool isRequired,
@@ -9432,7 +9432,7 @@ class _$CommentInputField implements CommentInputField {
         text,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -9448,7 +9448,7 @@ class _$CommentInputField implements CommentInputField {
         date,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -9464,7 +9464,7 @@ class _$CommentInputField implements CommentInputField {
         time,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -9480,7 +9480,7 @@ class _$CommentInputField implements CommentInputField {
         url,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -9496,7 +9496,7 @@ class _$CommentInputField implements CommentInputField {
         number,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -9512,7 +9512,7 @@ class _$CommentInputField implements CommentInputField {
         email,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -9528,7 +9528,7 @@ class _$CommentInputField implements CommentInputField {
         datetimelocal,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -9540,7 +9540,7 @@ class _$CommentInputField implements CommentInputField {
         comment,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -9561,7 +9561,7 @@ class _$CommentInputField implements CommentInputField {
         dropdown,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -9582,7 +9582,7 @@ class _$CommentInputField implements CommentInputField {
         checkbox,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -9602,7 +9602,7 @@ class _$CommentInputField implements CommentInputField {
         radiogroup,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -9612,7 +9612,7 @@ class _$CommentInputField implements CommentInputField {
             @JsonKey(name: 'requiredErrorText') String? requiredErrorText)
         files,
   }) {
-    return comment(name, title, answer, description, visible, isRequired,
+    return comment(name, label, answer, description, visible, isRequired,
         readOnly, requiredErrorText, hintText, maxLength);
   }
 
@@ -9621,7 +9621,7 @@ class _$CommentInputField implements CommentInputField {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -9631,7 +9631,7 @@ class _$CommentInputField implements CommentInputField {
         fallback,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
             @JsonKey(name: 'isRequired') bool isRequired,
@@ -9647,7 +9647,7 @@ class _$CommentInputField implements CommentInputField {
         text,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -9663,7 +9663,7 @@ class _$CommentInputField implements CommentInputField {
         date,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -9679,7 +9679,7 @@ class _$CommentInputField implements CommentInputField {
         time,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -9695,7 +9695,7 @@ class _$CommentInputField implements CommentInputField {
         url,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -9711,7 +9711,7 @@ class _$CommentInputField implements CommentInputField {
         number,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -9727,7 +9727,7 @@ class _$CommentInputField implements CommentInputField {
         email,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -9743,7 +9743,7 @@ class _$CommentInputField implements CommentInputField {
         datetimelocal,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -9755,7 +9755,7 @@ class _$CommentInputField implements CommentInputField {
         comment,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -9776,7 +9776,7 @@ class _$CommentInputField implements CommentInputField {
         dropdown,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -9797,7 +9797,7 @@ class _$CommentInputField implements CommentInputField {
         checkbox,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -9817,7 +9817,7 @@ class _$CommentInputField implements CommentInputField {
         radiogroup,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -9827,7 +9827,7 @@ class _$CommentInputField implements CommentInputField {
             @JsonKey(name: 'requiredErrorText') String? requiredErrorText)?
         files,
   }) {
-    return comment?.call(name, title, answer, description, visible, isRequired,
+    return comment?.call(name, label, answer, description, visible, isRequired,
         readOnly, requiredErrorText, hintText, maxLength);
   }
 
@@ -9836,7 +9836,7 @@ class _$CommentInputField implements CommentInputField {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -9846,7 +9846,7 @@ class _$CommentInputField implements CommentInputField {
         fallback,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
             @JsonKey(name: 'isRequired') bool isRequired,
@@ -9862,7 +9862,7 @@ class _$CommentInputField implements CommentInputField {
         text,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -9878,7 +9878,7 @@ class _$CommentInputField implements CommentInputField {
         date,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -9894,7 +9894,7 @@ class _$CommentInputField implements CommentInputField {
         time,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -9910,7 +9910,7 @@ class _$CommentInputField implements CommentInputField {
         url,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -9926,7 +9926,7 @@ class _$CommentInputField implements CommentInputField {
         number,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -9942,7 +9942,7 @@ class _$CommentInputField implements CommentInputField {
         email,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -9958,7 +9958,7 @@ class _$CommentInputField implements CommentInputField {
         datetimelocal,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -9970,7 +9970,7 @@ class _$CommentInputField implements CommentInputField {
         comment,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -9991,7 +9991,7 @@ class _$CommentInputField implements CommentInputField {
         dropdown,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -10012,7 +10012,7 @@ class _$CommentInputField implements CommentInputField {
         checkbox,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -10032,7 +10032,7 @@ class _$CommentInputField implements CommentInputField {
         radiogroup,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -10044,7 +10044,7 @@ class _$CommentInputField implements CommentInputField {
     required TResult orElse(),
   }) {
     if (comment != null) {
-      return comment(name, title, answer, description, visible, isRequired,
+      return comment(name, label, answer, description, visible, isRequired,
           readOnly, requiredErrorText, hintText, maxLength);
     }
     return orElse();
@@ -10125,7 +10125,7 @@ class _$CommentInputField implements CommentInputField {
 abstract class CommentInputField implements InputField {
   const factory CommentInputField(
       {@JsonKey(name: 'name') required final String name,
-      @JsonKey(name: 'title') final String? title,
+      @JsonKey(name: 'label') final String? label,
       @JsonKey(name: 'answer') final String? answer,
       @JsonKey(name: 'description') final String? description,
       @JsonKey(name: 'visible') final bool visible,
@@ -10142,8 +10142,8 @@ abstract class CommentInputField implements InputField {
   @JsonKey(name: 'name')
   String get name;
   @override
-  @JsonKey(name: 'title')
-  String? get title;
+  @JsonKey(name: 'label')
+  String? get label;
   @override
   @JsonKey(name: 'answer')
   String? get answer;
@@ -10182,7 +10182,7 @@ abstract class _$$DropdownInputFieldCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(name: 'name') String name,
-      @JsonKey(name: 'title') String? title,
+      @JsonKey(name: 'label') String? label,
       @JsonKey(name: 'answer') String? answer,
       @JsonKey(name: 'description') String? description,
       @JsonKey(name: 'visible') bool visible,
@@ -10212,7 +10212,7 @@ class __$$DropdownInputFieldCopyWithImpl<$Res>
   @override
   $Res call({
     Object? name = null,
-    Object? title = freezed,
+    Object? label = freezed,
     Object? answer = freezed,
     Object? description = freezed,
     Object? visible = null,
@@ -10234,9 +10234,9 @@ class __$$DropdownInputFieldCopyWithImpl<$Res>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      title: freezed == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
+      label: freezed == label
+          ? _value.label
+          : label // ignore: cast_nullable_to_non_nullable
               as String?,
       answer: freezed == answer
           ? _value.answer
@@ -10307,7 +10307,7 @@ class __$$DropdownInputFieldCopyWithImpl<$Res>
 class _$DropdownInputField implements DropdownInputField {
   const _$DropdownInputField(
       {@JsonKey(name: 'name') required this.name,
-      @JsonKey(name: 'title') this.title,
+      @JsonKey(name: 'label') this.label,
       @JsonKey(name: 'answer') this.answer,
       @JsonKey(name: 'description') this.description,
       @JsonKey(name: 'visible') this.visible = true,
@@ -10336,8 +10336,8 @@ class _$DropdownInputField implements DropdownInputField {
   @JsonKey(name: 'name')
   final String name;
   @override
-  @JsonKey(name: 'title')
-  final String? title;
+  @JsonKey(name: 'label')
+  final String? label;
   @override
   @JsonKey(name: 'answer')
   final String? answer;
@@ -10399,7 +10399,7 @@ class _$DropdownInputField implements DropdownInputField {
 
   @override
   String toString() {
-    return 'InputField.dropdown(name: $name, title: $title, answer: $answer, description: $description, visible: $visible, isRequired: $isRequired, readOnly: $readOnly, requiredErrorText: $requiredErrorText, allowClear: $allowClear, hintText: $hintText, choices: $choices, showNoneItem: $showNoneItem, noneText: $noneText, showOtherItem: $showOtherItem, otherText: $otherText, otherErrorText: $otherErrorText, otherPlaceholder: $otherPlaceholder)';
+    return 'InputField.dropdown(name: $name, label: $label, answer: $answer, description: $description, visible: $visible, isRequired: $isRequired, readOnly: $readOnly, requiredErrorText: $requiredErrorText, allowClear: $allowClear, hintText: $hintText, choices: $choices, showNoneItem: $showNoneItem, noneText: $noneText, showOtherItem: $showOtherItem, otherText: $otherText, otherErrorText: $otherErrorText, otherPlaceholder: $otherPlaceholder)';
   }
 
   @override
@@ -10408,7 +10408,7 @@ class _$DropdownInputField implements DropdownInputField {
         (other.runtimeType == runtimeType &&
             other is _$DropdownInputField &&
             (identical(other.name, name) || other.name == name) &&
-            (identical(other.title, title) || other.title == title) &&
+            (identical(other.label, label) || other.label == label) &&
             (identical(other.answer, answer) || other.answer == answer) &&
             (identical(other.description, description) ||
                 other.description == description) &&
@@ -10443,7 +10443,7 @@ class _$DropdownInputField implements DropdownInputField {
   int get hashCode => Object.hash(
       runtimeType,
       name,
-      title,
+      label,
       answer,
       description,
       visible,
@@ -10472,7 +10472,7 @@ class _$DropdownInputField implements DropdownInputField {
   TResult when<TResult extends Object?>({
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -10482,7 +10482,7 @@ class _$DropdownInputField implements DropdownInputField {
         fallback,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
             @JsonKey(name: 'isRequired') bool isRequired,
@@ -10498,7 +10498,7 @@ class _$DropdownInputField implements DropdownInputField {
         text,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -10514,7 +10514,7 @@ class _$DropdownInputField implements DropdownInputField {
         date,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -10530,7 +10530,7 @@ class _$DropdownInputField implements DropdownInputField {
         time,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -10546,7 +10546,7 @@ class _$DropdownInputField implements DropdownInputField {
         url,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -10562,7 +10562,7 @@ class _$DropdownInputField implements DropdownInputField {
         number,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -10578,7 +10578,7 @@ class _$DropdownInputField implements DropdownInputField {
         email,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -10594,7 +10594,7 @@ class _$DropdownInputField implements DropdownInputField {
         datetimelocal,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -10606,7 +10606,7 @@ class _$DropdownInputField implements DropdownInputField {
         comment,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -10627,7 +10627,7 @@ class _$DropdownInputField implements DropdownInputField {
         dropdown,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -10648,7 +10648,7 @@ class _$DropdownInputField implements DropdownInputField {
         checkbox,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -10668,7 +10668,7 @@ class _$DropdownInputField implements DropdownInputField {
         radiogroup,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -10680,7 +10680,7 @@ class _$DropdownInputField implements DropdownInputField {
   }) {
     return dropdown(
         name,
-        title,
+        label,
         answer,
         description,
         visible,
@@ -10703,7 +10703,7 @@ class _$DropdownInputField implements DropdownInputField {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -10713,7 +10713,7 @@ class _$DropdownInputField implements DropdownInputField {
         fallback,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
             @JsonKey(name: 'isRequired') bool isRequired,
@@ -10729,7 +10729,7 @@ class _$DropdownInputField implements DropdownInputField {
         text,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -10745,7 +10745,7 @@ class _$DropdownInputField implements DropdownInputField {
         date,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -10761,7 +10761,7 @@ class _$DropdownInputField implements DropdownInputField {
         time,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -10777,7 +10777,7 @@ class _$DropdownInputField implements DropdownInputField {
         url,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -10793,7 +10793,7 @@ class _$DropdownInputField implements DropdownInputField {
         number,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -10809,7 +10809,7 @@ class _$DropdownInputField implements DropdownInputField {
         email,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -10825,7 +10825,7 @@ class _$DropdownInputField implements DropdownInputField {
         datetimelocal,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -10837,7 +10837,7 @@ class _$DropdownInputField implements DropdownInputField {
         comment,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -10858,7 +10858,7 @@ class _$DropdownInputField implements DropdownInputField {
         dropdown,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -10879,7 +10879,7 @@ class _$DropdownInputField implements DropdownInputField {
         checkbox,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -10899,7 +10899,7 @@ class _$DropdownInputField implements DropdownInputField {
         radiogroup,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -10911,7 +10911,7 @@ class _$DropdownInputField implements DropdownInputField {
   }) {
     return dropdown?.call(
         name,
-        title,
+        label,
         answer,
         description,
         visible,
@@ -10934,7 +10934,7 @@ class _$DropdownInputField implements DropdownInputField {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -10944,7 +10944,7 @@ class _$DropdownInputField implements DropdownInputField {
         fallback,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
             @JsonKey(name: 'isRequired') bool isRequired,
@@ -10960,7 +10960,7 @@ class _$DropdownInputField implements DropdownInputField {
         text,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -10976,7 +10976,7 @@ class _$DropdownInputField implements DropdownInputField {
         date,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -10992,7 +10992,7 @@ class _$DropdownInputField implements DropdownInputField {
         time,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -11008,7 +11008,7 @@ class _$DropdownInputField implements DropdownInputField {
         url,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -11024,7 +11024,7 @@ class _$DropdownInputField implements DropdownInputField {
         number,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -11040,7 +11040,7 @@ class _$DropdownInputField implements DropdownInputField {
         email,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -11056,7 +11056,7 @@ class _$DropdownInputField implements DropdownInputField {
         datetimelocal,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -11068,7 +11068,7 @@ class _$DropdownInputField implements DropdownInputField {
         comment,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -11089,7 +11089,7 @@ class _$DropdownInputField implements DropdownInputField {
         dropdown,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -11110,7 +11110,7 @@ class _$DropdownInputField implements DropdownInputField {
         checkbox,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -11130,7 +11130,7 @@ class _$DropdownInputField implements DropdownInputField {
         radiogroup,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -11144,7 +11144,7 @@ class _$DropdownInputField implements DropdownInputField {
     if (dropdown != null) {
       return dropdown(
           name,
-          title,
+          label,
           answer,
           description,
           visible,
@@ -11239,7 +11239,7 @@ class _$DropdownInputField implements DropdownInputField {
 abstract class DropdownInputField implements InputField {
   const factory DropdownInputField(
           {@JsonKey(name: 'name') required final String name,
-          @JsonKey(name: 'title') final String? title,
+          @JsonKey(name: 'label') final String? label,
           @JsonKey(name: 'answer') final String? answer,
           @JsonKey(name: 'description') final String? description,
           @JsonKey(name: 'visible') final bool visible,
@@ -11266,8 +11266,8 @@ abstract class DropdownInputField implements InputField {
   @JsonKey(name: 'name')
   String get name;
   @override
-  @JsonKey(name: 'title')
-  String? get title;
+  @JsonKey(name: 'label')
+  String? get label;
   @override
   @JsonKey(name: 'answer')
   String? get answer;
@@ -11321,7 +11321,7 @@ abstract class _$$CheckboxInputFieldCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(name: 'name') String name,
-      @JsonKey(name: 'title') String? title,
+      @JsonKey(name: 'label') String? label,
       @JsonKey(name: 'answer') String? answer,
       @JsonKey(name: 'description') String? description,
       @JsonKey(name: 'visible') bool visible,
@@ -11351,7 +11351,7 @@ class __$$CheckboxInputFieldCopyWithImpl<$Res>
   @override
   $Res call({
     Object? name = null,
-    Object? title = freezed,
+    Object? label = freezed,
     Object? answer = freezed,
     Object? description = freezed,
     Object? visible = null,
@@ -11373,9 +11373,9 @@ class __$$CheckboxInputFieldCopyWithImpl<$Res>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      title: freezed == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
+      label: freezed == label
+          ? _value.label
+          : label // ignore: cast_nullable_to_non_nullable
               as String?,
       answer: freezed == answer
           ? _value.answer
@@ -11446,7 +11446,7 @@ class __$$CheckboxInputFieldCopyWithImpl<$Res>
 class _$CheckboxInputField implements CheckboxInputField {
   const _$CheckboxInputField(
       {@JsonKey(name: 'name') required this.name,
-      @JsonKey(name: 'title') this.title,
+      @JsonKey(name: 'label') this.label,
       @JsonKey(name: 'answer') this.answer,
       @JsonKey(name: 'description') this.description,
       @JsonKey(name: 'visible') this.visible = true,
@@ -11475,8 +11475,8 @@ class _$CheckboxInputField implements CheckboxInputField {
   @JsonKey(name: 'name')
   final String name;
   @override
-  @JsonKey(name: 'title')
-  final String? title;
+  @JsonKey(name: 'label')
+  final String? label;
   @override
   @JsonKey(name: 'answer')
   final String? answer;
@@ -11540,7 +11540,7 @@ class _$CheckboxInputField implements CheckboxInputField {
 
   @override
   String toString() {
-    return 'InputField.checkbox(name: $name, title: $title, answer: $answer, description: $description, visible: $visible, isRequired: $isRequired, readOnly: $readOnly, requiredErrorText: $requiredErrorText, choices: $choices, maxSelectedChoices: $maxSelectedChoices, showNoneItem: $showNoneItem, noneText: $noneText, showOtherItem: $showOtherItem, otherText: $otherText, otherErrorText: $otherErrorText, otherPlaceholder: $otherPlaceholder, showSelectAllItem: $showSelectAllItem)';
+    return 'InputField.checkbox(name: $name, label: $label, answer: $answer, description: $description, visible: $visible, isRequired: $isRequired, readOnly: $readOnly, requiredErrorText: $requiredErrorText, choices: $choices, maxSelectedChoices: $maxSelectedChoices, showNoneItem: $showNoneItem, noneText: $noneText, showOtherItem: $showOtherItem, otherText: $otherText, otherErrorText: $otherErrorText, otherPlaceholder: $otherPlaceholder, showSelectAllItem: $showSelectAllItem)';
   }
 
   @override
@@ -11549,7 +11549,7 @@ class _$CheckboxInputField implements CheckboxInputField {
         (other.runtimeType == runtimeType &&
             other is _$CheckboxInputField &&
             (identical(other.name, name) || other.name == name) &&
-            (identical(other.title, title) || other.title == title) &&
+            (identical(other.label, label) || other.label == label) &&
             (identical(other.answer, answer) || other.answer == answer) &&
             (identical(other.description, description) ||
                 other.description == description) &&
@@ -11584,7 +11584,7 @@ class _$CheckboxInputField implements CheckboxInputField {
   int get hashCode => Object.hash(
       runtimeType,
       name,
-      title,
+      label,
       answer,
       description,
       visible,
@@ -11613,7 +11613,7 @@ class _$CheckboxInputField implements CheckboxInputField {
   TResult when<TResult extends Object?>({
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -11623,7 +11623,7 @@ class _$CheckboxInputField implements CheckboxInputField {
         fallback,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
             @JsonKey(name: 'isRequired') bool isRequired,
@@ -11639,7 +11639,7 @@ class _$CheckboxInputField implements CheckboxInputField {
         text,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -11655,7 +11655,7 @@ class _$CheckboxInputField implements CheckboxInputField {
         date,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -11671,7 +11671,7 @@ class _$CheckboxInputField implements CheckboxInputField {
         time,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -11687,7 +11687,7 @@ class _$CheckboxInputField implements CheckboxInputField {
         url,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -11703,7 +11703,7 @@ class _$CheckboxInputField implements CheckboxInputField {
         number,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -11719,7 +11719,7 @@ class _$CheckboxInputField implements CheckboxInputField {
         email,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -11735,7 +11735,7 @@ class _$CheckboxInputField implements CheckboxInputField {
         datetimelocal,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -11747,7 +11747,7 @@ class _$CheckboxInputField implements CheckboxInputField {
         comment,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -11768,7 +11768,7 @@ class _$CheckboxInputField implements CheckboxInputField {
         dropdown,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -11789,7 +11789,7 @@ class _$CheckboxInputField implements CheckboxInputField {
         checkbox,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -11809,7 +11809,7 @@ class _$CheckboxInputField implements CheckboxInputField {
         radiogroup,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -11821,7 +11821,7 @@ class _$CheckboxInputField implements CheckboxInputField {
   }) {
     return checkbox(
         name,
-        title,
+        label,
         answer,
         description,
         visible,
@@ -11844,7 +11844,7 @@ class _$CheckboxInputField implements CheckboxInputField {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -11854,7 +11854,7 @@ class _$CheckboxInputField implements CheckboxInputField {
         fallback,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
             @JsonKey(name: 'isRequired') bool isRequired,
@@ -11870,7 +11870,7 @@ class _$CheckboxInputField implements CheckboxInputField {
         text,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -11886,7 +11886,7 @@ class _$CheckboxInputField implements CheckboxInputField {
         date,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -11902,7 +11902,7 @@ class _$CheckboxInputField implements CheckboxInputField {
         time,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -11918,7 +11918,7 @@ class _$CheckboxInputField implements CheckboxInputField {
         url,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -11934,7 +11934,7 @@ class _$CheckboxInputField implements CheckboxInputField {
         number,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -11950,7 +11950,7 @@ class _$CheckboxInputField implements CheckboxInputField {
         email,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -11966,7 +11966,7 @@ class _$CheckboxInputField implements CheckboxInputField {
         datetimelocal,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -11978,7 +11978,7 @@ class _$CheckboxInputField implements CheckboxInputField {
         comment,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -11999,7 +11999,7 @@ class _$CheckboxInputField implements CheckboxInputField {
         dropdown,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -12020,7 +12020,7 @@ class _$CheckboxInputField implements CheckboxInputField {
         checkbox,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -12040,7 +12040,7 @@ class _$CheckboxInputField implements CheckboxInputField {
         radiogroup,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -12052,7 +12052,7 @@ class _$CheckboxInputField implements CheckboxInputField {
   }) {
     return checkbox?.call(
         name,
-        title,
+        label,
         answer,
         description,
         visible,
@@ -12075,7 +12075,7 @@ class _$CheckboxInputField implements CheckboxInputField {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -12085,7 +12085,7 @@ class _$CheckboxInputField implements CheckboxInputField {
         fallback,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
             @JsonKey(name: 'isRequired') bool isRequired,
@@ -12101,7 +12101,7 @@ class _$CheckboxInputField implements CheckboxInputField {
         text,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -12117,7 +12117,7 @@ class _$CheckboxInputField implements CheckboxInputField {
         date,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -12133,7 +12133,7 @@ class _$CheckboxInputField implements CheckboxInputField {
         time,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -12149,7 +12149,7 @@ class _$CheckboxInputField implements CheckboxInputField {
         url,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -12165,7 +12165,7 @@ class _$CheckboxInputField implements CheckboxInputField {
         number,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -12181,7 +12181,7 @@ class _$CheckboxInputField implements CheckboxInputField {
         email,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -12197,7 +12197,7 @@ class _$CheckboxInputField implements CheckboxInputField {
         datetimelocal,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -12209,7 +12209,7 @@ class _$CheckboxInputField implements CheckboxInputField {
         comment,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -12230,7 +12230,7 @@ class _$CheckboxInputField implements CheckboxInputField {
         dropdown,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -12251,7 +12251,7 @@ class _$CheckboxInputField implements CheckboxInputField {
         checkbox,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -12271,7 +12271,7 @@ class _$CheckboxInputField implements CheckboxInputField {
         radiogroup,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -12285,7 +12285,7 @@ class _$CheckboxInputField implements CheckboxInputField {
     if (checkbox != null) {
       return checkbox(
           name,
-          title,
+          label,
           answer,
           description,
           visible,
@@ -12380,7 +12380,7 @@ class _$CheckboxInputField implements CheckboxInputField {
 abstract class CheckboxInputField implements InputField {
   const factory CheckboxInputField(
           {@JsonKey(name: 'name') required final String name,
-          @JsonKey(name: 'title') final String? title,
+          @JsonKey(name: 'label') final String? label,
           @JsonKey(name: 'answer') final String? answer,
           @JsonKey(name: 'description') final String? description,
           @JsonKey(name: 'visible') final bool visible,
@@ -12407,8 +12407,8 @@ abstract class CheckboxInputField implements InputField {
   @JsonKey(name: 'name')
   String get name;
   @override
-  @JsonKey(name: 'title')
-  String? get title;
+  @JsonKey(name: 'label')
+  String? get label;
   @override
   @JsonKey(name: 'answer')
   String? get answer;
@@ -12462,7 +12462,7 @@ abstract class _$$RadioInputFieldCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(name: 'name') String name,
-      @JsonKey(name: 'title') String? title,
+      @JsonKey(name: 'label') String? label,
       @JsonKey(name: 'answer') String? answer,
       @JsonKey(name: 'description') String? description,
       @JsonKey(name: 'visible') bool visible,
@@ -12491,7 +12491,7 @@ class __$$RadioInputFieldCopyWithImpl<$Res>
   @override
   $Res call({
     Object? name = null,
-    Object? title = freezed,
+    Object? label = freezed,
     Object? answer = freezed,
     Object? description = freezed,
     Object? visible = null,
@@ -12512,9 +12512,9 @@ class __$$RadioInputFieldCopyWithImpl<$Res>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      title: freezed == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
+      label: freezed == label
+          ? _value.label
+          : label // ignore: cast_nullable_to_non_nullable
               as String?,
       answer: freezed == answer
           ? _value.answer
@@ -12581,7 +12581,7 @@ class __$$RadioInputFieldCopyWithImpl<$Res>
 class _$RadioInputField implements RadioInputField {
   const _$RadioInputField(
       {@JsonKey(name: 'name') required this.name,
-      @JsonKey(name: 'title') this.title,
+      @JsonKey(name: 'label') this.label,
       @JsonKey(name: 'answer') this.answer,
       @JsonKey(name: 'description') this.description,
       @JsonKey(name: 'visible') this.visible = true,
@@ -12609,8 +12609,8 @@ class _$RadioInputField implements RadioInputField {
   @JsonKey(name: 'name')
   final String name;
   @override
-  @JsonKey(name: 'title')
-  final String? title;
+  @JsonKey(name: 'label')
+  final String? label;
   @override
   @JsonKey(name: 'answer')
   final String? answer;
@@ -12671,7 +12671,7 @@ class _$RadioInputField implements RadioInputField {
 
   @override
   String toString() {
-    return 'InputField.radiogroup(name: $name, title: $title, answer: $answer, description: $description, visible: $visible, isRequired: $isRequired, readOnly: $readOnly, requiredErrorText: $requiredErrorText, choices: $choices, showNoneItem: $showNoneItem, noneText: $noneText, showOtherItem: $showOtherItem, otherText: $otherText, otherErrorText: $otherErrorText, otherPlaceholder: $otherPlaceholder, showClearButton: $showClearButton)';
+    return 'InputField.radiogroup(name: $name, label: $label, answer: $answer, description: $description, visible: $visible, isRequired: $isRequired, readOnly: $readOnly, requiredErrorText: $requiredErrorText, choices: $choices, showNoneItem: $showNoneItem, noneText: $noneText, showOtherItem: $showOtherItem, otherText: $otherText, otherErrorText: $otherErrorText, otherPlaceholder: $otherPlaceholder, showClearButton: $showClearButton)';
   }
 
   @override
@@ -12680,7 +12680,7 @@ class _$RadioInputField implements RadioInputField {
         (other.runtimeType == runtimeType &&
             other is _$RadioInputField &&
             (identical(other.name, name) || other.name == name) &&
-            (identical(other.title, title) || other.title == title) &&
+            (identical(other.label, label) || other.label == label) &&
             (identical(other.answer, answer) || other.answer == answer) &&
             (identical(other.description, description) ||
                 other.description == description) &&
@@ -12713,7 +12713,7 @@ class _$RadioInputField implements RadioInputField {
   int get hashCode => Object.hash(
       runtimeType,
       name,
-      title,
+      label,
       answer,
       description,
       visible,
@@ -12740,7 +12740,7 @@ class _$RadioInputField implements RadioInputField {
   TResult when<TResult extends Object?>({
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -12750,7 +12750,7 @@ class _$RadioInputField implements RadioInputField {
         fallback,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
             @JsonKey(name: 'isRequired') bool isRequired,
@@ -12766,7 +12766,7 @@ class _$RadioInputField implements RadioInputField {
         text,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -12782,7 +12782,7 @@ class _$RadioInputField implements RadioInputField {
         date,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -12798,7 +12798,7 @@ class _$RadioInputField implements RadioInputField {
         time,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -12814,7 +12814,7 @@ class _$RadioInputField implements RadioInputField {
         url,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -12830,7 +12830,7 @@ class _$RadioInputField implements RadioInputField {
         number,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -12846,7 +12846,7 @@ class _$RadioInputField implements RadioInputField {
         email,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -12862,7 +12862,7 @@ class _$RadioInputField implements RadioInputField {
         datetimelocal,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -12874,7 +12874,7 @@ class _$RadioInputField implements RadioInputField {
         comment,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -12895,7 +12895,7 @@ class _$RadioInputField implements RadioInputField {
         dropdown,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -12916,7 +12916,7 @@ class _$RadioInputField implements RadioInputField {
         checkbox,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -12936,7 +12936,7 @@ class _$RadioInputField implements RadioInputField {
         radiogroup,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -12948,7 +12948,7 @@ class _$RadioInputField implements RadioInputField {
   }) {
     return radiogroup(
         name,
-        title,
+        label,
         answer,
         description,
         visible,
@@ -12970,7 +12970,7 @@ class _$RadioInputField implements RadioInputField {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -12980,7 +12980,7 @@ class _$RadioInputField implements RadioInputField {
         fallback,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
             @JsonKey(name: 'isRequired') bool isRequired,
@@ -12996,7 +12996,7 @@ class _$RadioInputField implements RadioInputField {
         text,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -13012,7 +13012,7 @@ class _$RadioInputField implements RadioInputField {
         date,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -13028,7 +13028,7 @@ class _$RadioInputField implements RadioInputField {
         time,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -13044,7 +13044,7 @@ class _$RadioInputField implements RadioInputField {
         url,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -13060,7 +13060,7 @@ class _$RadioInputField implements RadioInputField {
         number,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -13076,7 +13076,7 @@ class _$RadioInputField implements RadioInputField {
         email,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -13092,7 +13092,7 @@ class _$RadioInputField implements RadioInputField {
         datetimelocal,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -13104,7 +13104,7 @@ class _$RadioInputField implements RadioInputField {
         comment,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -13125,7 +13125,7 @@ class _$RadioInputField implements RadioInputField {
         dropdown,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -13146,7 +13146,7 @@ class _$RadioInputField implements RadioInputField {
         checkbox,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -13166,7 +13166,7 @@ class _$RadioInputField implements RadioInputField {
         radiogroup,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -13178,7 +13178,7 @@ class _$RadioInputField implements RadioInputField {
   }) {
     return radiogroup?.call(
         name,
-        title,
+        label,
         answer,
         description,
         visible,
@@ -13200,7 +13200,7 @@ class _$RadioInputField implements RadioInputField {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -13210,7 +13210,7 @@ class _$RadioInputField implements RadioInputField {
         fallback,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
             @JsonKey(name: 'isRequired') bool isRequired,
@@ -13226,7 +13226,7 @@ class _$RadioInputField implements RadioInputField {
         text,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -13242,7 +13242,7 @@ class _$RadioInputField implements RadioInputField {
         date,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -13258,7 +13258,7 @@ class _$RadioInputField implements RadioInputField {
         time,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -13274,7 +13274,7 @@ class _$RadioInputField implements RadioInputField {
         url,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -13290,7 +13290,7 @@ class _$RadioInputField implements RadioInputField {
         number,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -13306,7 +13306,7 @@ class _$RadioInputField implements RadioInputField {
         email,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -13322,7 +13322,7 @@ class _$RadioInputField implements RadioInputField {
         datetimelocal,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -13334,7 +13334,7 @@ class _$RadioInputField implements RadioInputField {
         comment,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -13355,7 +13355,7 @@ class _$RadioInputField implements RadioInputField {
         dropdown,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -13376,7 +13376,7 @@ class _$RadioInputField implements RadioInputField {
         checkbox,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -13396,7 +13396,7 @@ class _$RadioInputField implements RadioInputField {
         radiogroup,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -13410,7 +13410,7 @@ class _$RadioInputField implements RadioInputField {
     if (radiogroup != null) {
       return radiogroup(
           name,
-          title,
+          label,
           answer,
           description,
           visible,
@@ -13504,7 +13504,7 @@ class _$RadioInputField implements RadioInputField {
 abstract class RadioInputField implements InputField {
   const factory RadioInputField(
           {@JsonKey(name: 'name') required final String name,
-          @JsonKey(name: 'title') final String? title,
+          @JsonKey(name: 'label') final String? label,
           @JsonKey(name: 'answer') final String? answer,
           @JsonKey(name: 'description') final String? description,
           @JsonKey(name: 'visible') final bool visible,
@@ -13530,8 +13530,8 @@ abstract class RadioInputField implements InputField {
   @JsonKey(name: 'name')
   String get name;
   @override
-  @JsonKey(name: 'title')
-  String? get title;
+  @JsonKey(name: 'label')
+  String? get label;
   @override
   @JsonKey(name: 'answer')
   String? get answer;
@@ -13583,7 +13583,7 @@ abstract class _$$FileInputFieldCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(name: 'name') String name,
-      @JsonKey(name: 'title') String? title,
+      @JsonKey(name: 'label') String? label,
       @JsonKey(name: 'answer') String? answer,
       @JsonKey(name: 'description') String? description,
       @JsonKey(name: 'visible') bool visible,
@@ -13605,7 +13605,7 @@ class __$$FileInputFieldCopyWithImpl<$Res>
   @override
   $Res call({
     Object? name = null,
-    Object? title = freezed,
+    Object? label = freezed,
     Object? answer = freezed,
     Object? description = freezed,
     Object? visible = null,
@@ -13619,9 +13619,9 @@ class __$$FileInputFieldCopyWithImpl<$Res>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      title: freezed == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
+      label: freezed == label
+          ? _value.label
+          : label // ignore: cast_nullable_to_non_nullable
               as String?,
       answer: freezed == answer
           ? _value.answer
@@ -13660,7 +13660,7 @@ class __$$FileInputFieldCopyWithImpl<$Res>
 class _$FileInputField implements FileInputField {
   const _$FileInputField(
       {@JsonKey(name: 'name') required this.name,
-      @JsonKey(name: 'title') this.title,
+      @JsonKey(name: 'label') this.label,
       @JsonKey(name: 'answer') this.answer,
       @JsonKey(name: 'description') this.description,
       @JsonKey(name: 'visible') this.visible = true,
@@ -13678,8 +13678,8 @@ class _$FileInputField implements FileInputField {
   @JsonKey(name: 'name')
   final String name;
   @override
-  @JsonKey(name: 'title')
-  final String? title;
+  @JsonKey(name: 'label')
+  final String? label;
   @override
   @JsonKey(name: 'answer')
   final String? answer;
@@ -13707,7 +13707,7 @@ class _$FileInputField implements FileInputField {
 
   @override
   String toString() {
-    return 'InputField.files(name: $name, title: $title, answer: $answer, description: $description, visible: $visible, isMultiple: $isMultiple, isRequired: $isRequired, readOnly: $readOnly, requiredErrorText: $requiredErrorText)';
+    return 'InputField.files(name: $name, label: $label, answer: $answer, description: $description, visible: $visible, isMultiple: $isMultiple, isRequired: $isRequired, readOnly: $readOnly, requiredErrorText: $requiredErrorText)';
   }
 
   @override
@@ -13716,7 +13716,7 @@ class _$FileInputField implements FileInputField {
         (other.runtimeType == runtimeType &&
             other is _$FileInputField &&
             (identical(other.name, name) || other.name == name) &&
-            (identical(other.title, title) || other.title == title) &&
+            (identical(other.label, label) || other.label == label) &&
             (identical(other.answer, answer) || other.answer == answer) &&
             (identical(other.description, description) ||
                 other.description == description) &&
@@ -13733,7 +13733,7 @@ class _$FileInputField implements FileInputField {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, name, title, answer, description,
+  int get hashCode => Object.hash(runtimeType, name, label, answer, description,
       visible, isMultiple, isRequired, readOnly, requiredErrorText);
 
   @JsonKey(ignore: true)
@@ -13747,7 +13747,7 @@ class _$FileInputField implements FileInputField {
   TResult when<TResult extends Object?>({
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -13757,7 +13757,7 @@ class _$FileInputField implements FileInputField {
         fallback,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
             @JsonKey(name: 'isRequired') bool isRequired,
@@ -13773,7 +13773,7 @@ class _$FileInputField implements FileInputField {
         text,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -13789,7 +13789,7 @@ class _$FileInputField implements FileInputField {
         date,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -13805,7 +13805,7 @@ class _$FileInputField implements FileInputField {
         time,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -13821,7 +13821,7 @@ class _$FileInputField implements FileInputField {
         url,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -13837,7 +13837,7 @@ class _$FileInputField implements FileInputField {
         number,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -13853,7 +13853,7 @@ class _$FileInputField implements FileInputField {
         email,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -13869,7 +13869,7 @@ class _$FileInputField implements FileInputField {
         datetimelocal,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -13881,7 +13881,7 @@ class _$FileInputField implements FileInputField {
         comment,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -13902,7 +13902,7 @@ class _$FileInputField implements FileInputField {
         dropdown,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -13923,7 +13923,7 @@ class _$FileInputField implements FileInputField {
         checkbox,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -13943,7 +13943,7 @@ class _$FileInputField implements FileInputField {
         radiogroup,
     required TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -13953,7 +13953,7 @@ class _$FileInputField implements FileInputField {
             @JsonKey(name: 'requiredErrorText') String? requiredErrorText)
         files,
   }) {
-    return files(name, title, answer, description, visible, isMultiple,
+    return files(name, label, answer, description, visible, isMultiple,
         isRequired, readOnly, requiredErrorText);
   }
 
@@ -13962,7 +13962,7 @@ class _$FileInputField implements FileInputField {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -13972,7 +13972,7 @@ class _$FileInputField implements FileInputField {
         fallback,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
             @JsonKey(name: 'isRequired') bool isRequired,
@@ -13988,7 +13988,7 @@ class _$FileInputField implements FileInputField {
         text,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -14004,7 +14004,7 @@ class _$FileInputField implements FileInputField {
         date,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -14020,7 +14020,7 @@ class _$FileInputField implements FileInputField {
         time,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -14036,7 +14036,7 @@ class _$FileInputField implements FileInputField {
         url,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -14052,7 +14052,7 @@ class _$FileInputField implements FileInputField {
         number,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -14068,7 +14068,7 @@ class _$FileInputField implements FileInputField {
         email,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -14084,7 +14084,7 @@ class _$FileInputField implements FileInputField {
         datetimelocal,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -14096,7 +14096,7 @@ class _$FileInputField implements FileInputField {
         comment,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -14117,7 +14117,7 @@ class _$FileInputField implements FileInputField {
         dropdown,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -14138,7 +14138,7 @@ class _$FileInputField implements FileInputField {
         checkbox,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -14158,7 +14158,7 @@ class _$FileInputField implements FileInputField {
         radiogroup,
     TResult? Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -14168,7 +14168,7 @@ class _$FileInputField implements FileInputField {
             @JsonKey(name: 'requiredErrorText') String? requiredErrorText)?
         files,
   }) {
-    return files?.call(name, title, answer, description, visible, isMultiple,
+    return files?.call(name, label, answer, description, visible, isMultiple,
         isRequired, readOnly, requiredErrorText);
   }
 
@@ -14177,7 +14177,7 @@ class _$FileInputField implements FileInputField {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -14187,7 +14187,7 @@ class _$FileInputField implements FileInputField {
         fallback,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
             @JsonKey(name: 'isRequired') bool isRequired,
@@ -14203,7 +14203,7 @@ class _$FileInputField implements FileInputField {
         text,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -14219,7 +14219,7 @@ class _$FileInputField implements FileInputField {
         date,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -14235,7 +14235,7 @@ class _$FileInputField implements FileInputField {
         time,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -14251,7 +14251,7 @@ class _$FileInputField implements FileInputField {
         url,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -14267,7 +14267,7 @@ class _$FileInputField implements FileInputField {
         number,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -14283,7 +14283,7 @@ class _$FileInputField implements FileInputField {
         email,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -14299,7 +14299,7 @@ class _$FileInputField implements FileInputField {
         datetimelocal,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -14311,7 +14311,7 @@ class _$FileInputField implements FileInputField {
         comment,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -14332,7 +14332,7 @@ class _$FileInputField implements FileInputField {
         dropdown,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -14353,7 +14353,7 @@ class _$FileInputField implements FileInputField {
         checkbox,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -14373,7 +14373,7 @@ class _$FileInputField implements FileInputField {
         radiogroup,
     TResult Function(
             @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'title') String? title,
+            @JsonKey(name: 'label') String? label,
             @JsonKey(name: 'answer') String? answer,
             @JsonKey(name: 'description') String? description,
             @JsonKey(name: 'visible') bool visible,
@@ -14385,7 +14385,7 @@ class _$FileInputField implements FileInputField {
     required TResult orElse(),
   }) {
     if (files != null) {
-      return files(name, title, answer, description, visible, isMultiple,
+      return files(name, label, answer, description, visible, isMultiple,
           isRequired, readOnly, requiredErrorText);
     }
     return orElse();
@@ -14466,7 +14466,7 @@ class _$FileInputField implements FileInputField {
 abstract class FileInputField implements InputField {
   const factory FileInputField(
       {@JsonKey(name: 'name') required final String name,
-      @JsonKey(name: 'title') final String? title,
+      @JsonKey(name: 'label') final String? label,
       @JsonKey(name: 'answer') final String? answer,
       @JsonKey(name: 'description') final String? description,
       @JsonKey(name: 'visible') final bool visible,
@@ -14483,8 +14483,8 @@ abstract class FileInputField implements InputField {
   @JsonKey(name: 'name')
   String get name;
   @override
-  @JsonKey(name: 'title')
-  String? get title;
+  @JsonKey(name: 'label')
+  String? get label;
   @override
   @JsonKey(name: 'answer')
   String? get answer;

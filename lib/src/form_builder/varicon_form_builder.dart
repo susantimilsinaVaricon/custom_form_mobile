@@ -73,8 +73,8 @@ class _VariconFormBuilderState extends State<VariconFormBuilder> {
             ...widget.surveyForm.inputFields
                 .map<Widget?>((e) {
                   final labelText = e.isRequired
-                      ? '${e.title ?? e.name} *'
-                      : e.title ?? e.name;
+                      ? '${e.label ?? e.name} *'
+                      : e.label ?? e.name;
 
                   return e.maybeMap(
                     text: (field) {

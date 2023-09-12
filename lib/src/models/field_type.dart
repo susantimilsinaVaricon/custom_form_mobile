@@ -1,13 +1,14 @@
-enum FieldType { 
-  text, 
-  comment, 
-  checkbox, 
-  radiogroup, 
-  dropdown, 
-  files, 
+enum FieldType {
+  text,
+  comment,
+  checkbox,
+  radiogroup,
+  dropdown,
+  files,
   time,
-   date, 
-   datetimelocal,
-    email, 
-    url, 
-    number }
+  date,
+  datetimelocal,
+  email,
+  url,
+  number
+}
