@@ -8,7 +8,7 @@ part of 'survey_page_form.dart';
 
 _$_SurveyPageForm _$$_SurveyPageFormFromJson(Map<String, dynamic> json) =>
     _$_SurveyPageForm(
-      name: json['name'] as String,
+      name: json['name'] as String?,
       title: json['title'] as String?,
       description: json['description'] as String?,
       inputFields: (json['elements'] as List<dynamic>?)

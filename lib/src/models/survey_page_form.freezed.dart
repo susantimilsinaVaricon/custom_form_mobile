@@ -21,7 +21,7 @@ SurveyPageForm _$SurveyPageFormFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$SurveyPageForm {
   @JsonKey(name: 'name')
-  String get name => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
   @JsonKey(name: 'title')
   String? get title => throw _privateConstructorUsedError;
   @JsonKey(name: 'description')
@@ -43,7 +43,7 @@ abstract class $SurveyPageFormCopyWith<$Res> {
       _$SurveyPageFormCopyWithImpl<$Res, SurveyPageForm>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'name') String name,
+      {@JsonKey(name: 'name') String? name,
       @JsonKey(name: 'title') String? title,
       @JsonKey(name: 'description') String? description,
       @JsonKey(name: 'elements')
@@ -64,16 +64,16 @@ class _$SurveyPageFormCopyWithImpl<$Res, $Val extends SurveyPageForm>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = null,
+    Object? name = freezed,
     Object? title = freezed,
     Object? description = freezed,
     Object? inputFields = null,
   }) {
     return _then(_value.copyWith(
-      name: null == name
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -99,7 +99,7 @@ abstract class _$$_SurveyPageFormCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'name') String name,
+      {@JsonKey(name: 'name') String? name,
       @JsonKey(name: 'title') String? title,
       @JsonKey(name: 'description') String? description,
       @JsonKey(name: 'elements')
@@ -118,16 +118,16 @@ class __$$_SurveyPageFormCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = null,
+    Object? name = freezed,
     Object? title = freezed,
     Object? description = freezed,
     Object? inputFields = null,
   }) {
     return _then(_$_SurveyPageForm(
-      name: null == name
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -148,7 +148,7 @@ class __$$_SurveyPageFormCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_SurveyPageForm implements _SurveyPageForm {
   const _$_SurveyPageForm(
-      {@JsonKey(name: 'name') required this.name,
+      {@JsonKey(name: 'name') this.name,
       @JsonKey(name: 'title') this.title,
       @JsonKey(name: 'description') this.description,
       @JsonKey(name: 'elements')
@@ -161,7 +161,7 @@ class _$_SurveyPageForm implements _SurveyPageForm {
 
   @override
   @JsonKey(name: 'name')
-  final String name;
+  final String? name;
   @override
   @JsonKey(name: 'title')
   final String? title;
@@ -217,7 +217,7 @@ class _$_SurveyPageForm implements _SurveyPageForm {
 
 abstract class _SurveyPageForm implements SurveyPageForm {
   const factory _SurveyPageForm(
-      {@JsonKey(name: 'name') required final String name,
+      {@JsonKey(name: 'name') final String? name,
       @JsonKey(name: 'title') final String? title,
       @JsonKey(name: 'description') final String? description,
       @JsonKey(name: 'elements')
@@ -229,7 +229,7 @@ abstract class _SurveyPageForm implements SurveyPageForm {
 
   @override
   @JsonKey(name: 'name')
-  String get name;
+  String? get name;
   @override
   @JsonKey(name: 'title')
   String? get title;

@@ -11,7 +11,7 @@ part 'survey_page_form.g.dart';
 @freezed
 class SurveyPageForm with _$SurveyPageForm {
   const factory SurveyPageForm({
-    @JsonKey(name: 'name') required String name,
+    @JsonKey(name: 'name')  String? name,
     @JsonKey(name: 'title') String? title,
     @JsonKey(name: 'description') String? description,
     @JsonKey(name: 'elements')
