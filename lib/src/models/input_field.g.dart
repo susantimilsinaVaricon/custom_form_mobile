@@ -9,7 +9,7 @@ part of 'input_field.dart';
 _$_FallbackInputField _$$_FallbackInputFieldFromJson(
         Map<String, dynamic> json) =>
     _$_FallbackInputField(
-      name: json['name'] as String,
+      id: json['id'] as String,
       label: json['label'] as String?,
       answer: json['answer'] as String?,
       description: json['description'] as String?,
@@ -23,7 +23,7 @@ _$_FallbackInputField _$$_FallbackInputFieldFromJson(
 Map<String, dynamic> _$$_FallbackInputFieldToJson(
         _$_FallbackInputField instance) =>
     <String, dynamic>{
-      'name': instance.name,
+      'id': instance.id,
       'label': instance.label,
       'answer': instance.answer,
       'description': instance.description,
@@ -36,7 +36,7 @@ Map<String, dynamic> _$$_FallbackInputFieldToJson(
 
 _$TextInputField _$$TextInputFieldFromJson(Map<String, dynamic> json) =>
     _$TextInputField(
-      name: json['name'] as String,
+      id: json['id'] as String,
       label: json['label'] as String?,
       description: json['description'] as String?,
       visible: json['visible'] as bool? ?? true,
@@ -55,7 +55,7 @@ _$TextInputField _$$TextInputFieldFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$TextInputFieldToJson(_$TextInputField instance) =>
     <String, dynamic>{
-      'name': instance.name,
+      'id': instance.id,
       'label': instance.label,
       'description': instance.description,
       'visible': instance.visible,
@@ -74,7 +74,7 @@ Map<String, dynamic> _$$TextInputFieldToJson(_$TextInputField instance) =>
 
 _$DateInputField _$$DateInputFieldFromJson(Map<String, dynamic> json) =>
     _$DateInputField(
-      name: json['name'] as String,
+      id: json['id'] as String,
       label: json['label'] as String?,
       answer: json['answer'] as String?,
       description: json['description'] as String?,
@@ -93,7 +93,7 @@ _$DateInputField _$$DateInputFieldFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$DateInputFieldToJson(_$DateInputField instance) =>
     <String, dynamic>{
-      'name': instance.name,
+      'id': instance.id,
       'label': instance.label,
       'answer': instance.answer,
       'description': instance.description,
@@ -112,7 +112,7 @@ Map<String, dynamic> _$$DateInputFieldToJson(_$DateInputField instance) =>
 
 _$TimeInputField _$$TimeInputFieldFromJson(Map<String, dynamic> json) =>
     _$TimeInputField(
-      name: json['name'] as String,
+      id: json['id'] as String,
       label: json['label'] as String?,
       answer: json['answer'] as String?,
       description: json['description'] as String?,
@@ -131,7 +131,7 @@ _$TimeInputField _$$TimeInputFieldFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$TimeInputFieldToJson(_$TimeInputField instance) =>
     <String, dynamic>{
-      'name': instance.name,
+      'id': instance.id,
       'label': instance.label,
       'answer': instance.answer,
       'description': instance.description,
@@ -150,7 +150,7 @@ Map<String, dynamic> _$$TimeInputFieldToJson(_$TimeInputField instance) =>
 
 _$UrlInputField _$$UrlInputFieldFromJson(Map<String, dynamic> json) =>
     _$UrlInputField(
-      name: json['name'] as String,
+      id: json['id'] as String,
       label: json['label'] as String?,
       answer: json['answer'] as String?,
       description: json['description'] as String?,
@@ -169,7 +169,7 @@ _$UrlInputField _$$UrlInputFieldFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$UrlInputFieldToJson(_$UrlInputField instance) =>
     <String, dynamic>{
-      'name': instance.name,
+      'id': instance.id,
       'label': instance.label,
       'answer': instance.answer,
       'description': instance.description,
@@ -188,7 +188,7 @@ Map<String, dynamic> _$$UrlInputFieldToJson(_$UrlInputField instance) =>
 
 _$NumberInputField _$$NumberInputFieldFromJson(Map<String, dynamic> json) =>
     _$NumberInputField(
-      name: json['name'] as String,
+      id: json['id'] as String,
       label: json['label'] as String?,
       answer: json['answer'] as String?,
       description: json['description'] as String?,
@@ -207,7 +207,7 @@ _$NumberInputField _$$NumberInputFieldFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$NumberInputFieldToJson(_$NumberInputField instance) =>
     <String, dynamic>{
-      'name': instance.name,
+      'id': instance.id,
       'label': instance.label,
       'answer': instance.answer,
       'description': instance.description,
@@ -226,7 +226,7 @@ Map<String, dynamic> _$$NumberInputFieldToJson(_$NumberInputField instance) =>
 
 _$EmailInputField _$$EmailInputFieldFromJson(Map<String, dynamic> json) =>
     _$EmailInputField(
-      name: json['name'] as String,
+      id: json['id'] as String,
       label: json['label'] as String?,
       answer: json['answer'] as String?,
       description: json['description'] as String?,
@@ -245,7 +245,7 @@ _$EmailInputField _$$EmailInputFieldFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$EmailInputFieldToJson(_$EmailInputField instance) =>
     <String, dynamic>{
-      'name': instance.name,
+      'id': instance.id,
       'label': instance.label,
       'answer': instance.answer,
       'description': instance.description,
@@ -264,7 +264,7 @@ Map<String, dynamic> _$$EmailInputFieldToJson(_$EmailInputField instance) =>
 
 _$DateTimeInputField _$$DateTimeInputFieldFromJson(Map<String, dynamic> json) =>
     _$DateTimeInputField(
-      name: json['name'] as String,
+      id: json['id'] as String,
       label: json['label'] as String?,
       answer: json['answer'] as String?,
       description: json['description'] as String?,
@@ -284,7 +284,7 @@ _$DateTimeInputField _$$DateTimeInputFieldFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$$DateTimeInputFieldToJson(
         _$DateTimeInputField instance) =>
     <String, dynamic>{
-      'name': instance.name,
+      'id': instance.id,
       'label': instance.label,
       'answer': instance.answer,
       'description': instance.description,
@@ -303,7 +303,7 @@ Map<String, dynamic> _$$DateTimeInputFieldToJson(
 
 _$CommentInputField _$$CommentInputFieldFromJson(Map<String, dynamic> json) =>
     _$CommentInputField(
-      name: json['name'] as String,
+      id: json['id'] as String,
       label: json['label'] as String?,
       answer: json['answer'] as String?,
       description: json['description'] as String?,
@@ -318,7 +318,7 @@ _$CommentInputField _$$CommentInputFieldFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$CommentInputFieldToJson(_$CommentInputField instance) =>
     <String, dynamic>{
-      'name': instance.name,
+      'id': instance.id,
       'label': instance.label,
       'answer': instance.answer,
       'description': instance.description,
@@ -333,7 +333,7 @@ Map<String, dynamic> _$$CommentInputFieldToJson(_$CommentInputField instance) =>
 
 _$DropdownInputField _$$DropdownInputFieldFromJson(Map<String, dynamic> json) =>
     _$DropdownInputField(
-      name: json['name'] as String,
+      id: json['id'] as String,
       label: json['label'] as String?,
       answer: json['answer'] as String?,
       description: json['description'] as String?,
@@ -359,7 +359,7 @@ _$DropdownInputField _$$DropdownInputFieldFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$$DropdownInputFieldToJson(
         _$DropdownInputField instance) =>
     <String, dynamic>{
-      'name': instance.name,
+      'id': instance.id,
       'label': instance.label,
       'answer': instance.answer,
       'description': instance.description,
@@ -382,7 +382,7 @@ Map<String, dynamic> _$$DropdownInputFieldToJson(
 
 _$CheckboxInputField _$$CheckboxInputFieldFromJson(Map<String, dynamic> json) =>
     _$CheckboxInputField(
-      name: json['name'] as String,
+      id: json['id'] as String,
       label: json['label'] as String?,
       answer: json['answer'] as String?,
       description: json['description'] as String?,
@@ -408,7 +408,7 @@ _$CheckboxInputField _$$CheckboxInputFieldFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$$CheckboxInputFieldToJson(
         _$CheckboxInputField instance) =>
     <String, dynamic>{
-      'name': instance.name,
+      'id': instance.id,
       'label': instance.label,
       'answer': instance.answer,
       'description': instance.description,
@@ -431,7 +431,7 @@ Map<String, dynamic> _$$CheckboxInputFieldToJson(
 
 _$RadioInputField _$$RadioInputFieldFromJson(Map<String, dynamic> json) =>
     _$RadioInputField(
-      name: json['name'] as String,
+      id: json['id'] as String,
       label: json['label'] as String?,
       answer: json['answer'] as String?,
       description: json['description'] as String?,
@@ -455,7 +455,53 @@ _$RadioInputField _$$RadioInputFieldFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$RadioInputFieldToJson(_$RadioInputField instance) =>
     <String, dynamic>{
-      'name': instance.name,
+      'id': instance.id,
+      'label': instance.label,
+      'answer': instance.answer,
+      'description': instance.description,
+      'visible': instance.visible,
+      'isRequired': instance.isRequired,
+      'readOnly': instance.readOnly,
+      'requiredErrorText': instance.requiredErrorText,
+      'choices':
+          instance.choices.map(const ValueTextConverter().toJson).toList(),
+      'showNoneItem': instance.showNoneItem,
+      'noneText': instance.noneText,
+      'showOtherItem': instance.showOtherItem,
+      'otherText': instance.otherText,
+      'otherErrorText': instance.otherErrorText,
+      'otherPlaceholder': instance.otherPlaceholder,
+      'showClearButton': instance.showClearButton,
+      'type': instance.$type,
+    };
+
+_$YesNoInputField _$$YesNoInputFieldFromJson(Map<String, dynamic> json) =>
+    _$YesNoInputField(
+      id: json['id'] as String,
+      label: json['label'] as String?,
+      answer: json['answer'] as String?,
+      description: json['description'] as String?,
+      visible: json['visible'] as bool? ?? true,
+      isRequired: json['isRequired'] as bool? ?? false,
+      readOnly: json['readOnly'] as bool? ?? false,
+      requiredErrorText: json['requiredErrorText'] as String?,
+      choices: (json['choices'] as List<dynamic>?)
+              ?.map(const ValueTextConverter().fromJson)
+              .toList() ??
+          const [],
+      showNoneItem: json['showNoneItem'] as bool? ?? false,
+      noneText: json['noneText'] as String?,
+      showOtherItem: json['showOtherItem'] as bool? ?? false,
+      otherText: json['otherText'] as String?,
+      otherErrorText: json['otherErrorText'] as String?,
+      otherPlaceholder: json['otherPlaceholder'] as String?,
+      showClearButton: json['showClearButton'] as bool? ?? false,
+      $type: json['type'] as String?,
+    );
+
+Map<String, dynamic> _$$YesNoInputFieldToJson(_$YesNoInputField instance) =>
+    <String, dynamic>{
+      'id': instance.id,
       'label': instance.label,
       'answer': instance.answer,
       'description': instance.description,
@@ -477,7 +523,7 @@ Map<String, dynamic> _$$RadioInputFieldToJson(_$RadioInputField instance) =>
 
 _$FileInputField _$$FileInputFieldFromJson(Map<String, dynamic> json) =>
     _$FileInputField(
-      name: json['name'] as String,
+      id: json['id'] as String,
       label: json['label'] as String?,
       answer: json['answer'] as String?,
       description: json['description'] as String?,
@@ -491,7 +537,7 @@ _$FileInputField _$$FileInputFieldFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$FileInputFieldToJson(_$FileInputField instance) =>
     <String, dynamic>{
-      'name': instance.name,
+      'id': instance.id,
       'label': instance.label,
       'answer': instance.answer,
       'description': instance.description,

@@ -87,7 +87,7 @@ class _DateTimeInputWidgetState extends State<DateTimeInputWidget> {
                   '${DateFormat('yyyy-MM-dd').format(newValue)}T${DateFormat(DateFormat.HOUR24_MINUTE).format(newValue)}';
           }
           widget.formValue.saveString(
-            widget.field.name,
+            widget.field.id,
             value,
           );
         },

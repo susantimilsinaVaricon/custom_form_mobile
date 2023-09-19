@@ -12,7 +12,7 @@ part 'input_field.g.dart';
 class InputField with _$InputField implements BasicInputField {
   // InputField that is not supported.
   const factory InputField.fallback({
-    @JsonKey(name: 'name') required String name,
+    @JsonKey(name: 'id') required String id,
     @JsonKey(name: 'label') String? label,
     @JsonKey(name: 'answer') String? answer,
     @JsonKey(name: 'description') String? description,
@@ -23,7 +23,7 @@ class InputField with _$InputField implements BasicInputField {
   }) = _FallbackInputField;
 
   const factory InputField.text({
-    @JsonKey(name: 'name') required String name,
+    @JsonKey(name: 'id') required String id,
     @JsonKey(name: 'label') String? label,
     @JsonKey(name: 'description') String? description,
     @JsonKey(name: 'visible') @Default(true) bool visible,
@@ -43,7 +43,7 @@ class InputField with _$InputField implements BasicInputField {
   }) = TextInputField;
 
   const factory InputField.date({
-    @JsonKey(name: 'name') required String name,
+    @JsonKey(name: 'id') required String id,
     @JsonKey(name: 'label') String? label,
     @JsonKey(name: 'answer') String? answer,
     @JsonKey(name: 'description') String? description,
@@ -63,7 +63,7 @@ class InputField with _$InputField implements BasicInputField {
   }) = DateInputField;
 
   const factory InputField.time({
-    @JsonKey(name: 'name') required String name,
+    @JsonKey(name: 'id') required String id,
     @JsonKey(name: 'label') String? label,
     @JsonKey(name: 'answer') String? answer,
     @JsonKey(name: 'description') String? description,
@@ -83,7 +83,7 @@ class InputField with _$InputField implements BasicInputField {
   }) = TimeInputField;
 
   const factory InputField.url({
-    @JsonKey(name: 'name') required String name,
+    @JsonKey(name: 'id') required String id,
     @JsonKey(name: 'label') String? label,
     @JsonKey(name: 'answer') String? answer,
     @JsonKey(name: 'description') String? description,
@@ -103,7 +103,7 @@ class InputField with _$InputField implements BasicInputField {
   }) = UrlInputField;
 
   const factory InputField.number({
-    @JsonKey(name: 'name') required String name,
+    @JsonKey(name: 'id') required String id,
     @JsonKey(name: 'label') String? label,
     @JsonKey(name: 'answer') String? answer,
     @JsonKey(name: 'description') String? description,
@@ -123,7 +123,7 @@ class InputField with _$InputField implements BasicInputField {
   }) = NumberInputField;
 
   const factory InputField.email({
-    @JsonKey(name: 'name') required String name,
+    @JsonKey(name: 'id') required String id,
     @JsonKey(name: 'label') String? label,
     @JsonKey(name: 'answer') String? answer,
     @JsonKey(name: 'description') String? description,
@@ -143,7 +143,7 @@ class InputField with _$InputField implements BasicInputField {
   }) = EmailInputField;
 
   const factory InputField.datetimelocal({
-    @JsonKey(name: 'name') required String name,
+    @JsonKey(name: 'id') required String id,
     @JsonKey(name: 'label') String? label,
     @JsonKey(name: 'answer') String? answer,
     @JsonKey(name: 'description') String? description,
@@ -163,7 +163,7 @@ class InputField with _$InputField implements BasicInputField {
   }) = DateTimeInputField;
 
   const factory InputField.comment({
-    @JsonKey(name: 'name') required String name,
+    @JsonKey(name: 'id') required String id,
     @JsonKey(name: 'label') String? label,
     @JsonKey(name: 'answer') String? answer,
     @JsonKey(name: 'description') String? description,
@@ -177,7 +177,7 @@ class InputField with _$InputField implements BasicInputField {
   }) = CommentInputField;
 
   const factory InputField.dropdown({
-    @JsonKey(name: 'name') required String name,
+    @JsonKey(name: 'id') required String id,
     @JsonKey(name: 'label') String? label,
     @JsonKey(name: 'answer') String? answer,
     @JsonKey(name: 'description') String? description,
@@ -219,7 +219,7 @@ class InputField with _$InputField implements BasicInputField {
   // }) = RatingInputField;
 
   const factory InputField.checkbox({
-    @JsonKey(name: 'name') required String name,
+    @JsonKey(name: 'id') required String id,
     @JsonKey(name: 'label') String? label,
     @JsonKey(name: 'answer') String? answer,
     @JsonKey(name: 'description') String? description,
@@ -246,7 +246,7 @@ class InputField with _$InputField implements BasicInputField {
   }) = CheckboxInputField;
 
   const factory InputField.radiogroup({
-    @JsonKey(name: 'name') required String name,
+    @JsonKey(name: 'id') required String id,
     @JsonKey(name: 'label') String? label,
     @JsonKey(name: 'answer') String? answer,
     @JsonKey(name: 'description') String? description,
@@ -271,8 +271,35 @@ class InputField with _$InputField implements BasicInputField {
     @JsonKey(name: 'showClearButton') @Default(false) bool showClearButton,
   }) = RadioInputField;
 
+
+    const factory InputField.yesno({
+    @JsonKey(name: 'id') required String id,
+    @JsonKey(name: 'label') String? label,
+    @JsonKey(name: 'answer') String? answer,
+    @JsonKey(name: 'description') String? description,
+    @JsonKey(name: 'visible') @Default(true) bool visible,
+    @JsonKey(name: 'isRequired') @Default(false) bool isRequired,
+    @JsonKey(name: 'readOnly') @Default(false) bool readOnly,
+    @JsonKey(name: 'requiredErrorText') String? requiredErrorText,
+    // Fields.
+    @JsonKey(name: 'choices')
+    @Default([])
+    @ValueTextConverter()
+    List<ValueText> choices,
+    // None
+    @JsonKey(name: 'showNoneItem') @Default(false) bool showNoneItem,
+    @JsonKey(name: 'noneText') String? noneText,
+    // Other
+    @JsonKey(name: 'showOtherItem') @Default(false) bool showOtherItem,
+    @JsonKey(name: 'otherText') String? otherText,
+    @JsonKey(name: 'otherErrorText') String? otherErrorText,
+    @JsonKey(name: 'otherPlaceholder') String? otherPlaceholder,
+    // Show clear
+    @JsonKey(name: 'showClearButton') @Default(false) bool showClearButton,
+  }) = YesNoInputField;
+
   const factory InputField.files({
-    @JsonKey(name: 'name') required String name,
+    @JsonKey(name: 'id') required String id,
     @JsonKey(name: 'label') String? label,
     @JsonKey(name: 'answer') String? answer,
     @JsonKey(name: 'description') String? description,
@@ -289,7 +316,7 @@ class InputField with _$InputField implements BasicInputField {
 
 abstract class BasicInputField {
   BasicInputField(
-    this.name,
+    this.id,
     this.label,
     this.description,
     this.visible,
@@ -299,7 +326,7 @@ abstract class BasicInputField {
     this.requiredErrorText,
   );
 
-  final String? name;
+  final String id;
   final String? label;
   final String? description;
   final bool? visible;

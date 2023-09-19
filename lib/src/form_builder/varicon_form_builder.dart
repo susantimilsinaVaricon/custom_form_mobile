@@ -5,6 +5,7 @@ import 'package:varicon_form_builder/src/form_builder/widgets/datetime_input_wid
 import 'package:varicon_form_builder/src/form_builder/widgets/dropdown_input_widget.dart';
 import 'package:varicon_form_builder/src/form_builder/widgets/file_input_widget.dart';
 import 'package:varicon_form_builder/src/form_builder/widgets/radio_input_widget.dart';
+import 'package:varicon_form_builder/src/form_builder/widgets/yes_now_input_widget.dart';
 import 'package:varicon_form_builder/src/models/form_value.dart';
 import 'package:varicon_form_builder/src/models/models.dart';
 part '_helpers.dart';
@@ -73,8 +74,8 @@ class _VariconFormBuilderState extends State<VariconFormBuilder> {
             ...widget.surveyForm.inputFields
                 .map<Widget?>((e) {
                   final labelText = e.isRequired
-                      ? '${e.label ?? e.name} *'
-                      : e.label ?? e.name;
+                      ? '${e.label ?? ''} *'
+                      : e.label ?? '';
 
                   return e.maybeMap(
                     text: (field) {
@@ -89,7 +90,7 @@ class _VariconFormBuilderState extends State<VariconFormBuilder> {
                             maxLength: field.maxLength,
                             onSaved: (newValue) {
                               formValue.saveString(
-                                field.name,
+                                field.id,
                                 newValue,
                               );
                             },
@@ -122,7 +123,7 @@ class _VariconFormBuilderState extends State<VariconFormBuilder> {
                             maxLength: field.maxLength,
                             onSaved: (newValue) {
                               formValue.saveStringAsNum(
-                                field.name,
+                                field.id,
                                 newValue,
                               );
                             },
@@ -159,7 +160,7 @@ class _VariconFormBuilderState extends State<VariconFormBuilder> {
                             maxLength: field.maxLength,
                             onSaved: (newValue) {
                               formValue.saveString(
-                                field.name,
+                                field.id,
                                 newValue,
                               );
                             },
@@ -192,7 +193,7 @@ class _VariconFormBuilderState extends State<VariconFormBuilder> {
                             maxLength: field.maxLength,
                             onSaved: (newValue) {
                               formValue.saveString(
-                                field.name,
+                                field.id,
                                 newValue,
                               );
                             },
@@ -248,7 +249,7 @@ class _VariconFormBuilderState extends State<VariconFormBuilder> {
                             maxLength: field.maxLength,
                             maxLines: 4,
                             onSaved: (newValue) => formValue.saveString(
-                              field.name,
+                                field.id,
                               newValue,
                             ),
                             validator: (value) => textValidator(
@@ -272,6 +273,12 @@ class _VariconFormBuilderState extends State<VariconFormBuilder> {
                         formValue: formValue,
                         labelText: labelText,
                       );
+                    },
+                    yesno: (field) {
+                      return YesNoInputWidget(
+                        field: field,
+                        formValue: formValue,
+                        labelText: labelText,);
                     },
                     // rating: (field) {
                     //   return RatingBarFormField(

@@ -38,7 +38,7 @@ class _DropdownInputWidgetState extends State<DropdownInputWidget> {
         ValueText.other(text: widget.field.otherText ?? 'Other (describe)'),
     ];
 
-    otherFieldKey = '${widget.field.name}-Comment';
+    otherFieldKey = '${widget.field.id}-Comment';
     value = (widget.field.answer != null)
         ? widget.field.answer ?? widget.formValue.getStringValue('')
         : widget.formValue.getStringValue('');
@@ -93,7 +93,7 @@ class _DropdownInputWidgetState extends State<DropdownInputWidget> {
                 widget.formValue.remove(otherFieldKey);
               }
               widget.formValue.saveString(
-                widget.field.name,
+                widget.field.id,
                 newValue,
               );
             },

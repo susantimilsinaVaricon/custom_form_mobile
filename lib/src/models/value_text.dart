@@ -1,3 +1,5 @@
+// ignore_for_file: invalid_annotation_target
+
 import 'package:freezed_annotation/freezed_annotation.dart';
 part 'value_text.freezed.dart';
 part 'value_text.g.dart';
@@ -6,10 +8,10 @@ part 'value_text.g.dart';
 class ValueText with _$ValueText {
   const factory ValueText({
     /// Value that is used for remote API consumption.
-    required String value,
+    @JsonKey(readValue: readValue) required String value,
 
     /// Text that is displayed to the frontend.
-    required String text,
+    @JsonKey(readValue: readText) required String text,
   }) = _ValueText;
 
   const factory ValueText.none({
@@ -25,6 +27,9 @@ class ValueText with _$ValueText {
   factory ValueText.fromJson(Map<String, dynamic> json) =>
       _$ValueTextFromJson(json);
 }
+
+String readText(Map map, String key) => map[key] ?? map['label'] ?? '';
+String readValue(Map map, String key) => map[key] ?? map['id'] ?? '';
 
 // import 'package:json_annotation/json_annotation.dart';
 

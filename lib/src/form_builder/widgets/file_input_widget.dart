@@ -78,7 +78,7 @@ class _FileInputWidgetState extends State<FileInputWidget>
                               files = [];
                             });
                             widget.formValue.saveString(
-                              widget.field.name,
+                              widget.field.id,
                               '',
                             );
                           },
@@ -89,17 +89,13 @@ class _FileInputWidgetState extends State<FileInputWidget>
                     final result = await getFiles(
                         type: FileType.any,
                         allowMultiple: widget.field.isMultiple);
-
-                    print("Length " + (result ?? []).length.toString());
-                    print("Status " + widget.field.isMultiple.toString());
-
                     if (result != null && (!widget.field.isMultiple)) {
                       setState(() {
                         files = [];
                         files.add(result[0].path);
                       });
                       widget.formValue.saveString(
-                        widget.field.name,
+                        widget.field.id,
                         result[0].path,
                       );
                     } else if (result != null && widget.field.isMultiple) {
@@ -108,7 +104,7 @@ class _FileInputWidgetState extends State<FileInputWidget>
                           files.add(e.path);
                         });
                       });
-                      widget.formValue.saveString(widget.field.name,
+                      widget.formValue.saveString(widget.field.id,
                           files.isEmpty ? '' : files.join(","));
                       print("Length after adding" + files.length.toString());
                     }

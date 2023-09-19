@@ -32,27 +32,35 @@ ValueText _$ValueTextFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$ValueText {
   /// Value that is used for remote API consumption.
+  @JsonKey(readValue: readValue)
   String get value => throw _privateConstructorUsedError;
 
   /// Text that is displayed to the frontend.
+  @JsonKey(readValue: readText)
   String get text => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>(
-    TResult Function(String value, String text) $default, {
+    TResult Function(@JsonKey(readValue: readValue) String value,
+            @JsonKey(readValue: readText) String text)
+        $default, {
     required TResult Function(String value, String text) none,
     required TResult Function(String value, String text) other,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult? Function(String value, String text)? $default, {
+    TResult? Function(@JsonKey(readValue: readValue) String value,
+            @JsonKey(readValue: readText) String text)?
+        $default, {
     TResult? Function(String value, String text)? none,
     TResult? Function(String value, String text)? other,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
-    TResult Function(String value, String text)? $default, {
+    TResult Function(@JsonKey(readValue: readValue) String value,
+            @JsonKey(readValue: readText) String text)?
+        $default, {
     TResult Function(String value, String text)? none,
     TResult Function(String value, String text)? other,
     required TResult orElse(),
@@ -91,7 +99,9 @@ abstract class $ValueTextCopyWith<$Res> {
   factory $ValueTextCopyWith(ValueText value, $Res Function(ValueText) then) =
       _$ValueTextCopyWithImpl<$Res, ValueText>;
   @useResult
-  $Res call({String value, String text});
+  $Res call(
+      {@JsonKey(readValue: readValue) String value,
+      @JsonKey(readValue: readText) String text});
 }
 
 /// @nodoc
@@ -130,7 +140,9 @@ abstract class _$$_ValueTextCopyWith<$Res> implements $ValueTextCopyWith<$Res> {
       __$$_ValueTextCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String value, String text});
+  $Res call(
+      {@JsonKey(readValue: readValue) String value,
+      @JsonKey(readValue: readText) String text});
 }
 
 /// @nodoc
@@ -164,7 +176,9 @@ class __$$_ValueTextCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ValueText implements _ValueText {
   const _$_ValueText(
-      {required this.value, required this.text, final String? $type})
+      {@JsonKey(readValue: readValue) required this.value,
+      @JsonKey(readValue: readText) required this.text,
+      final String? $type})
       : $type = $type ?? 'default';
 
   factory _$_ValueText.fromJson(Map<String, dynamic> json) =>
@@ -172,10 +186,12 @@ class _$_ValueText implements _ValueText {
 
   /// Value that is used for remote API consumption.
   @override
+  @JsonKey(readValue: readValue)
   final String value;
 
   /// Text that is displayed to the frontend.
   @override
+  @JsonKey(readValue: readText)
   final String text;
 
   @JsonKey(name: 'runtimeType')
@@ -208,7 +224,9 @@ class _$_ValueText implements _ValueText {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>(
-    TResult Function(String value, String text) $default, {
+    TResult Function(@JsonKey(readValue: readValue) String value,
+            @JsonKey(readValue: readText) String text)
+        $default, {
     required TResult Function(String value, String text) none,
     required TResult Function(String value, String text) other,
   }) {
@@ -218,7 +236,9 @@ class _$_ValueText implements _ValueText {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult? Function(String value, String text)? $default, {
+    TResult? Function(@JsonKey(readValue: readValue) String value,
+            @JsonKey(readValue: readText) String text)?
+        $default, {
     TResult? Function(String value, String text)? none,
     TResult? Function(String value, String text)? other,
   }) {
@@ -228,7 +248,9 @@ class _$_ValueText implements _ValueText {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
-    TResult Function(String value, String text)? $default, {
+    TResult Function(@JsonKey(readValue: readValue) String value,
+            @JsonKey(readValue: readText) String text)?
+        $default, {
     TResult Function(String value, String text)? none,
     TResult Function(String value, String text)? other,
     required TResult orElse(),
@@ -283,7 +305,8 @@ class _$_ValueText implements _ValueText {
 
 abstract class _ValueText implements ValueText {
   const factory _ValueText(
-      {required final String value, required final String text}) = _$_ValueText;
+      {@JsonKey(readValue: readValue) required final String value,
+      @JsonKey(readValue: readText) required final String text}) = _$_ValueText;
 
   factory _ValueText.fromJson(Map<String, dynamic> json) =
       _$_ValueText.fromJson;
@@ -291,10 +314,12 @@ abstract class _ValueText implements ValueText {
   @override
 
   /// Value that is used for remote API consumption.
+  @JsonKey(readValue: readValue)
   String get value;
   @override
 
   /// Text that is displayed to the frontend.
+  @JsonKey(readValue: readText)
   String get text;
   @override
   @JsonKey(ignore: true)
@@ -386,7 +411,9 @@ class _$NoneValueText implements NoneValueText {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>(
-    TResult Function(String value, String text) $default, {
+    TResult Function(@JsonKey(readValue: readValue) String value,
+            @JsonKey(readValue: readText) String text)
+        $default, {
     required TResult Function(String value, String text) none,
     required TResult Function(String value, String text) other,
   }) {
@@ -396,7 +423,9 @@ class _$NoneValueText implements NoneValueText {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult? Function(String value, String text)? $default, {
+    TResult? Function(@JsonKey(readValue: readValue) String value,
+            @JsonKey(readValue: readText) String text)?
+        $default, {
     TResult? Function(String value, String text)? none,
     TResult? Function(String value, String text)? other,
   }) {
@@ -406,7 +435,9 @@ class _$NoneValueText implements NoneValueText {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
-    TResult Function(String value, String text)? $default, {
+    TResult Function(@JsonKey(readValue: readValue) String value,
+            @JsonKey(readValue: readText) String text)?
+        $default, {
     TResult Function(String value, String text)? none,
     TResult Function(String value, String text)? other,
     required TResult orElse(),
@@ -560,7 +591,9 @@ class _$OtherValueText implements OtherValueText {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>(
-    TResult Function(String value, String text) $default, {
+    TResult Function(@JsonKey(readValue: readValue) String value,
+            @JsonKey(readValue: readText) String text)
+        $default, {
     required TResult Function(String value, String text) none,
     required TResult Function(String value, String text) other,
   }) {
@@ -570,7 +603,9 @@ class _$OtherValueText implements OtherValueText {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult? Function(String value, String text)? $default, {
+    TResult? Function(@JsonKey(readValue: readValue) String value,
+            @JsonKey(readValue: readText) String text)?
+        $default, {
     TResult? Function(String value, String text)? none,
     TResult? Function(String value, String text)? other,
   }) {
@@ -580,7 +615,9 @@ class _$OtherValueText implements OtherValueText {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
-    TResult Function(String value, String text)? $default, {
+    TResult Function(@JsonKey(readValue: readValue) String value,
+            @JsonKey(readValue: readText) String text)?
+        $default, {
     TResult Function(String value, String text)? none,
     TResult Function(String value, String text)? other,
     required TResult orElse(),

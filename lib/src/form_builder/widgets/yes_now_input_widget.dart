@@ -6,23 +6,23 @@ import '../../models/form_value.dart';
 import '../../models/value_text.dart';
 import 'labeled_widget.dart';
 
-class RadioInputWidget extends StatefulWidget {
-  const RadioInputWidget({
+class YesNoInputWidget extends StatefulWidget {
+  const YesNoInputWidget({
     super.key,
     required this.field,
     required this.formValue,
     this.labelText,
   });
 
-  final RadioInputField field;
+  final YesNoInputField field;
   final FormValue formValue;
   final String? labelText;
 
   @override
-  State<RadioInputWidget> createState() => _RadioInputWidgetState();
+  State<YesNoInputWidget> createState() => _YesNoInputWidgetState();
 }
 
-class _RadioInputWidgetState extends State<RadioInputWidget> {
+class _YesNoInputWidgetState extends State<YesNoInputWidget> {
   String? value;
 
   late final List<ValueText> choices;

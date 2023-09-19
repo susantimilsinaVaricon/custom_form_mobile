@@ -50,11 +50,11 @@ class _CheckboxInputWidgetState extends State<CheckboxInputWidget> {
         ValueText.other(text: widget.field.otherText ?? 'Other (describe)'),
     ];
 
-    otherFieldKey = '${widget.field.name}-Comment';
+    otherFieldKey = '${widget.field.id}-Comment';
 
     // Get initial values from saved data.
     final List<String>? initialValue =
-        widget.formValue.value[widget.field.name];
+        widget.formValue.value[widget.field.id];
     if (initialValue != null && initialValue.isNotEmpty) {
       selectedChoices = choices.map((e) {
         return initialValue.contains(e.value) ? true : false;
@@ -120,7 +120,7 @@ class _CheckboxInputWidgetState extends State<CheckboxInputWidget> {
               }
 
               widget.formValue.saveList(
-                widget.field.name,
+                widget.field.id,
                 keys,
               );
             },

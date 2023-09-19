@@ -10,5 +10,6 @@ enum FieldType {
   datetimelocal,
   email,
   url,
-  number
+  number,
+  yesno
 }

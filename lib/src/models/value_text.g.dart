@@ -7,8 +7,8 @@ part of 'value_text.dart';
 // **************************************************************************
 
 _$_ValueText _$$_ValueTextFromJson(Map<String, dynamic> json) => _$_ValueText(
-      value: json['value'] as String,
-      text: json['text'] as String,
+      value: readValue(json, 'value') as String,
+      text: readText(json, 'text') as String,
       $type: json['runtimeType'] as String?,
     );
 
