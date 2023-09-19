@@ -299,12 +299,12 @@ abstract class BasicInputField {
     this.requiredErrorText,
   );
 
-  final String name;
+  final String? name;
   final String? label;
   final String? description;
-  final bool visible;
-  final bool isRequired;
-  final bool readOnly;
+  final bool? visible;
+  final bool? isRequired;
+  final bool? readOnly;
   final String? answer;
   final String? requiredErrorText;
 }
