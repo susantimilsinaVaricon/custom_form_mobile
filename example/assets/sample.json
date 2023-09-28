@@ -1,191 +1,65 @@
 {
-    "title": "Forms okay okay",
-    "description": "Dynamic form generator is a form of the things in the line",
+    "id": "form-89f9f241-65b5-4fa6-8d2c-9c2bd2b52d39",
+    "title": "Susans Form",
+    "description": "This is susan form for testing. Enjoy!!!",
     "name": "",
     "version": "1.0.0",
     "elements": [
-        {
-            "type": "time",
-            "id": "time1",
-            "label": "Enter time for notification",
-            "isRequired": true,
-            "answer": "11:23",
-            "min": "11:21",
-            "max": "12:12"
-        },
-        {
-            "type": "date",
-            "id": "date1",
-            "label": "Enter date to have leave",
-            "min": "2023-05-23",
-            "max": "2023-05-24",
-            "answer": "2023-05-24"
-        },
-        {
-            "type": "datetimelocal",
-            "answer": "2023-05-31T11:17",
-            "id": "datetime1",
-            "label": "What is your first day to start office",
-            "min": "2023-05-15T06:00",
-            "max": "2023-05-31T18:06"
-        },
-        {
-            "type": "files",
-            "id": "file1",
-            "label": "Attach citizenship files",
-            "isMultiple": false
-        },
-        {
-            "type": "files",
-            "id": "files2",
-            "label": "Attach covver letter",
-            "isMultiple": true
-        },
-        {
-            "type": "dropdown",
-            "id": "select1",
-            "answer": "item3",
-            "label": "Select from below drop down testelect from below drop down testelect from below drop down testelect from below drop down testelect from below drop down test",
-            "isRequired": true,
-            "requiredErrorText": "Drop down is required",
-            "commentPlaceholder": "comment are place",
-            "choices": [
-                {
-                    "value": "item1",
-                    "text": "This is item 1."
-                },
-                {
-                    "value": "item2",
-                    "text": "This is item 2."
-                },
-                {
-                    "value": "item3",
-                    "text": "This is item 3."
-                },
-                {
-                    "value": "item4",
-                    "text": "This is item 4."
-                },
-                {
-                    "value": "item5",
-                    "text": "This is item 5."
-                }
-            ],
-            "showOtherItem": true,
-            "showNoneItem": true,
-            "otherErrorText": "Empty comment required",
-            "placeholder": "Select...OKkk"
-        },
-        {
-            "type": "checkbox",
-            "id": "checkbox1",
-            "label": "Check boxes type test Check boxes type test Check boxes type test Check boxes type test Check boxes type test Check boxes type test ",
-            "isRequired": true,
-            "answer": "item1",
-            "showNoneItem": true,
-            "requiredErrorText": "At least one item must be selected",
-            "choices": [
-                {
-                    "value": "item1",
-                    "text": "This is item 1."
-                },
-                {
-                    "value": "item2",
-                    "text": "This is item 2."
-                },
-                {
-                    "value": "item3",
-                    "text": "This is item 3."
-                }
-            ],
-            "showOtherItem": true,
-            "otherErrorText": "Other field comment is required."
-        },
-        {
-            "type": "radiogroup",
-            "id": "radio1",
-            "answer": "2",
-            "label": "Select from below drop down",
-            "isRequired": true,
-            "value": 2,
-            "choices": [
-                {
-                    "text": "product 1",
-                    "value": "1"
-                },
-                {
-                    "text": "product 2",
-                    "value": "2"
-                },
-                {
-                    "text": "product 3",
-                    "value": "3"
-                }
-            ]
-        },
-        {
-            "type": "text",
-            "answer": "Susan Timilsina is the text",
-            "id": "firstName",
-            "label": "Please provide your first namePlease provide your first namePlease provide your first namePlease provide your first name",
-            "isRequired": true,
-            "requiredErrorText": "First name is required",
-            "autocomplete": "name",
-            "maxLength": 30,
-            "placeholder": "First Name placeholder"
-        },
-        {
-            "id": "item-cc4c729d-6f89-4539-aa89-a38345df865d",
-            "label": "This is question ",
-            "name": "This is question ",
-            "isRequired": false,
-            "answer": "",
-            "type": "yesno",
-            "choices": [
-                {
-                    "value": "item-621e1064-1171-4933-b456-4a12ca011b1a",
-                    "text": "Yes",
-                    "notify_To": [
-                        {
-                            "id": 724,
-                            "email": "ss@gmail.com",
-                            "username": "Aayush User"
-                        }
-                    ]
-                },
-                {
-                    "value": "item-a9de0318-6218-4e02-98e3-4d81ad273279",
-                    "text": "No",
-                    "notify_To": [
-                        {
-                            "id": 724,
-                            "email": "ss@gmail.com",
-                            "username": "Aayush User"
-                        },
-                        {
-                            "id": 1005,
-                            "email": "anil.shrestha+1@varicon.com.au",
-                            "username": "Anil Shrestha"
-                        },
-                        {
-                            "id": 501,
-                            "email": "anu.prajapati@varicon.com.au",
-                            "username": "Anu Prajapati"
-                        }
-                    ]
-                },
-                {
-                    "value": "item-3c12ef14-78f5-40ef-91cc-7ac45b56c05a",
-                    "text": "NA",
-                    "notify_To": [
-                        {
-                            "id": "",
-                            "email": "",
-                            "username": ""
-                        }
-                    ]
-                }
-            ]
-        }
+      {
+        "id": "item-4f31f588-a0e2-4cb7-9c1b-448c480d4930",
+        "name": "Heading",
+        "label": "Give Simples of Heading",
+        "isRequired": false,
+        "answer": "",
+        "type": "text"
+      },
+      {
+        "id": "item-9f0e1537-8f9a-4a14-b2cb-aa65b9a2d764",
+        "name": "Full Name",
+        "label": "What is our full name?",
+        "isRequired": false,
+        "answer": "",
+        "type": "text"
+      },
+      {
+        "id": "item-350dd14a-dec5-46d0-b507-2fd1938ae839",
+        "name": "Email",
+        "label": "What is your Email?",
+        "isRequired": false,
+        "answer": "",
+        "type": "text"
+      },
+      {
+        "id": "item-b64a2f42-aa0a-4c7f-9a91-92d77130a236",
+        "name": "Phone Number",
+        "label": "Tell me you mobile number",
+        "isRequired": false,
+        "answer": "",
+        "type": "number"
+      },
+      {
+        "id": "item-6353af57-e64d-4353-80ac-f32ae1ac731d",
+        "name": "Address",
+        "label": "Tell me your Address",
+        "isRequired": false,
+        "answer": "",
+        "type": "text"
+      },
+      {
+        "id": "item-fa1baab0-3611-4256-b330-a19ce6cf5922",
+        "name": "Short Text",
+        "label": "This is short text",
+        "isRequired": false,
+        "answer": "",
+        "type": "text"
+      },
+      {
+        "id": "item-23c6a108-5930-4bed-848a-7bb0823f0d83",
+        "name": "Long Text",
+        "label": "This is long text",
+        "isRequired": false,
+        "answer": "",
+        "type": "text"
+      }
     ]
-}
+  }

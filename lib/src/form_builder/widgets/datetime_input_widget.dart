@@ -116,6 +116,8 @@ class _DateTimeInputWidgetState extends State<DateTimeInputWidget> {
   static DateTime? _parseToDateTime(dynamic value, DatePickerType pickerType) {
     if (value is! String) {
       return null;
+    } else if (value.isEmpty) {
+      return null;
     }
 
     switch (pickerType) {

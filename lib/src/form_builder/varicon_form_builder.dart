@@ -8,6 +8,8 @@ import 'package:varicon_form_builder/src/form_builder/widgets/radio_input_widget
 import 'package:varicon_form_builder/src/form_builder/widgets/yes_now_input_widget.dart';
 import 'package:varicon_form_builder/src/models/form_value.dart';
 import 'package:varicon_form_builder/src/models/models.dart';
+
+import 'widgets/labeled_widget.dart';
 part '_helpers.dart';
 part '_navigation_button.dart';
 part '_validators.dart';
@@ -73,144 +75,126 @@ class _VariconFormBuilderState extends State<VariconFormBuilder> {
             AppSpacing.sizedBoxH_08(),
             ...widget.surveyForm.inputFields
                 .map<Widget?>((e) {
-                  final labelText = e.isRequired
-                      ? '${e.label ?? ''} *'
-                      : e.label ?? '';
+                  final labelText =
+                      e.isRequired ? '${e.label ?? ''} *' : e.label ?? '';
 
                   return e.maybeMap(
                     text: (field) {
-                      return Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          TextFormField(
-                            initialValue: field.answer ?? '',
-                            readOnly: field.readOnly,
-                            keyboardType: TextInputType.text,
-                            maxLength: field.maxLength,
-                            onSaved: (newValue) {
-                              formValue.saveString(
-                                field.id,
-                                newValue,
-                              );
-                            },
-                            validator: (value) {
-                              return textValidator(
-                                value: value,
-                                inputType: "text",
-                                isRequired: field.isRequired,
-                                requiredErrorText: field.requiredErrorText,
-                              );
-                            },
-                            decoration: InputDecoration(
-                              hintText: field.hintText,
-                              labelText: labelText,
-                            ),
+                      return LabeledWidget(
+                        labelText: labelText,
+                        child: TextFormField(
+                          initialValue: field.answer ?? '',
+                          readOnly: field.readOnly,
+                          keyboardType: TextInputType.text,
+                          maxLength: field.maxLength,
+                          onSaved: (newValue) {
+                            formValue.saveString(
+                              field.id,
+                              newValue,
+                            );
+                          },
+                          validator: (value) {
+                            return textValidator(
+                              value: value,
+                              inputType: "text",
+                              isRequired: field.isRequired,
+                              requiredErrorText: field.requiredErrorText,
+                            );
+                          },
+                          decoration: InputDecoration(
+                            hintText: field.hintText,
+                            labelText: labelText,
                           ),
-                          AppSpacing.sizedBoxH_12(),
-                        ],
+                        ),
                       );
                     },
                     number: (field) {
-                      return Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          TextFormField(
-                            initialValue: (field.answer),
-                            readOnly: field.readOnly,
-                            keyboardType: TextInputType.number,
-                            maxLength: field.maxLength,
-                            onSaved: (newValue) {
-                              formValue.saveStringAsNum(
-                                field.id,
-                                newValue,
-                              );
-                            },
-                            validator: (value) {
-                              return numberValidator(
-                                value:
-                                    value != null ? num.tryParse(value) : null,
-                                isRequired: field.isRequired,
-                                max: field.max,
-                                min: field.min,
-                                maxErrorText: field.maxErrorText,
-                                minErrorText: field.minErrorText,
-                                requiredErrorText: field.requiredErrorText,
-                              );
-                            },
-                            decoration: InputDecoration(
-                              hintText: field.hintText,
-                              labelText: labelText,
-                            ),
+                      return LabeledWidget(
+                        labelText: labelText,
+                        child: TextFormField(
+                          initialValue: (field.answer),
+                          readOnly: field.readOnly,
+                          keyboardType: TextInputType.number,
+                          maxLength: field.maxLength,
+                          onSaved: (newValue) {
+                            formValue.saveStringAsNum(
+                              field.id,
+                              newValue,
+                            );
+                          },
+                          validator: (value) {
+                            return numberValidator(
+                              value: value != null ? num.tryParse(value) : null,
+                              isRequired: field.isRequired,
+                              max: field.max,
+                              min: field.min,
+                              maxErrorText: field.maxErrorText,
+                              minErrorText: field.minErrorText,
+                              requiredErrorText: field.requiredErrorText,
+                            );
+                          },
+                          decoration: InputDecoration(
+                            hintText: field.hintText,
+                            labelText: labelText,
                           ),
-                          AppSpacing.sizedBoxH_12(),
-                        ],
+                        ),
                       );
                     },
                     email: (field) {
-                      return Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          TextFormField(
-                            initialValue: (field.answer),
-                            readOnly: field.readOnly,
-                            keyboardType: TextInputType.number,
-                            maxLength: field.maxLength,
-                            onSaved: (newValue) {
-                              formValue.saveString(
-                                field.id,
-                                newValue,
-                              );
-                            },
-                            validator: (value) {
-                              return textValidator(
-                                value: value,
-                                inputType: "email",
-                                isRequired: field.isRequired,
-                                requiredErrorText: field.requiredErrorText,
-                              );
-                            },
-                            decoration: InputDecoration(
-                              hintText: field.hintText,
-                              labelText: labelText,
-                            ),
+                      return LabeledWidget(
+                        labelText: labelText,
+                        child: TextFormField(
+                          initialValue: (field.answer),
+                          readOnly: field.readOnly,
+                          keyboardType: TextInputType.number,
+                          maxLength: field.maxLength,
+                          onSaved: (newValue) {
+                            formValue.saveString(
+                              field.id,
+                              newValue,
+                            );
+                          },
+                          validator: (value) {
+                            return textValidator(
+                              value: value,
+                              inputType: "email",
+                              isRequired: field.isRequired,
+                              requiredErrorText: field.requiredErrorText,
+                            );
+                          },
+                          decoration: InputDecoration(
+                            hintText: field.hintText,
+                            labelText: labelText,
                           ),
-                          AppSpacing.sizedBoxH_12(),
-                        ],
+                        ),
                       );
                     },
                     url: (field) {
-                      return Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          TextFormField(
-                            initialValue: (field.answer),
-                            readOnly: field.readOnly,
-                            keyboardType: TextInputType.number,
-                            maxLength: field.maxLength,
-                            onSaved: (newValue) {
-                              formValue.saveString(
-                                field.id,
-                                newValue,
-                              );
-                            },
-                            validator: (value) {
-                              return uriValidator(
-                                value: value,
-                                isRequired: field.isRequired,
-                                requiredErrorText: field.requiredErrorText,
-                              );
-                            },
-                            decoration: InputDecoration(
-                              hintText: field.hintText,
-                              labelText: labelText,
-                            ),
+                      return LabeledWidget(
+                        labelText: labelText,
+                        child: TextFormField(
+                          initialValue: (field.answer),
+                          readOnly: field.readOnly,
+                          keyboardType: TextInputType.number,
+                          maxLength: field.maxLength,
+                          onSaved: (newValue) {
+                            formValue.saveString(
+                              field.id,
+                              newValue,
+                            );
+                          },
+                          validator: (value) {
+                            return uriValidator(
+                              value: value,
+                              isRequired: field.isRequired,
+                              requiredErrorText: field.requiredErrorText,
+                            );
+                          },
+                          decoration: InputDecoration(
+                            hintText: field.hintText,
+                            labelText: labelText,
                           ),
-                          AppSpacing.sizedBoxH_12(),
-                        ],
+                        ),
                       );
                     },
                     date: (field) {
@@ -242,25 +226,28 @@ class _VariconFormBuilderState extends State<VariconFormBuilder> {
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          TextFormField(
-                            initialValue: field.answer,
-                            readOnly: field.readOnly,
-                            keyboardType: TextInputType.text,
-                            maxLength: field.maxLength,
-                            maxLines: 4,
-                            onSaved: (newValue) => formValue.saveString(
+                          LabeledWidget(
+                            labelText: labelText,
+                            child: TextFormField(
+                              initialValue: field.answer,
+                              readOnly: field.readOnly,
+                              keyboardType: TextInputType.text,
+                              maxLength: field.maxLength,
+                              maxLines: 4,
+                              onSaved: (newValue) => formValue.saveString(
                                 field.id,
-                              newValue,
-                            ),
-                            validator: (value) => textValidator(
-                              value: value,
-                              inputType: "comment",
-                              isRequired: field.isRequired,
-                              requiredErrorText: field.requiredErrorText,
-                            ),
-                            decoration: InputDecoration(
-                              hintText: field.hintText,
-                              labelText: labelText,
+                                newValue,
+                              ),
+                              validator: (value) => textValidator(
+                                value: value,
+                                inputType: "comment",
+                                isRequired: field.isRequired,
+                                requiredErrorText: field.requiredErrorText,
+                              ),
+                              decoration: InputDecoration(
+                                hintText: field.hintText,
+                                labelText: labelText,
+                              ),
                             ),
                           ),
                           AppSpacing.sizedBoxH_12(),
@@ -278,7 +265,8 @@ class _VariconFormBuilderState extends State<VariconFormBuilder> {
                       return YesNoInputWidget(
                         field: field,
                         formValue: formValue,
-                        labelText: labelText,);
+                        labelText: labelText,
+                      );
                     },
                     // rating: (field) {
                     //   return RatingBarFormField(
