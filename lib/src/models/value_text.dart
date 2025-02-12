@@ -7,8 +7,13 @@ part 'value_text.g.dart';
 @freezed
 class ValueText with _$ValueText {
   const factory ValueText({
+    /// Option Action to have color
+    @JsonKey(name: 'isOtherField') bool? isOtherField,
+    @JsonKey(name: 'action') bool? action,
+
     /// Value that is used for remote API consumption.
     @JsonKey(readValue: readValue) required String value,
+    @JsonKey(name: 'notify_To') List? notifyTo,
 
     /// Text that is displayed to the frontend.
     @JsonKey(readValue: readText) required String text,
@@ -17,11 +22,17 @@ class ValueText with _$ValueText {
   const factory ValueText.none({
     @Default('none') String value,
     required String text,
+    bool? action,
+    bool? isOtherField,
+    @JsonKey(name: 'notify_To') List? notifyTo,
   }) = NoneValueText;
 
   const factory ValueText.other({
     @Default('other') String value,
     required String text,
+    bool? action,
+    bool? isOtherField,
+    @JsonKey(name: 'notify_To') List? notifyTo,
   }) = OtherValueText;
 
   factory ValueText.fromJson(Map<String, dynamic> json) =>
@@ -30,25 +41,3 @@ class ValueText with _$ValueText {
 
 String readText(Map map, String key) => map[key] ?? map['label'] ?? '';
 String readValue(Map map, String key) => map[key] ?? map['id'] ?? '';
-
-// import 'package:json_annotation/json_annotation.dart';
-
-// @JsonSerializable()
-// class ValueText {
-//   ValueText({required this.value, required this.text});
-
-//   final String value;
-//   final String text;
-
-//   factory ValueText.fromJson(Map<String, dynamic> json) =>
-//       _$ValueTextFromJson(json);
-//   Map<String, dynamic> toJson() => _$ValueTextToJson(this);
-// }
-
-// class NoneValueText extends ValueText {
-//   NoneValueText({super.value = 'none', super.text = 'none'});
-// }
-
-// class OtherValueText extends ValueText {
-//   OtherValueText({super.value = 'other', super.text = 'other'});
-// }

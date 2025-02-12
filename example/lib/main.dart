@@ -1,48 +1,43 @@
-import 'dart:convert';
-
-import 'package:example/survey_page.dart';
+import 'package:example/button_page.dart';
+import 'package:example/theme/app_theme.dart';
+import 'package:example/theme/palette.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart' show rootBundle;
-import 'package:varicon_form_builder/varicon_form_builder.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  const assetPath = 'assets/sample.json';
-  String currentValue = await rootBundle.loadString(assetPath);
-  Map<String, dynamic> currentData = jsonDecode(currentValue);
-
-  final SurveyPageForm form = await rootBundle
-      .loadString(assetPath)
-      .then((value) => SurveyPageForm.fromJson(jsonDecode(value)));
-
-  runApp(MyApp(form: form, data: currentData,));
+  runApp(
+    const MyApp(),
+  );
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key, required this.form, required this.data});
-
-  final SurveyPageForm form;
-  final Map<String, dynamic> data;
+  const MyApp({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        useMaterial3: true,
-        primarySwatch: Colors.orange,
-        inputDecorationTheme: InputDecorationTheme(
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(8),
-            borderSide: const BorderSide(
-              color: Colors.red,
+    return ProviderScope(
+      child: MaterialApp(
+        title: 'Flutter Demo',
+        theme: AppTheme.defaultTheme.copyWith(
+            // bottomSheetTheme: AppTheme.defaultTheme.bottomSheetTheme
+            //     .copyWith(backgroundColor: Colors.white),
+            dialogTheme: AppTheme.defaultTheme.dialogTheme.copyWith(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(4),
+              ),
             ),
-          ),
-          errorMaxLines: 3,
-        ),
+            textSelectionTheme: const TextSelectionThemeData(
+              selectionColor: Palette.primary,
+              cursorColor: Palette.primary,
+              selectionHandleColor: Palette.primary,
+            ),
+            visualDensity: VisualDensity.adaptivePlatformDensity),
+        home: const ButtonPage(),
       ),
-      home: SurveyPage(form: form, formData: data,),
     );
   }
 }
