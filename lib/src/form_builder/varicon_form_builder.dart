@@ -6,10 +6,19 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:varicon_form_builder/src/form_elements/varicon_date_field.dart';
+import 'package:varicon_form_builder/src/form_elements/varicon_signature_field.dart';
 import 'package:varicon_form_builder/src/models/models.dart';
-import 'package:varicon_form_builder/src/widget/varicon_text_field.dart';
+import 'package:varicon_form_builder/src/widget/label_widget.dart';
+import 'package:varicon_form_builder/src/form_elements/varicon_text_field.dart';
 
+import '../custom_element/date_time_form_field.dart';
+import '../form_elements/varicon_email_field.dart';
+import '../form_elements/varicon_long_text.dart';
+import '../form_elements/varicon_number_field.dart';
+import '../form_elements/varicon_phone_field.dart';
 import '../state/current_form_provider.dart';
+import '../state/required_id_provider.dart';
 import '../widget/navigation_button.dart';
 
 ///Main container for the form builder
@@ -114,6 +123,11 @@ class VariconFormBuilderState extends ConsumerState<VariconFormBuilder> {
   @override
   void initState() {
     super.initState();
+    Future.microtask(() {
+      ref
+          .read(requiredNotifierProvider.notifier)
+          .initialList(widget.surveyForm.inputFields);
+    });
   }
 
   @override
@@ -124,6 +138,7 @@ class VariconFormBuilderState extends ConsumerState<VariconFormBuilder> {
   @override
   Widget build(BuildContext context) {
     ref.watch(currentStateNotifierProvider);
+    ref.watch(requiredNotifierProvider);
     return Scaffold(
       backgroundColor: Colors.white,
       body: Padding(
@@ -131,20 +146,22 @@ class VariconFormBuilderState extends ConsumerState<VariconFormBuilder> {
         child: Column(
           children: [
             Expanded(
-              child: FormBuilder(
-                key: _formKey,
-                child: SingleChildScrollView(
-                  child: Column(spacing: 12.0, children: [
-                    ...widget.surveyForm.inputFields
-                        .map<Widget?>(
-                            (e) => _buildInputField(e, context, isNested: true))
-                        .whereType<Widget>(),
-                  ]),
+              child: SingleChildScrollView(
+                scrollDirection: Axis.vertical,
+                physics: const AlwaysScrollableScrollPhysics(),
+                child: FormBuilder(
+                  key: _formKey,
+                  child: Column(
+                    children: [
+                      ...widget.surveyForm.inputFields.map<Widget?>((e) {
+                        return _buildInputField(e, context, isNested: true);
+                      }).whereType<Widget>(),
+                    ],
+                  ),
                 ),
               ),
             ),
             Row(
-              spacing: 16.0,
               children: [
                 if (widget.hasAutoSave) ...[
                   Expanded(
@@ -197,16 +214,26 @@ class VariconFormBuilderState extends ConsumerState<VariconFormBuilder> {
                   child: NavigationButton(
                     buttonText: widget.buttonText,
                     onComplete: () async {
-                      if (_formKey.currentState == null) return;
-                      // return if form is not valid.
-                      if (!_formKey.currentState!.validate()) {
-                        // widget.formInputWidgetsKey.currentState
-                        //     ?.scrollToFirstInvalidField();
-                        return;
+                      try {
+                        if (_formKey.currentState == null) return;
+                        // return if form is not valid.
+                        if (!_formKey.currentState!.validate()) {
+                          if (ref
+                                  .read(requiredNotifierProvider.notifier)
+                                  .getInitialRequiredContext() !=
+                              null) {
+                            Scrollable.ensureVisible(
+                                (ref
+                                    .read(requiredNotifierProvider.notifier)
+                                    .getInitialRequiredContext())!,
+                                duration: const Duration(milliseconds: 500),
+                                curve: Curves.bounceIn);
+                          }
+                          return;
+                        }
+                      } catch (e) {
+                        log('Error: $e');
                       }
-                      Map<String, dynamic> fulldata =
-                          ref.read(currentStateNotifierProvider);
-                      log('Form Data: $fulldata');
                     },
                   ),
                 ),
@@ -222,10 +249,96 @@ class VariconFormBuilderState extends ConsumerState<VariconFormBuilder> {
       {bool haslabel = true, bool isNested = false}) {
     final labelText = haslabel ? '${field.label ?? ''} ' : '';
     return field.maybeMap(text: (value) {
-      return VariconTextField(
-        field: value,
+      return LabelWidget(
+        key: GlobalObjectKey(value.id),
+        isRequired: value.isRequired,
         labelText: labelText,
-        isNested: isNested,
+        child: (value.name ?? '').toLowerCase().contains('long')
+            ? VariconLongText(
+                field: value,
+                formCon: TextEditingController(),
+              )
+            : VariconTextField(
+                field: value,
+                labelText: labelText,
+                isNested: isNested,
+              ),
+      );
+    }, number: (value) {
+      return LabelWidget(
+        key: GlobalObjectKey(value.id),
+        isRequired: value.isRequired,
+        labelText: labelText,
+        child: VariconNumberField(
+          field: value,
+          labelText: labelText,
+          isNested: isNested,
+        ),
+      );
+    }, email: (value) {
+      return LabelWidget(
+        key: GlobalObjectKey(value.id),
+        isRequired: value.isRequired,
+        labelText: labelText,
+        child: VariconEmailField(
+          field: value,
+          labelText: labelText,
+          isNested: isNested,
+        ),
+      );
+    }, phone: (value) {
+      return LabelWidget(
+        key: GlobalObjectKey(value.id),
+        isRequired: value.isRequired,
+        labelText: labelText,
+        child: VariconPhoneField(
+          field: value,
+          labelText: labelText,
+          isNested: isNested,
+        ),
+      );
+    }, date: (value) {
+      return LabelWidget(
+        key: GlobalObjectKey(value.id),
+        isRequired: value.isRequired,
+        labelText: labelText,
+        child: VariconDateField(
+          field: value,
+          dateTime: DatePickerType.date,
+          labelText: labelText,
+        ),
+      );
+    }, time: (value) {
+      return LabelWidget(
+        key: GlobalObjectKey(value.id),
+        isRequired: value.isRequired,
+        labelText: labelText,
+        child: VariconDateField(
+          field: value,
+          dateTime: DatePickerType.time,
+          labelText: labelText,
+        ),
+      );
+    }, datetimelocal: (value) {
+      return LabelWidget(
+        key: GlobalObjectKey(value.id),
+        isRequired: value.isRequired,
+        labelText: labelText,
+        child: VariconDateField(
+          dateTime: DatePickerType.dateTime,
+          field: value,
+          labelText: labelText,
+        ),
+      );
+    }, signature: (value) {
+      return LabelWidget(
+        key: GlobalObjectKey(value.id),
+        isRequired: value.isRequired,
+        labelText: labelText,
+        child: VariconSignatureField(
+          field: value,
+          labelText: labelText,
+        ),
       );
     }, orElse: () {
       return const SizedBox.shrink();
