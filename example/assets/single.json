@@ -6,109 +6,62 @@
     "hasLocation": true,
     "elements":[
         {
-            "id": "item-68fbb667-b16e-4639-a65d-c991b77ab43f",
-            "name": "Signature",
-            "type": "signature",
+            "id": "item-63834c20-af35-4e0b-9dff-6871b209c3fe",
+            "name": "Images Upload",
+            "type": "images",
+            "label": "Medical Certificate",
+            "isMultiple": true,
+            "isRequired": true,
+            "initialAnswer": []
+        },
+        {
+            "id": "item-63834c20-af35-4e0b-9dff-6871b209c3fd",
+            "name": "File Upload",
+            "type": "files",
+            "label": "Medical Certificate",
+            "isMultiple": true,
+            "isRequired": true,
+            "initialAnswer": []
+        },
+        {
+            "id": "item-68fbb667-b16e-4639-a65d-c991b77ab43fc",
+            "name": "Signature1",
+            "type": "multisignature",
             "label": "Signature",
-            "answer": {},
             "isRequired": false,
             "selectedLinkListLabel": ""
         },
         {
-            "id": "item-519c9d58-c049-49e3-9364-a5180a56e616",
-            "name": "Date Time",
-            "type": "date",
-            "label": "Date and Time of this form being completed: ",
+            "id": "item-68fbb667-b16e-4639-a65d-c991b77ab43fcd",
+            "name": "Signatureadsa",
+            "type": "multisignature",
+            "label": "Signature",
             "isRequired": true,
             "selectedLinkListLabel": ""
         },
         {
-            "id": "item-519c9d58-c049-49e3-9364-a5180a56e611",
-            "name": "Date Time",
-            "type": "time",
-            "label": "Date and Time of this form being completed: ",
+            "id": "item-68fbb667-b16e-4639-a65d-c991b77ab43fce",
+            "name": "Signsdadature",
+            "type": "multasdisignature",
+            "label": "Signature",
+            "isRequired": false,
+            "selectedLinkListLabel": ""
+        },
+        {
+            "id": "item-68fbb667-b16e-4639-a65d-c991b77ab43fcf",
+            "name": "Siasdasgnature",
+            "type": "multisignature",
+            "label": "Signature",
+            "isRequired": false,
+            "selectedLinkListLabel": ""
+        },
+        {
+            "id": "item-68fbb667-b16e-4639-a65d-c991b77ab43fcg",
+            "name": "asdadadad",
+            "type": "multisignature",
+            "label": "Signature",
             "isRequired": true,
-            "selectedLinkListLabel": ""
-        },
-        {
-            "id": "item-0732e9d7-2baf-48b8-b8f7-f13af2273453",
-            "name": "Date Time",
-            "type": "datetimelocal",
-            "label": "Date and Time of the incident: ",
-            "isRequired": true,
-            "selectedLinkListLabel": ""
-        },
-        {
-            "id": "item-0ef42a9c-d614-42cb-bb8b-826c735473882",
-            "name": "Phone Number",
-            "type": "phone",
-            "label": "Employee Phone",
-            "isRequired": true,
-            "selectedLinkListLabel": ""
-        },
-        {
-            "id": "item-0ef42a9c-d614-42cb-bb8b-826c73547388",
-            "name": "Phone Number",
-            "type": "phone",
-            "label": "Employee Phone",
-            "isRequired": true,
-            "selectedLinkListLabel": ""
-        },
-        {
-            "id": "item-b26d4346-4537-40f4-9f08-d1c8d873f1390",
-            "name": "Full Name",
-            "type": "text",
-            "label": "Full Name0",
-            "isRequired": false,
-            "selectedLinkListLabel": ""
-        },
-        {
-            "id": "item-b26d4346-4537-40f4-9f08-d1c8d873f1391",
-            "name": "Full Name1",
-            "type": "text",
-            "label": "Full Name1",
-            "isRequired": false,
-            "selectedLinkListLabel": ""
-        },
-        {
-            "id": "item-b26d4346-4537-40f4-9f08-d1c8d873f1392",
-            "name": "Full Name2",
-            "type": "text",
-            "label": "Full Name2",
-            "isRequired": false,
-            "selectedLinkListLabel": ""
-        },
-        {
-            "id": "item-b26d4346-4537-40f4-9f08-d1c8d873f1393",
-            "name": "Full Name3",
-            "type": "text",
-            "label": "Full Name3",
-            "isRequired": false,
-            "selectedLinkListLabel": ""
-        },
-        {
-            "id": "item-b26d4346-4537-40f4-9f08-d1c8d873f1394",
-            "name": "Full Name4",
-            "type": "text",
-            "label": "Full Name4",
-            "isRequired": false,
-            "selectedLinkListLabel": ""
-        },
-        {
-            "id": "item-55cbd6ef-c26b-48d7-87b7-f8d6561da1c2",
-            "name": "Address",
-            "type": "text",
-            "label": "Address",
-            "isRequired": false,
-            "selectedLinkListLabel": ""
-        },
-        {
-            "id": "item-972be852-1b93-44ce-be87-8665122ed336",
-            "name": "Address",
-            "type": "text",
-            "label": "Address",
-            "isRequired": false,
             "selectedLinkListLabel": ""
         }
-    ]
+      ]
 }

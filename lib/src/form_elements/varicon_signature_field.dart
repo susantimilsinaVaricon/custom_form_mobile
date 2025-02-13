@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:form_builder_extra_fields/form_builder_extra_fields.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:varicon_form_builder/src/helpers/debouncer.dart';
 import '../../varicon_form_builder.dart';
+import '../custom_element/form_builder_signature_pad.dart';
+import '../state/current_form_provider.dart';
 
 class VariconSignatureField extends ConsumerWidget {
   const VariconSignatureField({
@@ -22,7 +23,20 @@ class VariconSignatureField extends ConsumerWidget {
       decoration: const InputDecoration(
         labelText: 'Signature Pad',
       ),
+      autovalidateMode: AutovalidateMode.onUserInteraction,
       name: 'signature',
+      onChanged: (value) {
+        debouncer.run(() {
+          if (value == null) {
+            ref.read(currentStateNotifierProvider.notifier).remove(field.id);
+          } else {
+            ref.read(currentStateNotifierProvider.notifier).saveMap(
+              field.id,
+              {'changeToImage': true, 'value': value},
+            );
+          }
+        });
+      },
       validator: (data) {
         if (field.isRequired) {
           if (data == null || data.isEmpty) {

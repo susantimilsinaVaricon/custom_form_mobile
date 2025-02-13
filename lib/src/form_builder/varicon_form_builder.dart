@@ -1,12 +1,15 @@
 // ignore_for_file: use_build_context_synchronously, unnecessary_to_list_in_spreads, unrelated_type_equality_checks
 
 import 'dart:async';
+import 'dart:convert';
 import 'dart:developer';
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:varicon_form_builder/src/form_elements/varicon_date_field.dart';
+import 'package:varicon_form_builder/src/form_elements/varicon_file_picker_field.dart';
+import 'package:varicon_form_builder/src/form_elements/varicon_image_field.dart';
 import 'package:varicon_form_builder/src/form_elements/varicon_signature_field.dart';
 import 'package:varicon_form_builder/src/models/models.dart';
 import 'package:varicon_form_builder/src/widget/label_widget.dart';
@@ -15,6 +18,7 @@ import 'package:varicon_form_builder/src/form_elements/varicon_text_field.dart';
 import '../custom_element/date_time_form_field.dart';
 import '../form_elements/varicon_email_field.dart';
 import '../form_elements/varicon_long_text.dart';
+import '../form_elements/varicon_multi_signature_field.dart';
 import '../form_elements/varicon_number_field.dart';
 import '../form_elements/varicon_phone_field.dart';
 import '../state/current_form_provider.dart';
@@ -231,6 +235,9 @@ class VariconFormBuilderState extends ConsumerState<VariconFormBuilder> {
                           }
                           return;
                         }
+                        final formValue =
+                            ref.read(currentStateNotifierProvider);
+                        log(jsonEncode(formValue));
                       } catch (e) {
                         log('Error: $e');
                       }
@@ -336,6 +343,36 @@ class VariconFormBuilderState extends ConsumerState<VariconFormBuilder> {
         isRequired: value.isRequired,
         labelText: labelText,
         child: VariconSignatureField(
+          field: value,
+          labelText: labelText,
+        ),
+      );
+    }, multisignature: (value) {
+      return LabelWidget(
+        key: GlobalObjectKey(value.id),
+        isRequired: value.isRequired,
+        labelText: labelText,
+        child: VariconMultiSignatureField(
+          field: value,
+          labelText: labelText,
+        ),
+      );
+    }, files: (value) {
+      return LabelWidget(
+        key: GlobalObjectKey(value.id),
+        isRequired: value.isRequired,
+        labelText: labelText,
+        child: VariconFilePickerField(
+          field: value,
+          labelText: labelText,
+        ),
+      );
+    }, images: (value) {
+      return LabelWidget(
+        key: GlobalObjectKey(value.id),
+        isRequired: value.isRequired,
+        labelText: labelText,
+        child: VariconImageField(
           field: value,
           labelText: labelText,
         ),
