@@ -21,13 +21,13 @@ class LabelWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.only(bottom: 12.0),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(8.0),
-        border: Border.all(
-          color: Colors.grey.shade300,
-        ),
-      ),
+      // decoration: BoxDecoration(
+      //   color: Colors.white,
+      //   borderRadius: BorderRadius.circular(8.0),
+      //   border: Border.all(
+      //     color: Colors.grey.shade300,
+      //   ),
+      // ),
       width: double.infinity,
       child: Card(
         elevation: 0,

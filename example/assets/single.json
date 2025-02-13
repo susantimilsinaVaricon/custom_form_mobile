@@ -6,6 +6,98 @@
     "hasLocation": true,
     "elements":[
         {
+            "id": "item-c5eb2ec7-1ea9-42c7-bb04-f42984763baa",
+            "name": "Checkboxes",
+            "type": "checkbox",
+            "label": "Complete if applicable",
+            "answer": "item-72c23d6d-ea3e-4b48-baee-555200801627,item-bfe80f9b-b7d9-4744-b820-940d04acc49d,item-f1f14097-015f-4add-a65d-1f9b53696b24",
+            "choice": [
+                {
+                    "id": "item-f1f14097-015f-4add-a65d-1f9b53696b24",
+                    "label": "Routine Traffic Control"
+                },
+                {
+                    "id": "item-bfe80f9b-b7d9-4744-b820-940d04acc49d",
+                    "label": "Traffic Management Plan required",
+                    "action": true
+                },
+                {
+                    "id": "item-72c23d6d-ea3e-4b48-baee-555200801627",
+                    "label": "Public & Pedestrian safety"
+                }
+            ],
+            "actionMessage":"this is action",
+            "isRequired": false,
+            "isConditional": false,
+            "fromManualList": true,
+            "selectedLinkListLabel": ""
+        },
+        {
+            "name": "Yes/No",
+            "id": "item-3b801414-34cb-4e08-936a-93aa27dcf314",
+            "type": "yesno",
+            "label": "Yes/no conditional",
+            "answer": "",
+            
+            "choice": [
+                {
+                    "id": "item-466d1d28-a26a-4cd0-8a45-78a66f5a0809",
+                    "label": "Yes",
+                    "action": true,
+                    "notify_To": []
+                },
+                {
+                    "id": "item-7284886b-2d10-4a6a-b08e-5cc4230e0070",
+                    "label": "No",
+                    "action": false,
+                    "notify_To": []
+                }
+            ],
+            "isRequired": false,
+            "actionMessage":"this is action",
+            "initialAnswer": "",
+            "isConditional": true,
+            "fromManualList": true
+        },
+        {
+            "id": "item-3b801414-34cb-4e08-936a-93aa27dcf312",
+            "type": "radiogroup",
+            "label": "Column 5",
+            "answer": "",
+            "choice": [
+                {
+                    "text": "Option 1",
+                    "value": "",
+                    "action": false,
+                    "isOtherField": false
+                },
+                {
+                    "text": "Option 2",
+                    "value": "",
+                    "action": false,
+                    "isOtherField": false
+                },
+                {
+                    "text": "Option 3",
+                    "value": "",
+                    "action": true,
+                    "isOtherField": false
+                },
+                {
+                    "text": "Option 4",
+                    "value": "",
+                    "action": true,
+                    "isOtherField": false
+                }
+            ],
+            "visible": true,
+            "noneText": null,
+            "readOnly": false,
+            "otherText": null,
+            "actionMessage":"this is action",
+            "isRequired": true
+        },
+        {
             "id": "item-63834c20-af35-4e0b-9dff-6871b209c3fe",
             "name": "Images Upload",
             "type": "images",

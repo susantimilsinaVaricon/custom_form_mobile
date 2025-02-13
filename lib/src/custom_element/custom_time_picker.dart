@@ -2,7 +2,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:varicon_form_builder/src/widget/action_button.dart';
-import 'package:varicon_form_builder/varicon_form_builder.dart';
 
 ///Custom time picker dialog
 ///
