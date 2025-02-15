@@ -6,6 +6,43 @@
     "hasLocation": true,
     "elements":[
         {
+            "type": "dropdown",
+            "name": "select1",
+            "id": "select1",
+            "label": "Select from below drop down testelect from below drop down testelect from below drop down testelect from below drop down testelect from below drop down test",
+            "isRequired": true,
+            "islinked": true,
+            "islinked_query": "equipment",
+            "fromManualList": false,
+            "isConditional": true,
+            "answer": "123467",
+            "selectedLinkListLabel": "equipment36",
+            "actionMessage": "This is the action message ",
+            "requiredErrorText": "Drop down is required",
+            "commentPlaceholder": "comment are place",
+            "choice": [
+                {
+                    "value": "item1",
+                    "text": "This is item 1.",
+                    "action": true
+                },
+                {
+                    "value": "item2",
+                    "text": "This is item 2.",
+                    "action": false
+                },
+                {
+                    "value": "item3",
+                    "text": "This is item 3.",
+                    "action": false
+                }
+            ],
+            "showOtherItem": false,
+            "showNoneItem": false,
+            "otherErrorText": "Empty comment required",
+            "placeholder": "Select...OKkk"
+        },
+        {
             "id": "item-c5eb2ec7-1ea9-42c7-bb04-f42984763baa",
             "name": "Checkboxes",
             "type": "checkbox",
