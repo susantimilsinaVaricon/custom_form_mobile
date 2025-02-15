@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
+import 'package:form_builder_validators/form_builder_validators.dart';
 import 'package:varicon_form_builder/src/models/value_text.dart';
 
-class CustomGroupedCheckbox<T> extends StatelessWidget {
+class CustomGroupedCheckbox<T> extends StatefulWidget {
   /// A list of string that describes each checkbox. Each item must be distinct.
   final List<FormBuilderFieldOption<T>> options;
 
@@ -190,6 +191,7 @@ class CustomGroupedCheckbox<T> extends StatelessWidget {
   /// If the [orientation] is set to [OptionsOrientation.horizontal] then
   /// [wrapSpacing] is used as inter-item right margin
   final BoxDecoration? itemDecoration;
+  final Function(bool isSelected, String text)? onOtherSelectedValue;
 
   const CustomGroupedCheckbox({
     super.key,
@@ -217,21 +219,30 @@ class CustomGroupedCheckbox<T> extends StatelessWidget {
     this.controlAffinity = ControlAffinity.leading,
     this.visualDensity,
     this.itemDecoration,
+    this.onOtherSelectedValue,
   });
 
   @override
+  State<CustomGroupedCheckbox<T>> createState() =>
+      _CustomGroupedCheckboxState<T>();
+}
+
+class _CustomGroupedCheckboxState<T> extends State<CustomGroupedCheckbox<T>> {
+  TextEditingController otherFieldController = TextEditingController();
+  FocusNode otherFieldFocusNode = FocusNode();
+  @override
   Widget build(BuildContext context) {
     final widgetList = <Widget>[];
-    for (var i = 0; i < options.length; i++) {
-      widgetList.add(buildItem(i));
+    for (var i = 0; i < widget.options.length; i++) {
+      widgetList.add(buildItem(i, otherFieldController, otherFieldFocusNode));
     }
     Widget finalWidget;
-    if (orientation == OptionsOrientation.auto) {
+    if (widget.orientation == OptionsOrientation.auto) {
       finalWidget = OverflowBar(
         alignment: MainAxisAlignment.spaceEvenly,
         children: widgetList,
       );
-    } else if (orientation == OptionsOrientation.vertical) {
+    } else if (widget.orientation == OptionsOrientation.vertical) {
       finalWidget = SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Column(
@@ -239,10 +250,10 @@ class CustomGroupedCheckbox<T> extends StatelessWidget {
           children: [
             ...widgetList,
             Visibility(
-              visible: ((value??[]) as List<ValueText>)
+              visible: ((widget.value ?? []) as List<ValueText>)
                       .where((element) => element.action == true)
                       .isNotEmpty &&
-                  (actionMessage ?? '').isNotEmpty,
+                  (widget.actionMessage ?? '').isNotEmpty,
               child: Container(
                 width: double.infinity,
                 padding:
@@ -252,15 +263,41 @@ class CustomGroupedCheckbox<T> extends StatelessWidget {
                   borderRadius: BorderRadius.circular(8.0),
                 ),
                 child: Text(
-                  actionMessage ?? '',
+                  widget.actionMessage ?? '',
                   style: const TextStyle(color: Colors.white),
                 ),
+              ),
+            ),
+            const SizedBox(
+              height: 12.0,
+            ),
+            Visibility(
+              visible: ((widget.value ?? []) as List<ValueText>)
+                  .where((element) => element.isOtherField == true)
+                  .isNotEmpty,
+              child: FormBuilderTextField(
+                name: 'name',
+                autofocus: true,
+                onTapOutside: (val) {
+                  otherFieldFocusNode.unfocus();
+                },
+                controller: otherFieldController,
+                focusNode: otherFieldFocusNode,
+                decoration: const InputDecoration(
+                  labelText: 'Other (please specify)',
+                ),
+                onChanged: (data) {
+                  widget.onOtherSelectedValue!(true, data ?? '');
+                },
+                validator: FormBuilderValidators.compose([
+                  FormBuilderValidators.required(),
+                ]),
               ),
             ),
           ],
         ),
       );
-    } else if (orientation == OptionsOrientation.horizontal) {
+    } else if (widget.orientation == OptionsOrientation.horizontal) {
       finalWidget = SingleChildScrollView(
         scrollDirection: Axis.horizontal,
         child: Row(
@@ -272,14 +309,14 @@ class CustomGroupedCheckbox<T> extends StatelessWidget {
     } else {
       finalWidget = SingleChildScrollView(
         child: Wrap(
-          spacing: wrapSpacing,
-          runSpacing: wrapRunSpacing,
-          textDirection: wrapTextDirection,
-          crossAxisAlignment: wrapCrossAxisAlignment,
-          verticalDirection: wrapVerticalDirection,
-          alignment: wrapAlignment,
+          spacing: widget.wrapSpacing,
+          runSpacing: widget.wrapRunSpacing,
+          textDirection: widget.wrapTextDirection,
+          crossAxisAlignment: widget.wrapCrossAxisAlignment,
+          verticalDirection: widget.wrapVerticalDirection,
+          alignment: widget.wrapAlignment,
           direction: Axis.horizontal,
-          runAlignment: wrapRunAlignment,
+          runAlignment: widget.wrapRunAlignment,
           children: widgetList,
         ),
       );
@@ -288,40 +325,74 @@ class CustomGroupedCheckbox<T> extends StatelessWidget {
   }
 
   /// the composite of all the components for the option at index
-  Widget buildItem(int index) {
-    final option = options[index];
+  Widget buildItem(int index, TextEditingController otherFieldController,
+      FocusNode otherFieldFocusNode) {
+    final option = widget.options[index];
     final optionValue = option.value;
-    final isOptionDisabled = true == disabled?.contains(optionValue);
+    final isOptionDisabled = true == widget.disabled?.contains(optionValue);
     final control = Checkbox(
-      visualDensity: visualDensity,
-      activeColor: activeColor,
-      checkColor: checkColor,
-      focusColor: focusColor,
-      hoverColor: hoverColor,
-      materialTapTargetSize: materialTapTargetSize,
-      value: tristate
-          ? value?.contains(optionValue)
-          : true == value?.contains(optionValue),
-      tristate: tristate,
+      visualDensity: widget.visualDensity,
+      activeColor: widget.activeColor,
+      checkColor: widget.checkColor,
+      focusColor: widget.focusColor,
+      hoverColor: widget.hoverColor,
+      materialTapTargetSize: widget.materialTapTargetSize,
+      value: widget.tristate
+          ? widget.value?.contains(optionValue)
+          : true == widget.value?.contains(optionValue),
+      tristate: widget.tristate,
       onChanged: isOptionDisabled
           ? null
           : (selected) {
-              List<T> selectedListItems = value == null ? [] : List.of(value!);
+              List<T> selectedListItems =
+                  widget.value == null ? [] : List.of(widget.value!);
               selected!
                   ? selectedListItems.add(optionValue)
                   : selectedListItems.remove(optionValue);
-              onChanged(selectedListItems);
+
+              ValueText valueText = optionValue as ValueText;
+              if (valueText.isOtherField == true && selected == true) {
+                widget.onOtherSelectedValue!(true, '');
+              }
+              List<ValueText> valueTextList =
+                  selectedListItems as List<ValueText>;
+              if (valueTextList
+                  .where((element) => element.isOtherField == true)
+                  .isEmpty) {
+                widget.onOtherSelectedValue!(false, '');
+                otherFieldController.clear();
+              } else {
+                otherFieldFocusNode.requestFocus();
+              }
+              widget.onChanged(selectedListItems);
             },
     );
     final label = GestureDetector(
       onTap: isOptionDisabled
           ? null
           : () {
-              List<T> selectedListItems = value == null ? [] : List.of(value!);
+              List<T> selectedListItems =
+                  widget.value == null ? [] : List.of(widget.value!);
               selectedListItems.contains(optionValue)
                   ? selectedListItems.remove(optionValue)
                   : selectedListItems.add(optionValue);
-              onChanged(selectedListItems);
+              ValueText valueText = optionValue as ValueText;
+              if (valueText.isOtherField == true &&
+                  selectedListItems.contains(optionValue) == false) {
+                widget.onOtherSelectedValue!(true, '');
+              }
+              List<ValueText> valueTextList =
+                  selectedListItems as List<ValueText>;
+
+              if (valueTextList
+                  .where((element) => element.isOtherField == true)
+                  .isEmpty) {
+                widget.onOtherSelectedValue!(false, '');
+                otherFieldController.clear();
+              } else {
+                otherFieldFocusNode.requestFocus();
+              }
+              widget.onChanged(selectedListItems);
             },
       child: option,
     );
@@ -332,17 +403,17 @@ class CustomGroupedCheckbox<T> extends StatelessWidget {
       margin: const EdgeInsets.only(bottom: 8.0),
       decoration: BoxDecoration(
         border: Border.all(
-          color: value?.contains(optionValue) == true
+          color: widget.value?.contains(optionValue) == true
               ? valueText?.action == true
                   ? Colors.red
                   : Colors.grey.shade600
               : Colors.transparent,
           width: 1.0,
         ),
-        color:
-            (value?.contains(optionValue) == true && valueText?.action == true)
-                ? Colors.red.shade100
-                : Colors.transparent,
+        color: (widget.value?.contains(optionValue) == true &&
+                valueText?.action == true)
+            ? Colors.red.shade100
+            : Colors.transparent,
         borderRadius: BorderRadius.circular(8.0),
       ),
       child: Column(
@@ -352,31 +423,33 @@ class CustomGroupedCheckbox<T> extends StatelessWidget {
           Row(
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
-              if (controlAffinity == ControlAffinity.leading) control,
+              if (widget.controlAffinity == ControlAffinity.leading) control,
               Flexible(flex: 1, child: label),
-              if (controlAffinity == ControlAffinity.trailing) control,
-              if (orientation != OptionsOrientation.vertical &&
-                  separator != null &&
-                  index != options.length - 1)
-                separator!,
+              if (widget.controlAffinity == ControlAffinity.trailing) control,
+              if (widget.orientation != OptionsOrientation.vertical &&
+                  widget.separator != null &&
+                  index != widget.options.length - 1)
+                widget.separator!,
             ],
           ),
-          if (orientation == OptionsOrientation.vertical &&
-              separator != null &&
-              index != options.length - 1)
-            separator!,
+          if (widget.orientation == OptionsOrientation.vertical &&
+              widget.separator != null &&
+              index != widget.options.length - 1)
+            widget.separator!,
         ],
       ),
     );
 
-    if (this.itemDecoration != null) {
+    if (widget.itemDecoration != null) {
       compositeItem = Container(
-        decoration: this.itemDecoration,
+        decoration: widget.itemDecoration,
         margin: EdgeInsets.only(
-          bottom:
-              orientation == OptionsOrientation.vertical ? wrapSpacing : 0.0,
-          right:
-              orientation == OptionsOrientation.horizontal ? wrapSpacing : 0.0,
+          bottom: widget.orientation == OptionsOrientation.vertical
+              ? widget.wrapSpacing
+              : 0.0,
+          right: widget.orientation == OptionsOrientation.horizontal
+              ? widget.wrapSpacing
+              : 0.0,
         ),
         child: compositeItem,
       );

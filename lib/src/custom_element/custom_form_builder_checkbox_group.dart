@@ -25,6 +25,7 @@ class CustomFormBuilderCheckboxGroup<T> extends FormBuilderFieldDecoration<List<
   final Widget? separator;
   final ControlAffinity controlAffinity;
   final OptionsOrientation orientation;
+  final Function(bool isSelected, String text)? onOtherSelectedValue;
 
   /// Added to each item if provided.
   /// [GroupedCheckbox] applies the [itemDecorator] to each Checkbox
@@ -67,41 +68,46 @@ class CustomFormBuilderCheckboxGroup<T> extends FormBuilderFieldDecoration<List<
     this.controlAffinity = ControlAffinity.leading,
     this.orientation = OptionsOrientation.wrap,
     this.itemDecoration,
+    this.onOtherSelectedValue
   }) : super(
           builder: (FormFieldState<List<T>?> field) {
             final state = field as _CustomFormBuilderCheckboxGroupState<T>;
-
             return InputDecorator(
               decoration: state.decoration,
-              child: CustomGroupedCheckbox<T>(
-                actionMessage: actionMessage,
-                orientation: orientation,
-                value: state.value,
-                options: options,
-                onChanged: (val) {
-                  field.didChange(val);
-                },
-                disabled: state.enabled
-                    ? disabled
-                    : options.map((e) => e.value).toList(),
-                activeColor: activeColor,
-                visualDensity: visualDensity,
-                focusColor: focusColor,
-                checkColor: checkColor,
-                materialTapTargetSize: materialTapTargetSize,
-                hoverColor: hoverColor,
-                tristate: tristate,
-                wrapAlignment: wrapAlignment,
-                wrapCrossAxisAlignment: wrapCrossAxisAlignment,
-                wrapDirection: wrapDirection,
-                wrapRunAlignment: wrapRunAlignment,
-                wrapRunSpacing: wrapRunSpacing,
-                wrapSpacing: wrapSpacing,
-                wrapTextDirection: wrapTextDirection,
-                wrapVerticalDirection: wrapVerticalDirection,
-                separator: separator,
-                controlAffinity: controlAffinity,
-                itemDecoration: itemDecoration,
+              child: Column(
+                children: [
+                  CustomGroupedCheckbox<T>(
+                    actionMessage: actionMessage,
+                    orientation: orientation,
+                    value: state.value,
+                    options: options,
+                    onChanged: (val) {
+                      field.didChange(val);                    
+                    },
+                    disabled: state.enabled
+                        ? disabled
+                        : options.map((e) => e.value).toList(),
+                    activeColor: activeColor,
+                    visualDensity: visualDensity,
+                    focusColor: focusColor,
+                    checkColor: checkColor,
+                    materialTapTargetSize: materialTapTargetSize,
+                    hoverColor: hoverColor,
+                    tristate: tristate,
+                    wrapAlignment: wrapAlignment,
+                    wrapCrossAxisAlignment: wrapCrossAxisAlignment,
+                    wrapDirection: wrapDirection,
+                    wrapRunAlignment: wrapRunAlignment,
+                    wrapRunSpacing: wrapRunSpacing,
+                    wrapSpacing: wrapSpacing,
+                    wrapTextDirection: wrapTextDirection,
+                    wrapVerticalDirection: wrapVerticalDirection,
+                    separator: separator,
+                    controlAffinity: controlAffinity,
+                    itemDecoration: itemDecoration,
+                    onOtherSelectedValue: onOtherSelectedValue,
+                  ),
+                ],
               ),
             );
           },

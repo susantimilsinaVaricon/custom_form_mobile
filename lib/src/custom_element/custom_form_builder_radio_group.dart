@@ -29,41 +29,44 @@ class CustomFromBuilderRadioGroup<T> extends FormBuilderFieldDecoration<T> {
   /// [GroupedRadio] applies the [itemDecorator] to each Radio
   final BoxDecoration? itemDecoration;
 
+  final Function(bool isSelected, String text)? onOtherSelectedValue;
+
   /// Creates field to select one value from a list of Radio Widgets
-  CustomFromBuilderRadioGroup({
-    super.autovalidateMode = AutovalidateMode.disabled,
-    super.enabled,
-    super.focusNode,
-    super.onSaved,
-    super.validator,
-    super.decoration,
-    super.key,
-    required super.name,
-    required this.options,
-    super.initialValue,
-    this.actionMessage,
-    this.activeColor,
-    this.controlAffinity = ControlAffinity.leading,
-    this.disabled,
-    this.focusColor,
-    this.hoverColor,
-    this.materialTapTargetSize,
-    this.orientation = OptionsOrientation.wrap,
-    this.separator,
-    this.wrapAlignment = WrapAlignment.start,
-    this.wrapCrossAxisAlignment = WrapCrossAlignment.start,
-    this.wrapDirection = Axis.horizontal,
-    this.wrapRunAlignment = WrapAlignment.start,
-    this.wrapRunSpacing = 0.0,
-    this.wrapSpacing = 0.0,
-    this.wrapTextDirection,
-    this.wrapVerticalDirection = VerticalDirection.down,
-    super.onChanged,
-    super.valueTransformer,
-    super.onReset,
-    super.restorationId,
-    this.itemDecoration,
-  }) : super(
+  CustomFromBuilderRadioGroup(
+      {super.autovalidateMode = AutovalidateMode.disabled,
+      super.enabled,
+      super.focusNode,
+      super.onSaved,
+      super.validator,
+      super.decoration,
+      super.key,
+      required super.name,
+      required this.options,
+      super.initialValue,
+      this.actionMessage,
+      this.activeColor,
+      this.controlAffinity = ControlAffinity.leading,
+      this.disabled,
+      this.focusColor,
+      this.hoverColor,
+      this.materialTapTargetSize,
+      this.orientation = OptionsOrientation.wrap,
+      this.separator,
+      this.wrapAlignment = WrapAlignment.start,
+      this.wrapCrossAxisAlignment = WrapCrossAlignment.start,
+      this.wrapDirection = Axis.horizontal,
+      this.wrapRunAlignment = WrapAlignment.start,
+      this.wrapRunSpacing = 0.0,
+      this.wrapSpacing = 0.0,
+      this.wrapTextDirection,
+      this.wrapVerticalDirection = VerticalDirection.down,
+      super.onChanged,
+      super.valueTransformer,
+      super.onReset,
+      super.restorationId,
+      this.itemDecoration,
+      this.onOtherSelectedValue})
+      : super(
           builder: (FormFieldState<T?> field) {
             final state = field as _CustomFromBuilderRadioGroupState<T>;
 
@@ -95,6 +98,7 @@ class CustomFromBuilderRadioGroup<T> extends FormBuilderFieldDecoration<T> {
                 wrapTextDirection: wrapTextDirection,
                 wrapVerticalDirection: wrapVerticalDirection,
                 itemDecoration: itemDecoration,
+                onOtherSelectedValue: onOtherSelectedValue,
               ),
             );
           },

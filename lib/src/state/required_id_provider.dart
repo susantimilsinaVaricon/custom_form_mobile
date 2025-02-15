@@ -15,6 +15,14 @@ class RequiredIdNotifier extends StateNotifier<Map<String, dynamic>> {
 
   void remove(String k) => state.remove(k);
 
+  void addRequiredField(String k, GlobalObjectKey key) {
+    state.addAll({k: key});
+  }
+
+  void removeRequiredField(String k) {
+    state.remove(k);
+  }
+
   void initialList(List<InputField> inputFields) {
     // Clear the current state
     state = {};

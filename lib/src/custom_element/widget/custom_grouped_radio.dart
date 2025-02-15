@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_form_builder/flutter_form_builder.dart';
+import 'package:form_builder_validators/form_builder_validators.dart';
 import 'package:varicon_form_builder/src/models/value_text.dart';
 
 class CustomGroupedRadio<T> extends StatefulWidget {
@@ -184,36 +185,41 @@ class CustomGroupedRadio<T> extends StatefulWidget {
   /// [wrapSpacing] is used as inter-item right margin
   final BoxDecoration? itemDecoration;
 
-  const CustomGroupedRadio({
-    super.key,
-    required this.options,
-    required this.orientation,
-    required this.onChanged,
-    this.value,
-    this.disabled,
-    this.activeColor,
-    this.focusColor,
-    this.hoverColor,
-    this.actionMessage,
-    this.materialTapTargetSize,
-    this.wrapDirection = Axis.horizontal,
-    this.wrapAlignment = WrapAlignment.start,
-    this.wrapSpacing = 0.0,
-    this.wrapRunAlignment = WrapAlignment.start,
-    this.wrapRunSpacing = 0.0,
-    this.wrapCrossAxisAlignment = WrapCrossAlignment.start,
-    this.wrapTextDirection,
-    this.wrapVerticalDirection = VerticalDirection.down,
-    this.separator,
-    this.controlAffinity = ControlAffinity.leading,
-    this.itemDecoration,
-  });
+  final Function(bool isSelected, String text)? onOtherSelectedValue;
+
+  const CustomGroupedRadio(
+      {super.key,
+      required this.options,
+      required this.orientation,
+      required this.onChanged,
+      this.value,
+      this.disabled,
+      this.activeColor,
+      this.focusColor,
+      this.hoverColor,
+      this.actionMessage,
+      this.materialTapTargetSize,
+      this.wrapDirection = Axis.horizontal,
+      this.wrapAlignment = WrapAlignment.start,
+      this.wrapSpacing = 0.0,
+      this.wrapRunAlignment = WrapAlignment.start,
+      this.wrapRunSpacing = 0.0,
+      this.wrapCrossAxisAlignment = WrapCrossAlignment.start,
+      this.wrapTextDirection,
+      this.wrapVerticalDirection = VerticalDirection.down,
+      this.separator,
+      this.controlAffinity = ControlAffinity.leading,
+      this.itemDecoration,
+      this.onOtherSelectedValue});
 
   @override
   State<CustomGroupedRadio<T?>> createState() => _CustomGroupedRadioState<T>();
 }
 
 class _CustomGroupedRadioState<T> extends State<CustomGroupedRadio<T?>> {
+  TextEditingController otherFieldController = TextEditingController();
+  FocusNode otherFieldFocusNode = FocusNode();
+
   @override
   Widget build(BuildContext context) {
     final widgetList = <Widget>[];
@@ -250,6 +256,28 @@ class _CustomGroupedRadioState<T> extends State<CustomGroupedRadio<T?>> {
                     widget.actionMessage ?? '',
                     style: const TextStyle(color: Colors.white),
                   ),
+                ),
+              ),
+              const SizedBox(height: 8.0),
+              Visibility(
+                visible: (widget.value as ValueText?)?.isOtherField == true,
+                child: FormBuilderTextField(
+                  name: 'name',
+                  autofocus: true,
+                  onTapOutside: (val) {
+                    otherFieldFocusNode.unfocus();
+                  },
+                  controller: otherFieldController,
+                  focusNode: otherFieldFocusNode,
+                  decoration: const InputDecoration(
+                    labelText: 'Other (please specify)',
+                  ),
+                  onChanged: (data) {
+                    widget.onOtherSelectedValue!(true, data ?? '');
+                  },
+                  validator: FormBuilderValidators.compose([
+                    FormBuilderValidators.required(),
+                  ]),
                 ),
               ),
             ],
@@ -294,6 +322,13 @@ class _CustomGroupedRadioState<T> extends State<CustomGroupedRadio<T?>> {
       onChanged: isOptionDisabled
           ? null
           : (T? selected) {
+              ValueText? selectedOption = selected as ValueText?;
+              if (selectedOption?.isOtherField == true) {
+                widget.onOtherSelectedValue!(true, '');
+              } else {
+                otherFieldController.clear();
+                widget.onOtherSelectedValue!(false, '');
+              }
               widget.onChanged(selected);
             },
     );
@@ -302,6 +337,13 @@ class _CustomGroupedRadioState<T> extends State<CustomGroupedRadio<T?>> {
       onTap: isOptionDisabled
           ? null
           : () {
+              ValueText? selectedOption = optionValue as ValueText?;
+              if (selectedOption?.isOtherField == true) {
+                widget.onOtherSelectedValue!(true, '');
+              } else {
+                otherFieldController.clear();
+                widget.onOtherSelectedValue!(false, '');
+              }
               widget.onChanged(optionValue);
             },
       child: option,

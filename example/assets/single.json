@@ -24,6 +24,11 @@
                 {
                     "id": "item-72c23d6d-ea3e-4b48-baee-555200801627",
                     "label": "Public & Pedestrian safety"
+                },
+                {
+                    "id": "item-9e00c553-2e36-4f14-8748-fae28e4111dc",
+                    "label": "Other",
+                    "isOtherField": true
                 }
             ],
             "actionMessage":"this is action",
@@ -88,6 +93,11 @@
                     "value": "",
                     "action": true,
                     "isOtherField": false
+                },
+                {
+                    "id": "item-9e00c553-2e36-4f14-8748-fae28e4111de",
+                    "label": "Other",
+                    "isOtherField": true
                 }
             ],
             "visible": true,
@@ -95,7 +105,7 @@
             "readOnly": false,
             "otherText": null,
             "actionMessage":"this is action",
-            "isRequired": true
+            "isRequired": false
         },
         {
             "id": "item-63834c20-af35-4e0b-9dff-6871b209c3fe",
@@ -103,7 +113,7 @@
             "type": "images",
             "label": "Medical Certificate",
             "isMultiple": true,
-            "isRequired": true,
+            "isRequired": false,
             "initialAnswer": []
         },
         {
@@ -112,7 +122,7 @@
             "type": "files",
             "label": "Medical Certificate",
             "isMultiple": true,
-            "isRequired": true,
+            "isRequired": false,
             "initialAnswer": []
         },
         {
@@ -128,7 +138,7 @@
             "name": "Signatureadsa",
             "type": "multisignature",
             "label": "Signature",
-            "isRequired": true,
+            "isRequired": false,
             "selectedLinkListLabel": ""
         },
         {
@@ -152,7 +162,7 @@
             "name": "asdadadad",
             "type": "multisignature",
             "label": "Signature",
-            "isRequired": true,
+            "isRequired": false,
             "selectedLinkListLabel": ""
         }
       ]

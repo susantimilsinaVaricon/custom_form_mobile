@@ -1,8 +1,13 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import '../../varicon_form_builder.dart';
 import '../custom_element/custom_form_builder_radio_group.dart';
+import '../helpers/debouncer.dart';
+import '../models/value_text.dart';
+import '../state/required_id_provider.dart';
 
 class VariconRadioField extends ConsumerWidget {
   const VariconRadioField({
@@ -17,6 +22,9 @@ class VariconRadioField extends ConsumerWidget {
   final bool isNested;
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    Debouncer debouncer = Debouncer(milliseconds: 500);
+
+    final otherValue = ref.watch(radiotherFieldValue);
     return CustomFromBuilderRadioGroup(
       name: '',
       actionMessage: field.actionMessage,
@@ -25,15 +33,37 @@ class VariconRadioField extends ConsumerWidget {
       validator: (value) {
         if (field.isRequired && value == null) {
           return 'This field is required';
+        } else if (otherValue?.isOtherField == true &&
+            (otherValue?.value ?? '').isEmpty) {
+          return 'Please specify other in textbox';
         }
         return null;
+      },
+      onOtherSelectedValue: (isSelected, text) {
+        if (isSelected && field.isRequired == false) {
+          ref
+              .read(requiredNotifierProvider.notifier)
+              .addRequiredField(field.id, GlobalObjectKey(field.id));
+        } else if (isSelected == false && field.isRequired == false) {
+          ref.read(requiredNotifierProvider.notifier).remove(field.id);
+        }
+        debouncer.run(() {
+          ref.read(radiotherFieldValue.notifier).state =
+              ValueText(isOtherField: isSelected, value: text, text: '');
+        });
+
+        log('Selected: $isSelected, Text: $text');
       },
       options: field.choices
           .map((lang) => FormBuilderFieldOption(
                 value: lang,
-                child: Text(lang.text),
+                child: Text((lang.isOtherField ?? false)
+                    ? 'Other (please specify)'
+                    : lang.text),
               ))
           .toList(growable: false),
     );
   }
 }
+
+final radiotherFieldValue = StateProvider<ValueText?>((ref) => null);
