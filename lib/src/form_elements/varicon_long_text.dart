@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:html_editor_enhanced/html_editor.dart';
 import 'package:varicon_form_builder/varicon_form_builder.dart';
@@ -26,6 +28,7 @@ class _VariconLongTextState extends State<VariconLongText> {
   HtmlEditorOptions editorOptions = const HtmlEditorOptions();
 
   void saveLongText() {
+    log(widget.formCon.text);
     // widget.formValue.saveString(
     //   widget.field.id,
     //   widget.formCon.text,
@@ -36,17 +39,13 @@ class _VariconLongTextState extends State<VariconLongText> {
     return text.replaceAll(RegExp(r"<[^>]*>"), ' ');
   }
 
-  void _onHtmlEditorLoaded() {
-    // // Insert text after the editor is loaded
-    // widget.htmlEditorController.insertText(widget.field.answer ?? '');
-    // widget.formCon.text = widget.field.answer ?? '';
-  }
 
   @override
   void initState() {
     super.initState();
-    editorOptions = const HtmlEditorOptions(
+    editorOptions =  HtmlEditorOptions(
       adjustHeightForKeyboard: false,
+      initialText: widget.field.answer ?? ''
     );
   }
 
@@ -55,7 +54,7 @@ class _VariconLongTextState extends State<VariconLongText> {
     return Column(
       children: [
         SizedBox(
-          height: 200,
+          height: 300,
           child: Container(
             decoration: BoxDecoration(
                 border: Border.all(
@@ -64,7 +63,6 @@ class _VariconLongTextState extends State<VariconLongText> {
                 borderRadius: BorderRadius.circular(4.0)),
             child: HtmlEditor(
               callbacks: Callbacks(
-                onInit: _onHtmlEditorLoaded,
                 onFocus: () {
                   saveLongText();
                 },
@@ -89,25 +87,25 @@ class _VariconLongTextState extends State<VariconLongText> {
               ),
               controller: htmlEditorController, //required
               plugins: const [],
-              // htmlEditorOptions: widget.editorOptions,
-              // htmlToolbarOptions: const HtmlToolbarOptions(
-              //   defaultToolbarButtons: [
-              //     FontButtons(
-              //       clearAll: false,
-              //       strikethrough: false,
-              //       subscript: false,
-              //       superscript: false,
-              //     ),
-              //     ListButtons(listStyles: false),
-              //     ParagraphButtons(
-              //       caseConverter: false,
-              //       lineHeight: false,
-              //       textDirection: false,
-              //       increaseIndent: false,
-              //       decreaseIndent: false,
-              //     ),
-              //   ],
-              // ),
+              htmlEditorOptions: editorOptions,
+              htmlToolbarOptions: const HtmlToolbarOptions(
+                defaultToolbarButtons: [
+                  FontButtons(
+                    clearAll: false,
+                    strikethrough: false,
+                    subscript: false,
+                    superscript: false,
+                  ),
+                  ListButtons(listStyles: false),
+                  ParagraphButtons(
+                    caseConverter: false,
+                    lineHeight: false,
+                    textDirection: false,
+                    increaseIndent: false,
+                    decreaseIndent: false,
+                  ),
+                ],
+              ),
             ),
           ),
         ),
