@@ -21,6 +21,7 @@ import '../form_elements/varicon_checkbox_field.dart';
 import '../form_elements/varicon_dropdown_field.dart';
 import '../form_elements/varicon_email_field.dart';
 import '../form_elements/varicon_long_text.dart';
+import '../form_elements/varicon_multi_dropdown_field.dart';
 import '../form_elements/varicon_multi_signature_field.dart';
 import '../form_elements/varicon_number_field.dart';
 import '../form_elements/varicon_other_radio_field.dart';
@@ -427,6 +428,17 @@ class VariconFormBuilderState extends ConsumerState<VariconFormBuilder> {
         isRequired: value.isRequired,
         labelText: labelText,
         child: VariconDropdownField(
+          field: value,
+          labelText: labelText,
+          apiCall: widget.apiCall,
+        ),
+      );
+    }, multipleselect: (value) {
+      return LabelWidget(
+        key: GlobalObjectKey(value.id),
+        isRequired: value.isRequired,
+        labelText: labelText,
+        child: VariconMultiDropdownField(
           field: value,
           labelText: labelText,
           apiCall: widget.apiCall,

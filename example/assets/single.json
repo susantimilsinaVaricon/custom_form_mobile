@@ -6,6 +6,43 @@
     "hasLocation": true,
     "elements":[
         {
+            "type": "multipleselect",
+            "name": "select1",
+            "id": "multiselect1",
+            "label": "Select from below drop down testelect from below drop down testelect from below drop down testelect from below drop down testelect from below drop down test",
+            "isRequired": true,
+            "islinked": true,
+            "islinked_query": "equipment",
+            "fromManualList": false,
+            "isConditional": true,
+            "answer": "123467,1234610,123451",
+            "selectedLinkListLabel": "This is item 1.",
+            "actionMessage": "This is the action message ",
+            "requiredErrorText": "Drop down is required",
+            "commentPlaceholder": "comment are place",
+            "choice": [
+                {
+                    "value": "item11",
+                    "text": "This is item 1.",
+                    "action": true
+                },
+                {
+                    "value": "item22",
+                    "text": "This is item 2.",
+                    "action": false
+                },
+                {
+                    "value": "item33",
+                    "text": "This is item 3.",
+                    "action": false
+                }
+            ],
+            "showOtherItem": false,
+            "showNoneItem": false,
+            "otherErrorText": "Empty comment required",
+            "placeholder": "Select...OKkk"
+        },
+        {
             "type": "dropdown",
             "name": "select1",
             "id": "select1",

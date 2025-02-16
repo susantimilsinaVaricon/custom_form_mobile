@@ -28,22 +28,19 @@ class _CustomFormBuilderDropdownState extends State<CustomFormBuilderDropdown> {
   }
 
   Widget singleItem(ValueText item) {
-    return InkWell(
+    return ListTile(
       onTap: () {
         widget.onChanged!(item);
       },
-      child: ListTile(
-        title: Text(item.text),
-        subtitle:
-            (item.action == true && (widget.actionMessage ?? '').isNotEmpty)
-                ? Text(
-                    widget.actionMessage ?? '',
-                    style: const TextStyle(
-                      color: Colors.red,
-                    ),
-                  )
-                : null,
-      ),
+      title: Text(item.text),
+      subtitle: (item.action == true && (widget.actionMessage ?? '').isNotEmpty)
+          ? Text(
+              widget.actionMessage ?? '',
+              style: const TextStyle(
+                color: Colors.red,
+              ),
+            )
+          : null,
     );
   }
 }
