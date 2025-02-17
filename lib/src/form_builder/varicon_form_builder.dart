@@ -350,6 +350,8 @@ class VariconFormBuilderState extends ConsumerState<VariconFormBuilder> {
         child: VariconSignatureField(
           field: value,
           labelText: labelText,
+          imageBuild: widget.imageBuild,
+          attachmentSave: widget.attachmentSave,
         ),
       );
     }, multisignature: (value) {
@@ -360,6 +362,8 @@ class VariconFormBuilderState extends ConsumerState<VariconFormBuilder> {
         child: VariconMultiSignatureField(
           field: value,
           labelText: labelText,
+          imageBuild: widget.imageBuild,
+          attachmentSave: widget.attachmentSave,
         ),
       );
     }, files: (value) {
@@ -369,6 +373,7 @@ class VariconFormBuilderState extends ConsumerState<VariconFormBuilder> {
         labelText: labelText,
         child: VariconFilePickerField(
           field: value,
+          attachmentSave: widget.attachmentSave,
           labelText: labelText,
         ),
       );
@@ -380,6 +385,8 @@ class VariconFormBuilderState extends ConsumerState<VariconFormBuilder> {
         child: VariconImageField(
           field: value,
           labelText: labelText,
+          imageBuild: widget.imageBuild,
+          attachmentSave: widget.attachmentSave,
         ),
       );
     }, radiogroup: (value) {

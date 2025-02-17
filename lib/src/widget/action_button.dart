@@ -44,7 +44,6 @@ class ActionButton extends StatelessWidget {
     return GestureDetector(
       onTap: onPressed,
       child: Container(
-        constraints: const BoxConstraints(maxWidth: 120.0),
         padding: EdgeInsets.symmetric(vertical: verticalPadding),
         alignment: Alignment.center,
         decoration: BoxDecoration(

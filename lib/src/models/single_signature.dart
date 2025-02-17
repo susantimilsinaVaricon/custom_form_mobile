@@ -12,7 +12,7 @@ class SingleSignature with _$SingleSignature {
     String? id,
     String? attachmentId,
     String? file,
-    String? name,
+    DateTime? date,
     dynamic uniImage,
     @JsonKey(name: 'signatory_name') String? signatoryName,
     bool? changeToImage,

@@ -24,7 +24,7 @@ mixin _$SingleSignature {
   String? get id => throw _privateConstructorUsedError;
   String? get attachmentId => throw _privateConstructorUsedError;
   String? get file => throw _privateConstructorUsedError;
-  String? get name => throw _privateConstructorUsedError;
+  DateTime? get date => throw _privateConstructorUsedError;
   dynamic get uniImage => throw _privateConstructorUsedError;
   @JsonKey(name: 'signatory_name')
   String? get signatoryName => throw _privateConstructorUsedError;
@@ -50,7 +50,7 @@ abstract class $SingleSignatureCopyWith<$Res> {
       {String? id,
       String? attachmentId,
       String? file,
-      String? name,
+      DateTime? date,
       dynamic uniImage,
       @JsonKey(name: 'signatory_name') String? signatoryName,
       bool? changeToImage});
@@ -74,7 +74,7 @@ class _$SingleSignatureCopyWithImpl<$Res, $Val extends SingleSignature>
     Object? id = freezed,
     Object? attachmentId = freezed,
     Object? file = freezed,
-    Object? name = freezed,
+    Object? date = freezed,
     Object? uniImage = freezed,
     Object? signatoryName = freezed,
     Object? changeToImage = freezed,
@@ -92,10 +92,10 @@ class _$SingleSignatureCopyWithImpl<$Res, $Val extends SingleSignature>
           ? _value.file
           : file // ignore: cast_nullable_to_non_nullable
               as String?,
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
+      date: freezed == date
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
       uniImage: freezed == uniImage
           ? _value.uniImage
           : uniImage // ignore: cast_nullable_to_non_nullable
@@ -124,7 +124,7 @@ abstract class _$$SingleSignatureImplCopyWith<$Res>
       {String? id,
       String? attachmentId,
       String? file,
-      String? name,
+      DateTime? date,
       dynamic uniImage,
       @JsonKey(name: 'signatory_name') String? signatoryName,
       bool? changeToImage});
@@ -146,7 +146,7 @@ class __$$SingleSignatureImplCopyWithImpl<$Res>
     Object? id = freezed,
     Object? attachmentId = freezed,
     Object? file = freezed,
-    Object? name = freezed,
+    Object? date = freezed,
     Object? uniImage = freezed,
     Object? signatoryName = freezed,
     Object? changeToImage = freezed,
@@ -164,10 +164,10 @@ class __$$SingleSignatureImplCopyWithImpl<$Res>
           ? _value.file
           : file // ignore: cast_nullable_to_non_nullable
               as String?,
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
+      date: freezed == date
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
       uniImage: freezed == uniImage
           ? _value.uniImage
           : uniImage // ignore: cast_nullable_to_non_nullable
@@ -193,7 +193,7 @@ class _$SingleSignatureImpl
       {this.id,
       this.attachmentId,
       this.file,
-      this.name,
+      this.date,
       this.uniImage,
       @JsonKey(name: 'signatory_name') this.signatoryName,
       this.changeToImage});
@@ -209,7 +209,7 @@ class _$SingleSignatureImpl
   @override
   final String? file;
   @override
-  final String? name;
+  final DateTime? date;
   @override
   final dynamic uniImage;
   @override
@@ -220,7 +220,7 @@ class _$SingleSignatureImpl
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'SingleSignature(id: $id, attachmentId: $attachmentId, file: $file, name: $name, uniImage: $uniImage, signatoryName: $signatoryName, changeToImage: $changeToImage)';
+    return 'SingleSignature(id: $id, attachmentId: $attachmentId, file: $file, date: $date, uniImage: $uniImage, signatoryName: $signatoryName, changeToImage: $changeToImage)';
   }
 
   @override
@@ -231,7 +231,7 @@ class _$SingleSignatureImpl
       ..add(DiagnosticsProperty('id', id))
       ..add(DiagnosticsProperty('attachmentId', attachmentId))
       ..add(DiagnosticsProperty('file', file))
-      ..add(DiagnosticsProperty('name', name))
+      ..add(DiagnosticsProperty('date', date))
       ..add(DiagnosticsProperty('uniImage', uniImage))
       ..add(DiagnosticsProperty('signatoryName', signatoryName))
       ..add(DiagnosticsProperty('changeToImage', changeToImage));
@@ -246,7 +246,7 @@ class _$SingleSignatureImpl
             (identical(other.attachmentId, attachmentId) ||
                 other.attachmentId == attachmentId) &&
             (identical(other.file, file) || other.file == file) &&
-            (identical(other.name, name) || other.name == name) &&
+            (identical(other.date, date) || other.date == date) &&
             const DeepCollectionEquality().equals(other.uniImage, uniImage) &&
             (identical(other.signatoryName, signatoryName) ||
                 other.signatoryName == signatoryName) &&
@@ -261,7 +261,7 @@ class _$SingleSignatureImpl
       id,
       attachmentId,
       file,
-      name,
+      date,
       const DeepCollectionEquality().hash(uniImage),
       signatoryName,
       changeToImage);
@@ -288,7 +288,7 @@ abstract class _SingleSignature implements SingleSignature {
       {final String? id,
       final String? attachmentId,
       final String? file,
-      final String? name,
+      final DateTime? date,
       final dynamic uniImage,
       @JsonKey(name: 'signatory_name') final String? signatoryName,
       final bool? changeToImage}) = _$SingleSignatureImpl;
@@ -304,7 +304,7 @@ abstract class _SingleSignature implements SingleSignature {
   @override
   String? get file;
   @override
-  String? get name;
+  DateTime? get date;
   @override
   dynamic get uniImage;
   @override

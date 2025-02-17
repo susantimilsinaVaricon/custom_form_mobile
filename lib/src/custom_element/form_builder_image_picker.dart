@@ -85,55 +85,55 @@ class FormBuilderImagePicker extends FormBuilderFieldDecoration<List<dynamic>> {
       optionsBuilder;
 
   final WidgetBuilder? loadingWidget;
+  final Widget? initialWidget;
 
-  FormBuilderImagePicker({
-    super.key,
-    required super.name,
-    super.validator,
-    super.initialValue,
-    super.decoration = const InputDecoration(),
-    super.onChanged,
-    super.valueTransformer,
-    super.enabled = true,
-    super.onSaved,
-    super.autovalidateMode = AutovalidateMode.disabled,
-    super.onReset,
-    super.focusNode,
-    this.loadingWidget,
-    this.previewBuilder,
-    this.fit = BoxFit.cover,
-    this.preventPop = false,
-    this.displayCustomType,
-    this.maxHeight,
-    this.maxWidth,
-    this.imageQuality,
-    this.onImage,
-    this.maxImages,
-    this.cameraIcon = const Icon(Icons.camera_enhance),
-    this.galleryIcon = const Icon(Icons.image),
-    this.cameraLabel = const Text('Camera'),
-    this.galleryLabel = const Text('Gallery'),
-    this.bottomSheetPadding = EdgeInsets.zero,
-    this.onTap,
-    this.optionsBuilder,
-    this.availableImageSources = const [
-      ImageSourceOption.camera,
-      ImageSourceOption.gallery,
-    ],
-  })  : assert(maxImages == null || maxImages >= 0),
+  FormBuilderImagePicker(
+      {super.key,
+      required super.name,
+      super.validator,
+      super.initialValue,
+      super.decoration = const InputDecoration(),
+      super.onChanged,
+      super.valueTransformer,
+      super.enabled = true,
+      super.onSaved,
+      super.autovalidateMode = AutovalidateMode.disabled,
+      super.onReset,
+      super.focusNode,
+      this.loadingWidget,
+      this.previewBuilder,
+      this.fit = BoxFit.cover,
+      this.preventPop = false,
+      this.displayCustomType,
+      this.maxHeight,
+      this.maxWidth,
+      this.imageQuality,
+      this.onImage,
+      this.maxImages,
+      this.cameraIcon = const Icon(Icons.camera_enhance),
+      this.galleryIcon = const Icon(Icons.image),
+      this.cameraLabel = const Text('Camera'),
+      this.galleryLabel = const Text('Gallery'),
+      this.bottomSheetPadding = EdgeInsets.zero,
+      this.onTap,
+      this.optionsBuilder,
+      this.availableImageSources = const [
+        ImageSourceOption.camera,
+        ImageSourceOption.gallery,
+      ],
+      this.initialWidget})
+      : assert(maxImages == null || maxImages >= 0),
         super(
           builder: (FormFieldState<List<dynamic>?> field) {
             final state = field as FormBuilderImagePickerState;
-            double height = 100.0;
-            double width = 100.0;
+            double height = 75.0;
+            double width = 75.0;
             // final theme = Theme.of(state.context);
             // final disabledColor = theme.disabledColor;
             // final primaryColor = theme.primaryColor;
             final value = state.effectiveValue;
             final canUpload = state.enabled && !state.hasMaxImages;
 
-            /// how many items to display in the list view (including upload btn)
-            final itemCount = value.length + (canUpload ? 1 : 0);
 
             Widget addButtonBuilder(
               BuildContext context,
@@ -232,6 +232,10 @@ class FormBuilderImagePicker extends FormBuilderFieldDecoration<List<dynamic>> {
                 children: <Widget>[
                   Container(
                     height: height,
+                    margin: const EdgeInsets.only(
+                      right: 8.0,
+                      bottom: 8.0,
+                    ),
                     width: width,
                     decoration: BoxDecoration(
                       border: Border.all(
@@ -244,7 +248,7 @@ class FormBuilderImagePicker extends FormBuilderFieldDecoration<List<dynamic>> {
                   if (state.enabled)
                     PositionedDirectional(
                       top: 0,
-                      end: 0,
+                      end: 12,
                       child: InkWell(
                         onTap: () {
                           state.focus();
@@ -287,46 +291,21 @@ class FormBuilderImagePicker extends FormBuilderFieldDecoration<List<dynamic>> {
               });
             }
 
-            final child = SizedBox(
-              height: height,
-              child: itemCount == 0
-                  ? null //empty list
-                  : itemCount == 1 //has a single item,
-                      ? canUpload
-                          ? SizedBox(
-                              width: width,
-                              child: addButtonBuilder(
-                                  state.context)) //upload button
-                          : SizedBox(
-                              child: itemBuilder(state.context, value.first, 0),
-                            )
-                      : ListView.builder(
-                          itemExtent: 100,
-                          scrollDirection: Axis.horizontal,
-                          itemCount: itemCount,
-                          itemBuilder: (context, index) {
-                            return Container(
-                              margin: const EdgeInsets.only(right: 8.0),
-                              child: Builder(
-                                builder: (context) {
-                                  if (index == 0 && canUpload) {
-                                    return addButtonBuilder(context);
-                                  } else {
-                                    final item =
-                                        value[index - (canUpload ? 1 : 0)];
-                                    return itemBuilder(context, item,
-                                        index - (canUpload ? 1 : 0));
-                                  }
-                                  // if (index < value.length) {
-                                  //   final item = value[index];
-                                  //   return itemBuilder(context, item, index);
-                                  // }
-                                  // return addButtonBuilder(context);
-                                },
-                              ),
-                            );
-                          },
-                        ),
+            final child = Wrap(
+              children: [
+                canUpload ? addButtonBuilder(state.context) : const SizedBox(),
+                SizedBox(
+                  width: canUpload ? 12.0 : 0,
+                ),
+                initialWidget ?? const SizedBox.shrink(),
+                ...value.map(
+                  (e) => itemBuilder(
+                    state.context,
+                    e,
+                    value.indexOf(e),
+                  ),
+                )
+              ],
             );
             return InputDecorator(
               decoration: state.decoration,

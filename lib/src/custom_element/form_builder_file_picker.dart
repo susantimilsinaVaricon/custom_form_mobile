@@ -72,6 +72,7 @@ class FormBuilderFilePicker
 
   /// Allow to customise the view of the pickers.
   final Widget Function(List<Widget> types)? customTypeViewerBuilder;
+  final Widget? previousImage;
 
   /// Creates field for image(s) from user device storage
   FormBuilderFilePicker(
@@ -102,7 +103,8 @@ class FormBuilderFilePicker
       this.allowCompression = true,
       this.compressionQuality = 30,
       this.customFileViewerBuilder,
-      this.customTypeViewerBuilder})
+      this.customTypeViewerBuilder,
+      this.previousImage})
       : super(
           builder: (FormFieldState<List<PlatformFile>?> field) {
             final state = field as _FormBuilderFilePickerState;
@@ -116,15 +118,17 @@ class FormBuilderFilePicker
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
-                  customTypeViewerBuilder != null
-                      ? customTypeViewerBuilder(
-                          state.getTypeSelectorActions(typeSelectors, field))
-                      : Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: state.getTypeSelectorActions(
-                              typeSelectors, field),
-                        ),
-                  const SizedBox(height: 3),
+                  // customTypeViewerBuilder != null
+                  //     ? customTypeViewerBuilder(
+                  //         state.getTypeSelectorActions(typeSelectors, field))
+                  //     :
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children:
+                        state.getTypeSelectorActions(typeSelectors, field),
+                  ),
+                  const SizedBox(height: 8.0),
+                  previousImage ?? const SizedBox.shrink(),
                   customFileViewerBuilder != null
                       ? customFileViewerBuilder.call(state._files,
                           (files) => state._setFiles(files ?? [], field))
